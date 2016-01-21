@@ -29,11 +29,4 @@ Previously, the MR job will get failed if AM get restarted for some reason (like
 In this improvement, we add a new API isCommitJobRepeatable() to OutputCommitter interface which to indicate if job's committer can do commitJob again if previous commit work is interrupted by NM/AM failures, etc. The instance of OutputCommitter, which support repeatable job commit (like FileOutputCommitter in algorithm 2), can allow AM to continue the commitJob() after AM restart as a new attempt.
 
 
----
-
-* [YARN-4380](https://issues.apache.org/jira/browse/YARN-4380) | *Major* | **TestResourceLocalizationService.testDownloadingResourcesOnContainerKill fails intermittently**
-
-Committed this to trunk, branch-2, and branch-2.7. Thanks Varun Saxena for your contribution.
-
-
 

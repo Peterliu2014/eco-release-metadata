@@ -23,11 +23,49 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
-* [HBASE-15073](https://issues.apache.org/jira/browse/HBASE-15073) | *Major* | **Finer grained control over normalization actions for RegionNormalizer**
+* [HBASE-15111](https://issues.apache.org/jira/browse/HBASE-15111) | *Trivial* | **"hbase version" should write to stdout**
 
-The NORMALIZATION\_ENABLED\_KEY attribute for table has been renamed NORMALIZATION\_MODE whose value represents the types of action allowed for normalization.
-To enable normalization for the table, you can specify 'M' for merging, 'S' for splitting or "MS" for splitting / merging.
-Leave empty to disable normalization.
+The `hbase version` command now outputs directly to stdout rather than to a logger. This change allows the version information to be output consistently regardless of logger configuration. Naturally, this also means the command output ignores all logger configuration. Furthermore, the move from loggers to direct output changes the output of the command to omit metadata commonly included in logger ouput such as a timestamp, log level, and logger name.
+
+
+---
+
+* [HBASE-15098](https://issues.apache.org/jira/browse/HBASE-15098) | *Blocker* | **Normalizer switch in configuration is not used**
+
+The config parameter, hbase.normalizer.enabled, has been dropped since it is not used in the code base.
+
+
+---
+
+* [HBASE-15091](https://issues.apache.org/jira/browse/HBASE-15091) | *Blocker* | **Forward-port to 1.2+ HBASE-15031 "Fix merge of MVCC and SequenceID performance regression in branch-1.0"**
+
+Increments can be 10x slower (or more) when there is high concurrency since HBase 1.0.0 (HBASE-8763). 
+
+This 'fix' adds back a fast increment but speed is achieved by relaxing row-level consistency for Increments (only). The default remains the old, slow, consistent Increment behavior. 
+
+Set "hbase.increment.fast.but.narrow.consistency" to true in hbase-site.xml to enable 'fast' increments and then rolling restart your cluster. This is a setting the server-side needs to read. 
+
+Intermixing fast increment with other Mutations will give indeterminate results; e.g. a Put and Increment against the same Cell will not always give you the result you expect. Fast Increments are consistent unto themselves. A Get with {@link IsolationLevel#READ\_UNCOMMITTED} will return the latest increment value or an Increment of an amount zero will do the same (beware doing Get on a cell that has not been incremented yet -- this will return no results). 
+
+The difference between fastAndNarrowConsistencyIncrement and slowButConsistentIncrement is that the former holds the row lock until the WAL sync completes; this allows us to reason that there are no other writers afoot when we read the current increment value. In this case we do not need to wait on mvcc reads to catch up to writes before we proceed with the read of the current Increment value, the root of the slowdown seen in HBASE-14460. The fast-path also does not wait on mvcc to complete before returning to the client (but the write has been synced and put into memstore before we return). 
+
+Also adds a simple performance test tool that will run against existing cluster. It expects the table to be already created (by default it expects the table 'tableName' with a column family 'columnFamilyName'): 
+
+{code} 
+$ ./bin/hbase org.apache.hadoop.hbase.IncrementPerformanceTest 
+{code] 
+
+Configure it by passing -D options. Here are the set below: 
+
+2015-12-23 19:33:36,941 INFO [main] hbase.IncrementPerformanceTest: Running test with hbase.zookeeper.quorum=localhost, tableName=tableName, columnFamilyName=columnFamilyName, threadCount=80, incrementCount=10000 
+
+... so to set the tableName pass -DtableName=SOME\_TABLENAME 
+
+Here is an example use of the test tool: 
+
+{code} 
+$ time ./bin/hbase --config ~/conf\_hbase org.apache.hadoop.hbase.IncrementPerformanceTest -DincrementCount=50000 
+{code}
 
 
 ---

@@ -23,6 +23,37 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | *Major* | **Verify sem.getInputs() and sem.getOutputs()**
+
+No release notes needed here.
+
+
+---
+
+* [HIVE-12827](https://issues.apache.org/jira/browse/HIVE-12827) | *Major* | **Vectorization: VectorCopyRow/VectorAssignRow/VectorDeserializeRow assign needs explicit isNull[offset] modification**
+
+commit 9cab4414caf1bba2eb1852536a9d3676ba7eab21
+Author: Gopal V \<gopalv@apache.org\>
+Date:   Mon Jan 18 16:03:40 2016 -0800
+
+    Vectorization: VectorCopyRow/VectorAssignRow/VectorDeserializeRow assign needs explicit isNull[offset] modification (Gopal V, reviewed by Sergey Shelukhin)
+    
+    Signed-off-by: Gopal V \<gopalv@apache.org\>
+
+
+---
+
+* [HIVE-12826](https://issues.apache.org/jira/browse/HIVE-12826) | *Major* | **Vectorization: fix VectorUDAF\* suspect isNull checks**
+
+commit 36e855084da833915dfe6c34f74e19352b64fde9
+
+    Vectorization: fix VectorUDAF\* suspect isNull checks (Gopal V, reviewed by Matt McCline)
+    
+    Signed-off-by: Gopal V \<gopalv@apache.org\>
+
+
+---
+
 * [HIVE-12740](https://issues.apache.org/jira/browse/HIVE-12740) | *Critical* | **NPE with HS2 when using null input format**
 
 HIVE-12740: NPE with HS2 when using null input format (Vikram Dixit K via Gunther Hagleitner)
@@ -75,6 +106,13 @@ Any extensions of org.apache.hive.hcatalog.streaming.AbstractRecordWriter will n
 * [HIVE-12434](https://issues.apache.org/jira/browse/HIVE-12434) | *Major* | **Merge spark into master 11/17/1015**
 
 Merge introduced some configurations.
+
+
+---
+
+* [HIVE-12429](https://issues.apache.org/jira/browse/HIVE-12429) | *Major* | **Switch default Hive authorization to SQLStandardAuth in 2.0**
+
+**WARNING: No release note provided for this incompatible change.**
 
 
 ---
@@ -248,7 +286,7 @@ JDK8 strict build broken for master
 
 * [HIVE-11785](https://issues.apache.org/jira/browse/HIVE-11785) | *Major* | **Support escaping carriage return and new line for LazySimpleSerDe**
 
-This change disallows carriage return and new line characters to be used as field separators or escape character. While before this change, those were allowed while those cases could easily lead to incorrect results if the content also contain carriage return or new line. Since even carriage return or new line was escaped, line based input format in MapReduce used in Hive will break the lines by carriage return and new line only and lead to incorrect result.
+This change with HIVE-12820 in addition adds the support of carriage return and new line characters in the fields. Before this change, the user needs to preprocess the text by replacing them with some characters other than carriage return and new line in order for the files to be properly processed. With this change, it will automatically escape them if {{serialization.escape.crlf}} serde property is set to true. One incompatible change is: characters 'r' and 'n' cannot be used as separator or field delimiter.
 
 
 ---

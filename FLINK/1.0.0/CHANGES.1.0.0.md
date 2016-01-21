@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-01-18)
+## Release 1.0.0 - Unreleased (as of 2016-01-21)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -37,6 +37,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [FLINK-3102](https://issues.apache.org/jira/browse/FLINK-3102) | Allow reading from multiple topics with one FlinkKafkaConsumer |  Major | Kafka Connector | Robert Metzger | Robert Metzger |
+| [FLINK-3058](https://issues.apache.org/jira/browse/FLINK-3058) | Add Kafka consumer for new 0.9.0.0 Kafka API |  Major | Kafka Connector | Robert Metzger | Robert Metzger |
 | [FLINK-2996](https://issues.apache.org/jira/browse/FLINK-2996) | Add config entry to define BlobServer port |  Major | JobManager | Stephan Ewen | Robert Metzger |
 | [FLINK-2978](https://issues.apache.org/jira/browse/FLINK-2978) | Integrate web submission interface into the new dashboard |  Major | Web Client, Webfrontend | Sachin Goel | Sachin Goel |
 | [FLINK-2955](https://issues.apache.org/jira/browse/FLINK-2955) | Add operations introduction in Table API page. |  Minor | Documentation | Chengxiang Li | Chengxiang Li |
@@ -57,12 +58,14 @@
 | [FLINK-3147](https://issues.apache.org/jira/browse/FLINK-3147) | HadoopOutputFormatBase should expose fields as protected |  Minor | . | Nick Dimiduk |  |
 | [FLINK-3131](https://issues.apache.org/jira/browse/FLINK-3131) | Expose checkpoint metrics |  Major | Webfrontend | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3124](https://issues.apache.org/jira/browse/FLINK-3124) | Introduce a TaskInfo object to better represent task name, index, attempt number etc. |  Major | . | Sachin Goel | Sachin Goel |
+| [FLINK-3122](https://issues.apache.org/jira/browse/FLINK-3122) | Generalize value type in LabelPropagation |  Major | Gelly | Martin Junghanns | Martin Junghanns |
 | [FLINK-3116](https://issues.apache.org/jira/browse/FLINK-3116) | Remove RecordOperator |  Trivial | Core | Chesnay Schepler | jun aoki |
 | [FLINK-3084](https://issues.apache.org/jira/browse/FLINK-3084) | File State Backend should not write very small state into files |  Major | Streaming | Stephan Ewen | Stephan Ewen |
 | [FLINK-3077](https://issues.apache.org/jira/browse/FLINK-3077) | Add "version" command to CliFrontend for showing the version of the installation |  Major | Command-line client | Robert Metzger | Sachin Goel |
 | [FLINK-3074](https://issues.apache.org/jira/browse/FLINK-3074) | Make ApplicationMaster/JobManager akka port configurable |  Major | YARN Client | Robert Metzger | Robert Metzger |
 | [FLINK-3073](https://issues.apache.org/jira/browse/FLINK-3073) | Activate streaming mode by default |  Major | TaskManager | Robert Metzger | Aljoscha Krettek |
 | [FLINK-3069](https://issues.apache.org/jira/browse/FLINK-3069) | Make state materialization asynchronous |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
+| [FLINK-3063](https://issues.apache.org/jira/browse/FLINK-3063) | [py] Remove combiner |  Major | Python API | Chesnay Schepler | Chesnay Schepler |
 | [FLINK-3056](https://issues.apache.org/jira/browse/FLINK-3056) | Show bytes sent/received as MBs/GB and so on in web interface |  Major | Webfrontend | Robert Metzger | Sachin Goel |
 | [FLINK-3055](https://issues.apache.org/jira/browse/FLINK-3055) | ExecutionVertex has duplicate method getParallelSubtaskIndex and getSubTaskIndex |  Trivial | Distributed Runtime | Ufuk Celebi | jun aoki |
 | [FLINK-3051](https://issues.apache.org/jira/browse/FLINK-3051) | Define a maximum number of concurrent inflight checkpoints |  Major | Streaming | Stephan Ewen | Stephan Ewen |
@@ -104,7 +107,9 @@
 | [FLINK-3251](https://issues.apache.org/jira/browse/FLINK-3251) | Checkpoint stats show ghost numbers |  Major | Webfrontend | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3250](https://issues.apache.org/jira/browse/FLINK-3250) | Savepoint coordinator requires too strict parallelism match |  Major | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3236](https://issues.apache.org/jira/browse/FLINK-3236) | Flink user code classloader should have Flink classloader as parent classloader |  Major | Local Runtime | Stephan Ewen | Stephan Ewen |
+| [FLINK-3220](https://issues.apache.org/jira/browse/FLINK-3220) | Flink does not start on Hortonworks Sandbox 2.3.2 due to missing class |  Blocker | Build System | Robert Metzger | Robert Metzger |
 | [FLINK-3218](https://issues.apache.org/jira/browse/FLINK-3218) | Merging Hadoop configurations overrides user parameters |  Major | Java API | Greg Hogan | Greg Hogan |
+| [FLINK-3206](https://issues.apache.org/jira/browse/FLINK-3206) | Heap size for non-pre-allocated off-heap memory |  Major | Start-Stop Scripts | Greg Hogan | Maximilian Michels |
 | [FLINK-3197](https://issues.apache.org/jira/browse/FLINK-3197) | InputStream not closed in BinaryInputFormat#createStatistics |  Minor | . | Ted Yu |  |
 | [FLINK-3189](https://issues.apache.org/jira/browse/FLINK-3189) | Error while parsing job arguments passed by CLI |  Minor | Command-line client | Filip Leczycki | Matthias J. Sax |
 | [FLINK-3188](https://issues.apache.org/jira/browse/FLINK-3188) | Deletes in Kafka source should be passed on to KeyedDeserializationSchema |  Major | Kafka Connector | Sebastian Klemke | Robert Metzger |
@@ -192,7 +197,8 @@
 | [FLINK-3195](https://issues.apache.org/jira/browse/FLINK-3195) | Restructure examples projects and package streaming examples |  Major | Examples | Stephan Ewen | Stephan Ewen |
 | [FLINK-3071](https://issues.apache.org/jira/browse/FLINK-3071) | Add asynchronous materialization thread |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
 | [FLINK-3070](https://issues.apache.org/jira/browse/FLINK-3070) | Create an asynchronous state handle interface |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
-| [FLINK-2972](https://issues.apache.org/jira/browse/FLINK-2972) | Remove Twitter Chill dependency from flink-java module |  Major | Java API | Fabian Hueske | Fabian Hueske |
+| [FLINK-3057](https://issues.apache.org/jira/browse/FLINK-3057) | [py] Provide a way to pass information back to the plan process |  Minor | Python API | Chesnay Schepler | Chesnay Schepler |
+| [FLINK-2972](https://issues.apache.org/jira/browse/FLINK-2972) | Remove Twitter Chill dependency from flink-java module |  Major | Java API | Fabian Hueske |  |
 | [FLINK-2919](https://issues.apache.org/jira/browse/FLINK-2919) | Apply JMH on FieldAccessMinibenchmark class. |  Minor | Tests | GaoLun | GaoLun |
 | [FLINK-2890](https://issues.apache.org/jira/browse/FLINK-2890) | Apply JMH on StringSerializationSpeedBenchmark class. |  Minor | Tests | GaoLun | GaoLun |
 | [FLINK-2889](https://issues.apache.org/jira/browse/FLINK-2889) | Apply JMH on LongSerializationSpeedBenchmark class |  Minor | Tests | GaoLun | GaoLun |

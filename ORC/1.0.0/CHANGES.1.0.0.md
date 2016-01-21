@@ -18,7 +18,7 @@
 -->
 # Apache Orc Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-01-18)
+## Release 1.0.0 - Unreleased (as of 2016-01-21)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -53,9 +53,11 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [ORC-38](https://issues.apache.org/jira/browse/ORC-38) | Fix compilation errors on RHEL 5 |  Major | C++ | Owen O'Malley | Owen O'Malley |
 | [ORC-32](https://issues.apache.org/jira/browse/ORC-32) | Warnings under new version of xcode on MacOS. |  Major | . | Owen O'Malley | Owen O'Malley |
 | [ORC-25](https://issues.apache.org/jira/browse/ORC-25) | Clean up Coverity scans |  Major | . | Owen O'Malley | Owen O'Malley |
 | [ORC-24](https://issues.apache.org/jira/browse/ORC-24) | C++ reader for direct string encodings occasionally skips bytes |  Major | C++ | Owen O'Malley | Owen O'Malley |
+| [ORC-8](https://issues.apache.org/jira/browse/ORC-8) | Replace tool implementation to use Reader interface |  Major | . | Owen O'Malley | Owen O'Malley |
 
 
 ### TESTS:

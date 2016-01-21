@@ -23,6 +23,19 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HADOOP-12651](https://issues.apache.org/jira/browse/HADOOP-12651) | *Major* | **Replace dev-support with wrappers to Yetus**
+
+<!-- markdown -->
+* Major portions of dev-support have been replaced with wrappers to Apache Yetus:
+  * releasedocmaker.py is now dev-support/bin/releasedocmaker
+  * shelldocs.py is now dev-support/bin/shelldocs
+  * smart-apply-patch.sh is now dev-support/bin/smart-apply-patch
+  * test-patch.sh is now dev-support/bin/test-patch
+* See the dev-support/README.md file for more details on how to control the wrappers to various degrees.
+
+
+---
+
 * [HADOOP-12495](https://issues.apache.org/jira/browse/HADOOP-12495) | *Major* | **Fix posix\_spawn error on OS X**
 
 When Hadoop JVMs create other processes on OS X, it will always use posix\_spawn.

@@ -23,11 +23,16 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
-* [HBASE-15073](https://issues.apache.org/jira/browse/HBASE-15073) | *Major* | **Finer grained control over normalization actions for RegionNormalizer**
+* [HBASE-15111](https://issues.apache.org/jira/browse/HBASE-15111) | *Trivial* | **"hbase version" should write to stdout**
 
-The NORMALIZATION\_ENABLED\_KEY attribute for table has been renamed NORMALIZATION\_MODE whose value represents the types of action allowed for normalization.
-To enable normalization for the table, you can specify 'M' for merging, 'S' for splitting or "MS" for splitting / merging.
-Leave empty to disable normalization.
+The `hbase version` command now outputs directly to stdout rather than to a logger. This change allows the version information to be output consistently regardless of logger configuration. Naturally, this also means the command output ignores all logger configuration. Furthermore, the move from loggers to direct output changes the output of the command to omit metadata commonly included in logger ouput such as a timestamp, log level, and logger name.
+
+
+---
+
+* [HBASE-15098](https://issues.apache.org/jira/browse/HBASE-15098) | *Blocker* | **Normalizer switch in configuration is not used**
+
+The config parameter, hbase.normalizer.enabled, has been dropped since it is not used in the code base.
 
 
 ---
@@ -143,6 +148,17 @@ After this change setting "hbase.hregion.percolumnfamilyflush.size.lower.bound" 
 This patch changes the semantic around namespace create/delete/modify when coprocessor asks that the invocation be by-passed. Previous the by-pass was done silently -- the method would just return with no indication as to whether by-pass route had been taken or not.  This patch adds throwing of a BypassCoprocessorException which is thrown if we have been asked to bypass a call.
 
 The bypass facility has been in place since hbase 1.0.0 when namespace creation/deletion, etc.., was originally added in HBASE-8408 (HBASE-15071 is about addressing bypass handling in a general way)
+
+
+---
+
+* [HBASE-14865](https://issues.apache.org/jira/browse/HBASE-14865) | *Major* | **Support passing multiple QOPs to SaslClient/Server via hbase.rpc.protection**
+
+With this patch, hbase.rpc.protection can now take multiple comma-separate QOP values. Accepted QOP values remain unchanged and are 'authentication', 'integrity', and 'privacy'. Server or client can use this configuration to specify their preference (in decreasing order) while negotiating QOP.
+This feature can be used to upgrade or downgrade QOP in an online cluster without compromising availability (i.e. taking cluster offline). For e.g. to change qop from A to B, typical steps would be:
+"A" --\> "B,A" --\> rolling restart --\> "B" --\> rolling restart
+
+Sidenote: Based on experimentation, server's choice is given higher preference than client's choice. i.e. if server's choices are "A,B,C" and client's choices are "B,C,A", both A and B are acceptable, but A is chosen.
 
 
 ---

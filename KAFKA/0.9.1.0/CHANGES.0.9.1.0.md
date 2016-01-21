@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.1.0 - Unreleased (as of 2016-01-18)
+## Release 0.9.1.0 - Unreleased (as of 2016-01-21)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -43,6 +43,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3119](https://issues.apache.org/jira/browse/KAFKA-3119) | Adding -daemon option to zookeeper-server-start.sh USAGE |  Minor | config | Atul Soman | Atul Soman |
 | [KAFKA-3105](https://issues.apache.org/jira/browse/KAFKA-3105) | Use `Utils.atomicMoveWithFallback` instead of `File.rename` |  Major | . | Ismael Juma | Ismael Juma |
 | [KAFKA-3084](https://issues.apache.org/jira/browse/KAFKA-3084) | Topic existence checks in topic commands (create, alter, delete) |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3077](https://issues.apache.org/jira/browse/KAFKA-3077) | Enable KafkaLog4jAppender to work with SASL enabled brokers. |  Major | clients | Ashish K Singh | Ashish K Singh |
@@ -50,6 +51,7 @@
 | [KAFKA-3043](https://issues.apache.org/jira/browse/KAFKA-3043) | Replace request.required.acks with acks in docs |  Major | website | Sasaki Toru |  |
 | [KAFKA-3024](https://issues.apache.org/jira/browse/KAFKA-3024) | Remove old patch review tools |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3019](https://issues.apache.org/jira/browse/KAFKA-3019) | Add an exceptionName method to Errors |  Major | . | Grant Henke | Grant Henke |
+| [KAFKA-3012](https://issues.apache.org/jira/browse/KAFKA-3012) | Avoid reserved.broker.max.id collisions on upgrade |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3002](https://issues.apache.org/jira/browse/KAFKA-3002) | Make available to specify hostname with Uppercase at broker list |  Minor | clients | Sasaki Toru |  |
 | [KAFKA-2992](https://issues.apache.org/jira/browse/KAFKA-2992) | Trace log statements in the replica fetcher inner loop create large amounts of garbage |  Minor | core | Cory Kolbeck |  |
 | [KAFKA-2964](https://issues.apache.org/jira/browse/KAFKA-2964) | Split Security Rolling Upgrade Test By Client and Broker Protocols |  Minor | . | Ben Stopford | Ben Stopford |
@@ -67,7 +69,9 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-3095](https://issues.apache.org/jira/browse/KAFKA-3095) | No documentation on format of sasl.kerberos.principal.to.local.rules |  Major | core | Thomas Graves | Thomas Graves |
+| [KAFKA-3091](https://issues.apache.org/jira/browse/KAFKA-3091) | Broker with an invalid id would not start when its id is updated to a new valid one |  Minor | . | Vahid Hashemian | Grant Henke |
 | [KAFKA-3085](https://issues.apache.org/jira/browse/KAFKA-3085) | BrokerChangeListener computes inconsistent live/dead broker list |  Major | core | Jun Rao | David Jacot |
+| [KAFKA-3080](https://issues.apache.org/jira/browse/KAFKA-3080) | ConsoleConsumerTest.test\_version system test fails consistently |  Major | system tests | Ewen Cheslack-Postava |  |
 | [KAFKA-3069](https://issues.apache.org/jira/browse/KAFKA-3069) | Fix recursion in ZkSecurityMigrator |  Major | security | Flavio Junqueira | Flavio Junqueira |
 | [KAFKA-3055](https://issues.apache.org/jira/browse/KAFKA-3055) | JsonConverter mangles schema during serialization (fromConnectData) |  Major | copycat | Kishore Senji | Ewen Cheslack-Postava |
 | [KAFKA-3009](https://issues.apache.org/jira/browse/KAFKA-3009) | Disallow star imports |  Major | . | Gwen Shapira | Manasvi Gupta |
@@ -118,6 +122,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3108](https://issues.apache.org/jira/browse/KAFKA-3108) | KStream custom StreamPartitioner for windowed key |  Minor | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
+| [KAFKA-3104](https://issues.apache.org/jira/browse/KAFKA-3104) | Windowed Stream Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3081](https://issues.apache.org/jira/browse/KAFKA-3081) | KTable Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3078](https://issues.apache.org/jira/browse/KAFKA-3078) | Add ducktape tests for KafkaLog4jAppender producing to SASL enabled Kafka cluster |  Major | clients | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3063](https://issues.apache.org/jira/browse/KAFKA-3063) | LogRecoveryTest exits with -1 occasionally |  Major | . | Guozhang Wang | Ismael Juma |
@@ -152,6 +157,7 @@
 | [KAFKA-2509](https://issues.apache.org/jira/browse/KAFKA-2509) | Replace LeaderAndIsr{Request,Response} with org.apache.kafka.common.network.requests equivalent |  Major | . | Ismael Juma | Grant Henke |
 | [KAFKA-2422](https://issues.apache.org/jira/browse/KAFKA-2422) | Allow copycat connector plugins to be aliased to simpler names |  Minor | copycat | Ewen Cheslack-Postava | Gwen Shapira |
 | [KAFKA-2072](https://issues.apache.org/jira/browse/KAFKA-2072) | Add StopReplica request/response to o.a.k.common.requests and replace the usage in core module |  Major | . | Gwen Shapira | David Jacot |
+| [KAFKA-2071](https://issues.apache.org/jira/browse/KAFKA-2071) | Replace Produce Request/Response with their org.apache.kafka.common.requests equivalents |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-2070](https://issues.apache.org/jira/browse/KAFKA-2070) | Replace OffsetRequest/response with ListOffsetRequest/response from org.apache.kafka.common.requests |  Major | . | Gwen Shapira | Grant Henke |
 
 

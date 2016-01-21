@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.0.1 - Unreleased (as of 2016-01-18)
+## Release 0.9.0.1 - Unreleased (as of 2016-01-21)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -47,6 +47,7 @@
 | [KAFKA-3051](https://issues.apache.org/jira/browse/KAFKA-3051) | security.protocol documentation is inaccurate |  Major | clients | Jun Rao | Ismael Juma |
 | [KAFKA-3048](https://issues.apache.org/jira/browse/KAFKA-3048) | incorrect property name ssl.want.client.auth |  Major | core | Jun Rao | Ismael Juma |
 | [KAFKA-3045](https://issues.apache.org/jira/browse/KAFKA-3045) | ZkNodeChangeNotificationListener shouldn't log interrupted exception as error |  Major | core | Jun Rao | Dong Lin |
+| [KAFKA-3012](https://issues.apache.org/jira/browse/KAFKA-3012) | Avoid reserved.broker.max.id collisions on upgrade |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3010](https://issues.apache.org/jira/browse/KAFKA-3010) | include error code when logging an error when ack = 0 |  Major | core | Jun Rao | Ismael Juma |
 | [KAFKA-3002](https://issues.apache.org/jira/browse/KAFKA-3002) | Make available to specify hostname with Uppercase at broker list |  Minor | clients | Sasaki Toru |  |
 | [KAFKA-2988](https://issues.apache.org/jira/browse/KAFKA-2988) | Change default configuration of the log cleaner |  Major | . | Grant Henke | Grant Henke |
@@ -60,6 +61,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3122](https://issues.apache.org/jira/browse/KAFKA-3122) | Memory leak in `Sender.completeBatch` on TOPIC\_AUTHORIZATION\_FAILED |  Major | clients | Ismael Juma | Ismael Juma |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-3095](https://issues.apache.org/jira/browse/KAFKA-3095) | No documentation on format of sasl.kerberos.principal.to.local.rules |  Major | core | Thomas Graves | Thomas Graves |
 | [KAFKA-3055](https://issues.apache.org/jira/browse/KAFKA-3055) | JsonConverter mangles schema during serialization (fromConnectData) |  Major | copycat | Kishore Senji | Ewen Cheslack-Postava |

@@ -23,6 +23,13 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | *Major* | **Verify sem.getInputs() and sem.getOutputs()**
+
+No release notes needed here.
+
+
+---
+
 * [HIVE-12717](https://issues.apache.org/jira/browse/HIVE-12717) | *Critical* | **Enabled to accept quoting of all character backslash qooting mechanism to json\_tuple UDTF**
 
 Enabled to accept quoting of all character backslash qooting mechanism to JSON UDTF
