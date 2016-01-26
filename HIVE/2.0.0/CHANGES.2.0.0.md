@@ -197,6 +197,8 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HIVE-12920](https://issues.apache.org/jira/browse/HIVE-12920) | LLAP fails to start with java.lang.NumberFormatException |  Minor | llap | Shinichi Yamashita | Shinichi Yamashita |
 | [HIVE-12911](https://issues.apache.org/jira/browse/HIVE-12911) | PPD might get exercised even when flag is false if CBO is on |  Blocker | CBO, Logical Optimizer, Physical Optimizer | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
+| [HIVE-12905](https://issues.apache.org/jira/browse/HIVE-12905) | Issue with mapjoin in tez under certain conditions |  Blocker | Tez | Vikram Dixit K | Vikram Dixit K |
+| [HIVE-12904](https://issues.apache.org/jira/browse/HIVE-12904) | LLAP: deadlock in task scheduling |  Critical | . | Hui Zheng | Sergey Shelukhin |
 | [HIVE-12879](https://issues.apache.org/jira/browse/HIVE-12879) | RowResolver of Semijoin not updated in CalcitePlanner |  Major | . | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | Verify sem.getInputs() and sem.getOutputs() |  Major | . | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12864](https://issues.apache.org/jira/browse/HIVE-12864) | StackOverflowError parsing queries with very large predicates |  Major | Parser | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |

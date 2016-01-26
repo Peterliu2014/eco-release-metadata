@@ -88,7 +88,7 @@
 | [BIGTOP-1888](https://issues.apache.org/jira/browse/BIGTOP-1888) | Upgrade Flume to 1.6.0 |  Minor | . | YoungWoo Kim | YoungWoo Kim |
 | [BIGTOP-1809](https://issues.apache.org/jira/browse/BIGTOP-1809) | Remove gridgain-hadoop component once ignite-hadoop gets added |  Critical | build | Ivan Veselovsky | Ivan Veselovsky |
 | [BIGTOP-1309](https://issues.apache.org/jira/browse/BIGTOP-1309) | Gradle environment overhaul |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
-| [BIGTOP-1126](https://issues.apache.org/jira/browse/BIGTOP-1126) | Add Hama to Bigtop |  Major | . | Edward J. Yoon | Minho Kim |
+| [BIGTOP-1126](https://issues.apache.org/jira/browse/BIGTOP-1126) | Add Hama to Bigtop |  Major | general | Edward J. Yoon | Minho Kim |
 
 
 ### BUG FIXES:

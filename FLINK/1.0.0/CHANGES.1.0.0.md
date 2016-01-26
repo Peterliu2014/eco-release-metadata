@@ -51,9 +51,11 @@
 | [FLINK-3246](https://issues.apache.org/jira/browse/FLINK-3246) | Consolidate maven project names with \*-parent suffix |  Major | . | Stephan Ewen | Stephan Ewen |
 | [FLINK-3244](https://issues.apache.org/jira/browse/FLINK-3244) | Add log messages to savepoint coordinator restore |  Minor | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3235](https://issues.apache.org/jira/browse/FLINK-3235) | Drop Flink-on-Tez code |  Major | Flink on Tez | Ufuk Celebi | Stephan Ewen |
+| [FLINK-3233](https://issues.apache.org/jira/browse/FLINK-3233) | PartitionOperator does not support expression keys on atomic types |  Major | DataSet API | Fabian Hueske | Fabian Hueske |
 | [FLINK-3232](https://issues.apache.org/jira/browse/FLINK-3232) | Add option to eagerly deploy channels |  Minor | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3219](https://issues.apache.org/jira/browse/FLINK-3219) | Implement DataSet.count using a single operator |  Minor | . | Greg Hogan | Greg Hogan |
 | [FLINK-3209](https://issues.apache.org/jira/browse/FLINK-3209) | Remove Unused ProcessingTime, EventTime and AbstractTime |  Blocker | . | Aljoscha Krettek | Aljoscha Krettek |
+| [FLINK-3198](https://issues.apache.org/jira/browse/FLINK-3198) | Rename Grouping.getDataSet() method and add JavaDocs |  Major | DataSet API | Fabian Hueske | Kostas |
 | [FLINK-3194](https://issues.apache.org/jira/browse/FLINK-3194) | Remove web client |  Major | Webfrontend | Stephan Ewen | Stephan Ewen |
 | [FLINK-3181](https://issues.apache.org/jira/browse/FLINK-3181) | The vertex-centric SSSP example and library method send unnecessary messages during the first superstep |  Major | Gelly | Vasia Kalavri | Vasia Kalavri |
 | [FLINK-3176](https://issues.apache.org/jira/browse/FLINK-3176) | Window Apply Website Example |  Trivial | website | radu |  |
@@ -97,6 +99,7 @@
 | [FLINK-2488](https://issues.apache.org/jira/browse/FLINK-2488) | Expose attemptNumber in RuntimeContext |  Minor | JobManager, TaskManager | Robert Metzger | Sachin Goel |
 | [FLINK-2017](https://issues.apache.org/jira/browse/FLINK-2017) | Add predefined required parameters to ParameterTool |  Major | . | Robert Metzger | Martin Liesenberg |
 | [FLINK-1947](https://issues.apache.org/jira/browse/FLINK-1947) | Make Avro and Tachyon test logging less verbose |  Minor | . | Till Rohrmann |  |
+| [FLINK-1903](https://issues.apache.org/jira/browse/FLINK-1903) | Joins where one side uses a field more than once don't work |  Minor | . | Aljoscha Krettek | Fabian Hueske |
 | [FLINK-1228](https://issues.apache.org/jira/browse/FLINK-1228) | Add REST Interface to JobManager |  Major | . | Arvid Heise |  |
 | [FLINK-734](https://issues.apache.org/jira/browse/FLINK-734) | Integrate web job client into JobManager web interface |  Major | . | GitHub Import |  |
 | [FLINK-8](https://issues.apache.org/jira/browse/FLINK-8) | [GitHub] Implement automatic sample histogram building for Range Partitioning |  Major | . | GitHub Import | Chengxiang Li |
@@ -106,6 +109,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3289](https://issues.apache.org/jira/browse/FLINK-3289) | Double reference to flink-contrib |  Trivial | Documentation | Stefano Baghino | Stefano Baghino |
 | [FLINK-3280](https://issues.apache.org/jira/browse/FLINK-3280) | Wrong usage of Boolean.getBoolean() |  Major | . | Ted Yu | Robert Metzger |
 | [FLINK-3274](https://issues.apache.org/jira/browse/FLINK-3274) | Prefix Kafka connector accumulators with unique id |  Major | Kafka Connector | Robert Metzger | Robert Metzger |
 | [FLINK-3267](https://issues.apache.org/jira/browse/FLINK-3267) | Disable reference tracking in Kryo fallback serializer |  Blocker | Local Runtime | Stephan Ewen | Stephan Ewen |

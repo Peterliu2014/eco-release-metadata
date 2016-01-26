@@ -128,6 +128,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3136](https://issues.apache.org/jira/browse/KAFKA-3136) | Rename KafkaStreaming to KafkaStreams |  Major | . | Guozhang Wang | Guozhang Wang |
+| [KAFKA-3125](https://issues.apache.org/jira/browse/KAFKA-3125) | Exception Hierarchy for Streams |  Major | . | Guozhang Wang |  |
 | [KAFKA-3108](https://issues.apache.org/jira/browse/KAFKA-3108) | KStream custom StreamPartitioner for windowed key |  Minor | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-3104](https://issues.apache.org/jira/browse/KAFKA-3104) | Windowed Stream Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3081](https://issues.apache.org/jira/browse/KAFKA-3081) | KTable Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |

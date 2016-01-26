@@ -87,6 +87,7 @@
 | [KAFKA-2752](https://issues.apache.org/jira/browse/KAFKA-2752) | Add clean bounce system test for distributed Copycat |  Major | copycat | Ewen Cheslack-Postava | Ewen Cheslack-Postava |
 | [KAFKA-2695](https://issues.apache.org/jira/browse/KAFKA-2695) | Handle null string/bytes protocol primitives |  Major | . | Jason Gustafson | Jason Gustafson |
 | [KAFKA-2578](https://issues.apache.org/jira/browse/KAFKA-2578) | Client Metadata internal state should be synchronized |  Trivial | . | Jason Gustafson | Edward Ribeiro |
+| [KAFKA-2478](https://issues.apache.org/jira/browse/KAFKA-2478) | KafkaConsumer javadoc example seems wrong |  Major | consumer | Dmitry Stratiychuk | Dmitry Stratiychuk |
 | [KAFKA-1862](https://issues.apache.org/jira/browse/KAFKA-1862) | Pass in the Time object into OffsetManager |  Major | . | Guozhang Wang | Aditya Auradkar |
 
 

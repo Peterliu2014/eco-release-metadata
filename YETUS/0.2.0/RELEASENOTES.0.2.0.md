@@ -72,6 +72,7 @@ User-facing:
 
 * make, cmake, and autoconf are now supported build tools
 * ctest is now a supported test format
+* Dockerfile content has been slimmed down and enhanced to just what is needed to run Apache Yetus
 
 Developer-facing:
 

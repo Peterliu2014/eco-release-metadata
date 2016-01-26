@@ -401,13 +401,6 @@ WebHDFS is mandatory and cannot be disabled.
 
 ---
 
-* [HDFS-7645](https://issues.apache.org/jira/browse/HDFS-7645) | *Major* | **Rolling upgrade is restoring blocks from trash multiple times**
-
-**WARNING: No release note provided for this incompatible change.**
-
-
----
-
 * [HDFS-7460](https://issues.apache.org/jira/browse/HDFS-7460) | *Major* | **Rewrite httpfs to use new shell framework**
 
 <!-- markdown -->
