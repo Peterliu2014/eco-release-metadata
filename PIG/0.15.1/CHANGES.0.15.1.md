@@ -18,7 +18,7 @@
 -->
 # Apache Pig Changelog
 
-## Release 0.15.1 - Unreleased (as of 2016-01-21)
+## Release 0.15.1 - Unreleased (as of 2016-01-26)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -63,6 +63,7 @@
 | [PIG-4628](https://issues.apache.org/jira/browse/PIG-4628) | Pig 0.14 job with order by fails in mapreduce mode with Oozie |  Major | impl | Koji Noguchi | Koji Noguchi |
 | [PIG-4627](https://issues.apache.org/jira/browse/PIG-4627) | [Pig on Tez] Self join does not handle null values correctly |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4624](https://issues.apache.org/jira/browse/PIG-4624) | Error on ORC empty file without schema |  Major | . | Thejas M Nair | Daniel Dai |
+| [PIG-4587](https://issues.apache.org/jira/browse/PIG-4587) | Applying isFirstReduceOfKey for Skewed left outer join skips records |  Critical | . | Rohini Palaniswamy | Daniel Dai |
 
 
 ### TESTS:

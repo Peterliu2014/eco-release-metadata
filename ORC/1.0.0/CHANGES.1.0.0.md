@@ -18,7 +18,7 @@
 -->
 # Apache Orc Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-01-21)
+## Release 1.0.0 - 2016-01-25
 
 ### INCOMPATIBLE CHANGES:
 
@@ -43,6 +43,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [ORC-39](https://issues.apache.org/jira/browse/ORC-39) | Create Dockerfiles for building and testing |  Major | . | Owen O'Malley | Owen O'Malley |
 | [ORC-36](https://issues.apache.org/jira/browse/ORC-36) | create a program that lets developers create ORC files from future versions |  Major | . | Owen O'Malley | Owen O'Malley |
 | [ORC-29](https://issues.apache.org/jira/browse/ORC-29) | ColumnPrinter should be able to print only specified columns |  Major | . | Aliaksei Sandryhaila | Aliaksei Sandryhaila |
 | [ORC-22](https://issues.apache.org/jira/browse/ORC-22) | Make buffer block size configurable |  Major | C++ | Aliaksei Sandryhaila | Aliaksei Sandryhaila |

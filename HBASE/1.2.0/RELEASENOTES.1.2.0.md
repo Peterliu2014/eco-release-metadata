@@ -37,7 +37,7 @@ The config parameter, hbase.normalizer.enabled, has been dropped since it is not
 
 ---
 
-* [HBASE-15091](https://issues.apache.org/jira/browse/HBASE-15091) | *Blocker* | **Forward-port to 1.2+ HBASE-15031 "Fix merge of MVCC and SequenceID performance regression in branch-1.0"**
+* [HBASE-15091](https://issues.apache.org/jira/browse/HBASE-15091) | *Blocker* | **Forward-port to 1.2+ HBASE-15031 "Fix merge of MVCC and SequenceID performance regression in branch-1.0 for Increments"**
 
 Increments can be 10x slower (or more) when there is high concurrency since HBase 1.0.0 (HBASE-8763). 
 

@@ -65,6 +65,23 @@ With this change, most plug-ins have been updated to report these numbers.
 
 ---
 
+* [YETUS-70](https://issues.apache.org/jira/browse/YETUS-70) | *Major* | **add support for make, including cmake and autoconf**
+
+<!-- markdown -->
+User-facing:
+
+* make, cmake, and autoconf are now supported build tools
+* ctest is now a supported test format
+
+Developer-facing:
+
+* BUILDTOOLCWD has changed in an incompatible way: instead of true/false it nows takes several different types of values.  See documentation for more information
+* modules\_workers now supports @@@BASEDIR@@@@ and @@@MODULEDIR@@@ as replaceable parameters on the command line
+* New buildtool\_changed\_modules function support to allow build tools to change the module list
+
+
+---
+
 * [YETUS-62](https://issues.apache.org/jira/browse/YETUS-62) | *Major* | **add auto-formatting of usage options**
 
 <!-- markdown -->

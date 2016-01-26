@@ -54,6 +54,18 @@ commit 36e855084da833915dfe6c34f74e19352b64fde9
 
 ---
 
+* [HIVE-12809](https://issues.apache.org/jira/browse/HIVE-12809) | *Major* | **Vectorization: fast-path for coalesce if input.noNulls = true**
+
+commit f15278af7970f8c857e52938f99c2b0fcc1a8155
+Author: Gopal V \<gopalv@apache.org\>
+
+    HIVE-12809: Vectorization: fast-path for coalesce if input.noNulls = true (Gopal V, reviewed by Sergey Shelukhin)
+    
+    Signed-off-by: Gopal V \<gopalv@apache.org\>
+
+
+---
+
 * [HIVE-12740](https://issues.apache.org/jira/browse/HIVE-12740) | *Critical* | **NPE with HS2 when using null input format**
 
 HIVE-12740: NPE with HS2 when using null input format (Vikram Dixit K via Gunther Hagleitner)
@@ -71,6 +83,18 @@ Enabled to accept quoting of all character backslash qooting mechanism to JSON U
 * [HIVE-12694](https://issues.apache.org/jira/browse/HIVE-12694) | *Major* | **LLAP: Slider destroy semantics require force**
 
 LLAP Slider registry cleanup requires destroy with --force
+
+
+---
+
+* [HIVE-12693](https://issues.apache.org/jira/browse/HIVE-12693) | *Major* | **LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution**
+
+commit 03473cc7fb830821b6d90f465cb604550388097d
+Author: Gopal V \<gopalv@apache.org\>
+
+    HIVE-12693: LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution (Gopal V, reviewed by Sergey Shelukhin)
+    
+    Signed-off-by: Gopal V \<gopalv@apache.org\>
 
 
 ---

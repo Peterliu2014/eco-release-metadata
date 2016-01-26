@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.1.0 - Unreleased (as of 2016-01-21)
+## Release 0.9.1.0 - Unreleased (as of 2016-01-26)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -47,6 +47,7 @@
 | [KAFKA-3105](https://issues.apache.org/jira/browse/KAFKA-3105) | Use `Utils.atomicMoveWithFallback` instead of `File.rename` |  Major | . | Ismael Juma | Ismael Juma |
 | [KAFKA-3084](https://issues.apache.org/jira/browse/KAFKA-3084) | Topic existence checks in topic commands (create, alter, delete) |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3077](https://issues.apache.org/jira/browse/KAFKA-3077) | Enable KafkaLog4jAppender to work with SASL enabled brokers. |  Major | clients | Ashish K Singh | Ashish K Singh |
+| [KAFKA-3076](https://issues.apache.org/jira/browse/KAFKA-3076) | BrokerChangeListener should log the brokers in order |  Major | core | Jun Rao | Konrad Kalita |
 | [KAFKA-3058](https://issues.apache.org/jira/browse/KAFKA-3058) | remove the usage of deprecated config properties |  Major | core | Jun Rao | Konrad Kalita |
 | [KAFKA-3043](https://issues.apache.org/jira/browse/KAFKA-3043) | Replace request.required.acks with acks in docs |  Major | website | Sasaki Toru |  |
 | [KAFKA-3024](https://issues.apache.org/jira/browse/KAFKA-3024) | Remove old patch review tools |  Major | . | Grant Henke | Grant Henke |
@@ -67,6 +68,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3140](https://issues.apache.org/jira/browse/KAFKA-3140) | PatternSyntaxException thrown in MM, causes MM to hang |  Major | tools | Ashish K Singh | Ashish K Singh |
+| [KAFKA-3138](https://issues.apache.org/jira/browse/KAFKA-3138) | 0.9.0 docs still say that log compaction doesn't work on compressed topics. |  Major | . | James Cheng |  |
+| [KAFKA-3134](https://issues.apache.org/jira/browse/KAFKA-3134) | Missing required configuration "value.deserializer" when initializing a KafkaConsumer with a valid "valueDeserializer" |  Major | . | Yifan Ying |  |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-3095](https://issues.apache.org/jira/browse/KAFKA-3095) | No documentation on format of sasl.kerberos.principal.to.local.rules |  Major | core | Thomas Graves | Thomas Graves |
 | [KAFKA-3091](https://issues.apache.org/jira/browse/KAFKA-3091) | Broker with an invalid id would not start when its id is updated to a new valid one |  Minor | . | Vahid Hashemian | Grant Henke |
@@ -103,6 +107,7 @@
 | [KAFKA-2578](https://issues.apache.org/jira/browse/KAFKA-2578) | Client Metadata internal state should be synchronized |  Trivial | . | Jason Gustafson | Edward Ribeiro |
 | [KAFKA-2421](https://issues.apache.org/jira/browse/KAFKA-2421) | Upgrade LZ4 to version 1.3 to avoid crashing with IBM Java 7 |  Major | . | Rajini Sivaram | Grant Henke |
 | [KAFKA-2399](https://issues.apache.org/jira/browse/KAFKA-2399) | Replace Stream.continually with Iterator.continually |  Minor | . | Ismael Juma | Ismael Juma |
+| [KAFKA-2146](https://issues.apache.org/jira/browse/KAFKA-2146) | adding partition did not find the correct startIndex |  Minor | admin | chenshangan | chenshangan |
 
 
 ### TESTS:
@@ -113,6 +118,7 @@
 | [KAFKA-2979](https://issues.apache.org/jira/browse/KAFKA-2979) | Enable authorizer and ACLs in ducktape tests |  Major | system tests | Flavio Junqueira | Flavio Junqueira |
 | [KAFKA-2949](https://issues.apache.org/jira/browse/KAFKA-2949) | Make EndToEndAuthorizationTest replicated |  Major | . | Flavio Junqueira | Flavio Junqueira |
 | [KAFKA-2905](https://issues.apache.org/jira/browse/KAFKA-2905) | System test for rolling upgrade to enable ZooKeeper ACLs with SASL |  Major | . | Flavio Junqueira | Flavio Junqueira |
+| [KAFKA-2846](https://issues.apache.org/jira/browse/KAFKA-2846) | Add Ducktape test for kafka-consumer-groups |  Major | . | Ashish K Singh | Ashish K Singh |
 | [KAFKA-2825](https://issues.apache.org/jira/browse/KAFKA-2825) | Add controller failover to existing replication tests |  Major | . | Anna Povzner | Anna Povzner |
 | [KAFKA-2732](https://issues.apache.org/jira/browse/KAFKA-2732) | Add test cases with ZK Auth, SASL and SSL |  Major | security | Flavio Junqueira | Flavio Junqueira |
 
@@ -121,10 +127,12 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3136](https://issues.apache.org/jira/browse/KAFKA-3136) | Rename KafkaStreaming to KafkaStreams |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3108](https://issues.apache.org/jira/browse/KAFKA-3108) | KStream custom StreamPartitioner for windowed key |  Minor | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-3104](https://issues.apache.org/jira/browse/KAFKA-3104) | Windowed Stream Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3081](https://issues.apache.org/jira/browse/KAFKA-3081) | KTable Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3078](https://issues.apache.org/jira/browse/KAFKA-3078) | Add ducktape tests for KafkaLog4jAppender producing to SASL enabled Kafka cluster |  Major | clients | Ashish K Singh | Ashish K Singh |
+| [KAFKA-3066](https://issues.apache.org/jira/browse/KAFKA-3066) | Add Demo Examples for Kafka Streams |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3063](https://issues.apache.org/jira/browse/KAFKA-3063) | LogRecoveryTest exits with -1 occasionally |  Major | . | Guozhang Wang | Ismael Juma |
 | [KAFKA-3030](https://issues.apache.org/jira/browse/KAFKA-3030) | Remove unused scala dependencies |  Major | build | Grant Henke | Grant Henke |
 | [KAFKA-3022](https://issues.apache.org/jira/browse/KAFKA-3022) | Deduplicate common project configurations |  Major | build | Grant Henke | Grant Henke |

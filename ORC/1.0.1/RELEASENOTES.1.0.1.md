@@ -16,12 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 -->
-* Apache Orc v1.1.0
-    * [Changes](1.1.0/CHANGES.1.1.0.md)
-    * [Release Notes](1.1.0/RELEASENOTES.1.1.0.md)
-* Apache Orc v1.0.1
-    * [Changes](1.0.1/CHANGES.1.0.1.md)
-    * [Release Notes](1.0.1/RELEASENOTES.1.0.1.md)
-* Apache Orc v1.0.0
-    * [Changes](1.0.0/CHANGES.1.0.0.md)
-    * [Release Notes](1.0.0/RELEASENOTES.1.0.0.md)
+# Apache Orc  1.0.1 Release Notes
+
+These release notes cover new developer and user-facing incompatibilities, important issues, features, and major improvements.
+
+
+

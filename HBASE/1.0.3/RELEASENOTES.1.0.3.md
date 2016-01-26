@@ -23,7 +23,7 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
-* [HBASE-15031](https://issues.apache.org/jira/browse/HBASE-15031) | *Major* | **Fix merge of MVCC and SequenceID performance regression in branch-1.0**
+* [HBASE-15031](https://issues.apache.org/jira/browse/HBASE-15031) | *Major* | **Fix merge of MVCC and SequenceID performance regression in branch-1.0 for Increments**
 
 Increments can be 10x slower (or more) when there is high concurrency since HBase 1.0.0 (HBASE-8763).
 

@@ -18,7 +18,7 @@
 -->
 # Apache BigTop Changelog
 
-## Release 1.1.0 - Unreleased (as of 2016-01-21)
+## Release 1.1.0 - Unreleased (as of 2016-01-26)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -37,6 +37,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [BIGTOP-1976](https://issues.apache.org/jira/browse/BIGTOP-1976) | Replace Pair type with Apache Commons Lang Pair type |  Minor | blueprints | RJ Nowling | RJ Nowling |
+| [BIGTOP-1769](https://issues.apache.org/jira/browse/BIGTOP-1769) | Zeppelin Integration |  Major | general | Jongyoul Lee | Jonathan Kelly |
 | [BIGTOP-1746](https://issues.apache.org/jira/browse/BIGTOP-1746) | Introduce the concept of roles in bigtop cluster deployment |  Major | deployment | vishnu gajendran | vishnu gajendran |
 | [BIGTOP-1149](https://issues.apache.org/jira/browse/BIGTOP-1149) | Package Kite |  Major | . | Bruno Mahé | YoungWoo Kim |
 
@@ -73,6 +74,7 @@
 | [BIGTOP-1970](https://issues.apache.org/jira/browse/BIGTOP-1970) | Ignite IGFS now fully supports mutiltenancy: deployment should configure it with HDFS backing |  Major | deployment | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-1964](https://issues.apache.org/jira/browse/BIGTOP-1964) | Upgrade Tez version to 0.6.2 |  Major | . | YoungWoo Kim | YoungWoo Kim |
 | [BIGTOP-1955](https://issues.apache.org/jira/browse/BIGTOP-1955) | Upgrade Ignite Hadoop component version from 1.2.0 to 1.3.0 |  Major | build | Ivan Veselovsky | Ivan Veselovsky |
+| [BIGTOP-1944](https://issues.apache.org/jira/browse/BIGTOP-1944) | Upgrade Spark version to 1.5.1 |  Major | spark | YoungWoo Kim | Jonathan Kelly |
 | [BIGTOP-1943](https://issues.apache.org/jira/browse/BIGTOP-1943) | Upgrade SCALA version to 2.10.4 |  Major | toolchain | YoungWoo Kim | RJ Nowling |
 | [BIGTOP-1942](https://issues.apache.org/jira/browse/BIGTOP-1942) | Upgrade Phoenix to 4.6.0 |  Major | build | YoungWoo Kim | Jonathan Kelly |
 | [BIGTOP-1941](https://issues.apache.org/jira/browse/BIGTOP-1941) | Upgrade Phoenix to 4.4.0 |  Major | . | YoungWoo Kim | YoungWoo Kim |
@@ -93,6 +95,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2276](https://issues.apache.org/jira/browse/BIGTOP-2276) | Zeppeling added war\_tempdir location, which needs to be set |  Major | debian, rpm | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2275](https://issues.apache.org/jira/browse/BIGTOP-2275) | Update configuration files for jsvc |  Major | build, jsvc, ppc64le | Olaf Flebbe | Olaf Flebbe |
+| [BIGTOP-2272](https://issues.apache.org/jira/browse/BIGTOP-2272) | moved hdfs ssh key are failing rat check |  Blocker | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2256](https://issues.apache.org/jira/browse/BIGTOP-2256) | Promote return codes from docker to the CI while building images |  Major | docker | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2255](https://issues.apache.org/jira/browse/BIGTOP-2255) | bigtop/deploy:ubuntu-15.04 image does not support ppc64le |  Critical | build, docker | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2252](https://issues.apache.org/jira/browse/BIGTOP-2252) | provisional hdfs ssh keys couldn't be found during deployment |  Major | deployment | Konstantin Boudnik | Konstantin Boudnik |
@@ -101,6 +106,9 @@
 | [BIGTOP-2244](https://issues.apache.org/jira/browse/BIGTOP-2244) | CI provisioner tests are failing after BIGTOP-2227 change |  Major | build, tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2243](https://issues.apache.org/jira/browse/BIGTOP-2243) | :itest-common:test is broken without JAVA\_HOME being set |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2242](https://issues.apache.org/jira/browse/BIGTOP-2242) | Running ./gradlew should only require JAVA\_HOME for test task |  Critical | build, tests | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2240](https://issues.apache.org/jira/browse/BIGTOP-2240) | add -XX:PermSize=1024m -XX:MaxPermSize=1024m to build environment |  Critical | build, tests | Amir Sanjar | Amir Sanjar |
+| [BIGTOP-2238](https://issues.apache.org/jira/browse/BIGTOP-2238) | Provisioner should propagate hdfs ssh keys for testing |  Major | deployment, tests | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2237](https://issues.apache.org/jira/browse/BIGTOP-2237) | Nullify the standard output when generating gradle cache |  Major | docker | Evans Ye | Evans Ye |
 | [BIGTOP-2236](https://issues.apache.org/jira/browse/BIGTOP-2236) | GRADLE\_USER\_HOME should be set for bigtop/slaves images only |  Major | docker, toolchain | Evans Ye | Evans Ye |
 | [BIGTOP-2223](https://issues.apache.org/jira/browse/BIGTOP-2223) | .dockerignore doesn't have ASL header |  Major | build, docker | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2222](https://issues.apache.org/jira/browse/BIGTOP-2222) | Hadoop do-component-build should pull in and use BOM |  Minor | build | Andrew Purtell | Andrew Purtell |
@@ -148,6 +156,7 @@
 | [BIGTOP-2088](https://issues.apache.org/jira/browse/BIGTOP-2088) | Support protobuf installation for OPENPOWER |  Major | toolchain | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2086](https://issues.apache.org/jira/browse/BIGTOP-2086) | Install essential puppet modules along with puppet itself |  Major | toolchain | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2084](https://issues.apache.org/jira/browse/BIGTOP-2084) | rename all puppet modules to have an underscore rather a dash |  Major | deployment | Olaf Flebbe | Olaf Flebbe |
+| [BIGTOP-2083](https://issues.apache.org/jira/browse/BIGTOP-2083) | smoke-tests are still on hadoop 2.6.0 |  Major | tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2082](https://issues.apache.org/jira/browse/BIGTOP-2082) | Remove x86 Assembler Code from zookeeper |  Major | build | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2074](https://issues.apache.org/jira/browse/BIGTOP-2074) | spark-worker doesn't start during deploy from master |  Major | deployment | Konstantin Boudnik | Evans Ye |
 | [BIGTOP-2071](https://issues.apache.org/jira/browse/BIGTOP-2071) | Gstring.empty doesn't exist |  Blocker | build | RJ Nowling | RJ Nowling |
@@ -195,6 +204,7 @@
 | [BIGTOP-1950](https://issues.apache.org/jira/browse/BIGTOP-1950) | Upgrade maven-assembly plugin: StackOverFlowException is thrown |  Blocker | build, tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-1949](https://issues.apache.org/jira/browse/BIGTOP-1949) | Sqoop 1.4.5 artifacts aren't getting resolved in the release... |  Blocker | build, tests | Konstantin Boudnik | YoungWoo Kim |
 | [BIGTOP-1946](https://issues.apache.org/jira/browse/BIGTOP-1946) | Missing ASL header in some of iTest files |  Blocker | tests | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-1940](https://issues.apache.org/jira/browse/BIGTOP-1940) | Consider removing tests expecting 'sudo' from skip-list |  Major | tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-1938](https://issues.apache.org/jira/browse/BIGTOP-1938) | kafka packages /usr/bin on RPM |  Major | . | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-1937](https://issues.apache.org/jira/browse/BIGTOP-1937) | redhat-lsb is required by kafka daemon |  Major | build | Evans Ye | Evans Ye |
 | [BIGTOP-1936](https://issues.apache.org/jira/browse/BIGTOP-1936) | Provide JDK8 for Bigtop |  Major | toolchain | Olaf Flebbe | Olaf Flebbe |
@@ -230,6 +240,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2277](https://issues.apache.org/jira/browse/BIGTOP-2277) | release assembly needs to include bigtop\_toolchain |  Blocker | build | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2271](https://issues.apache.org/jira/browse/BIGTOP-2271) | Update maven rat config to match one from gradle |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2267](https://issues.apache.org/jira/browse/BIGTOP-2267) | Zeppeling 0.5.6 is out; let's bump it in our stack |  Major | build | Konstantin Boudnik |  |
 | [BIGTOP-2245](https://issues.apache.org/jira/browse/BIGTOP-2245) | TestFuseHCFS might fall on '+' op. involving String and GString; class name is wrong |  Major | tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2235](https://issues.apache.org/jira/browse/BIGTOP-2235) | Allow smoke-tests to use filename regexps instead of explicite listings |  Major | tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2234](https://issues.apache.org/jira/browse/BIGTOP-2234) | TestBlockRecovery incorrectly fails on a single node cluster |  Major | tests | Konstantin Boudnik | Konstantin Boudnik |
@@ -240,6 +253,7 @@
 | [BIGTOP-2169](https://issues.apache.org/jira/browse/BIGTOP-2169) | Zeppeling has more upstream dependencies |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2167](https://issues.apache.org/jira/browse/BIGTOP-2167) | Zeppelin interpreter list doesn't include Ignite |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2166](https://issues.apache.org/jira/browse/BIGTOP-2166) | Zeppelin shouldn't be build against constant version of Ignite |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2154](https://issues.apache.org/jira/browse/BIGTOP-2154) | spark-shell doesn't start anymore without Hive libs in the classpath |  Blocker | spark | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2149](https://issues.apache.org/jira/browse/BIGTOP-2149) | Zeppeling 0.5.5 has been officially released. Change the source ref |  Major | build | Konstantin Boudnik | Sergey Soldatov |
 | [BIGTOP-2123](https://issues.apache.org/jira/browse/BIGTOP-2123) | Add zeppelin Puppet recipes |  Major | deployment | Konstantin Boudnik | Jonathan Kelly |
 | [BIGTOP-2122](https://issues.apache.org/jira/browse/BIGTOP-2122) | Add zeppelin packages |  Major | debian, rpm | Konstantin Boudnik | Jonathan Kelly |
@@ -285,6 +299,7 @@
 | [BIGTOP-2069](https://issues.apache.org/jira/browse/BIGTOP-2069) | Update README.md to reflect CTR trial |  Major | documentation | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-1953](https://issues.apache.org/jira/browse/BIGTOP-1953) | Upgrade bigtop\_toolchain to Maven 3.3.3 |  Major | toolchain | Jonathan Kelly | Olaf Flebbe |
 | [BIGTOP-1925](https://issues.apache.org/jira/browse/BIGTOP-1925) | Add ywkim as a maintainer for YCSB |  Trivial | . | YoungWoo Kim | YoungWoo Kim |
+| [BIGTOP-1897](https://issues.apache.org/jira/browse/BIGTOP-1897) | Umbrella JIRA for CI overhaul |  Blocker | . | Evans Ye | Evans Ye |
 | [BIGTOP-1821](https://issues.apache.org/jira/browse/BIGTOP-1821) | Add smoke tests for Ignite Hadoop Bigtop module |  Major | tests | Ivan Veselovsky | Ivan Veselovsky |
 | [BIGTOP-1795](https://issues.apache.org/jira/browse/BIGTOP-1795) | Upgrade bigtop\_toolchain to Maven 3.2.5 |  Major | toolchain | Jonathan Kelly | Jonathan Kelly |
 

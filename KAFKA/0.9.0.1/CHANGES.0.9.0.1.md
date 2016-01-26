@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.0.1 - Unreleased (as of 2016-01-21)
+## Release 0.9.0.1 - Unreleased (as of 2016-01-26)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -43,6 +43,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3100](https://issues.apache.org/jira/browse/KAFKA-3100) | Broker.createBroker should work if json is version \> 2, but still compatible |  Major | core | Ismael Juma | Ismael Juma |
 | [KAFKA-3052](https://issues.apache.org/jira/browse/KAFKA-3052) | broker properties get logged twice if acl is enabled |  Major | core | Jun Rao | Ismael Juma |
 | [KAFKA-3051](https://issues.apache.org/jira/browse/KAFKA-3051) | security.protocol documentation is inaccurate |  Major | clients | Jun Rao | Ismael Juma |
 | [KAFKA-3048](https://issues.apache.org/jira/browse/KAFKA-3048) | incorrect property name ssl.want.client.auth |  Major | core | Jun Rao | Ismael Juma |
@@ -61,6 +62,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3134](https://issues.apache.org/jira/browse/KAFKA-3134) | Missing required configuration "value.deserializer" when initializing a KafkaConsumer with a valid "valueDeserializer" |  Major | . | Yifan Ying |  |
 | [KAFKA-3122](https://issues.apache.org/jira/browse/KAFKA-3122) | Memory leak in `Sender.completeBatch` on TOPIC\_AUTHORIZATION\_FAILED |  Major | clients | Ismael Juma | Ismael Juma |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-3095](https://issues.apache.org/jira/browse/KAFKA-3095) | No documentation on format of sasl.kerberos.principal.to.local.rules |  Major | core | Thomas Graves | Thomas Graves |
