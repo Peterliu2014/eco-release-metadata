@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.1.0 - Unreleased (as of 2016-01-26)
+## Release 0.9.1.0 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -44,6 +44,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3119](https://issues.apache.org/jira/browse/KAFKA-3119) | Adding -daemon option to zookeeper-server-start.sh USAGE |  Minor | config | Atul Soman | Atul Soman |
+| [KAFKA-3116](https://issues.apache.org/jira/browse/KAFKA-3116) | Failure to build |  Major | build | edwardt | Vahid Hashemian |
 | [KAFKA-3105](https://issues.apache.org/jira/browse/KAFKA-3105) | Use `Utils.atomicMoveWithFallback` instead of `File.rename` |  Major | . | Ismael Juma | Ismael Juma |
 | [KAFKA-3084](https://issues.apache.org/jira/browse/KAFKA-3084) | Topic existence checks in topic commands (create, alter, delete) |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-3077](https://issues.apache.org/jira/browse/KAFKA-3077) | Enable KafkaLog4jAppender to work with SASL enabled brokers. |  Major | clients | Ashish K Singh | Ashish K Singh |
@@ -71,6 +72,7 @@
 | [KAFKA-3140](https://issues.apache.org/jira/browse/KAFKA-3140) | PatternSyntaxException thrown in MM, causes MM to hang |  Major | tools | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3138](https://issues.apache.org/jira/browse/KAFKA-3138) | 0.9.0 docs still say that log compaction doesn't work on compressed topics. |  Major | . | James Cheng |  |
 | [KAFKA-3134](https://issues.apache.org/jira/browse/KAFKA-3134) | Missing required configuration "value.deserializer" when initializing a KafkaConsumer with a valid "valueDeserializer" |  Major | . | Yifan Ying |  |
+| [KAFKA-3132](https://issues.apache.org/jira/browse/KAFKA-3132) | URI scheme in "listeners" property should not be case-sensitive |  Minor | config | Jake Robb | Grant Henke |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
 | [KAFKA-3095](https://issues.apache.org/jira/browse/KAFKA-3095) | No documentation on format of sasl.kerberos.principal.to.local.rules |  Major | core | Thomas Graves | Thomas Graves |
 | [KAFKA-3091](https://issues.apache.org/jira/browse/KAFKA-3091) | Broker with an invalid id would not start when its id is updated to a new valid one |  Minor | . | Vahid Hashemian | Grant Henke |
@@ -127,8 +129,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3142](https://issues.apache.org/jira/browse/KAFKA-3142) | Improve error message in kstreams |  Major | . | Jay Kreps | Guozhang Wang |
 | [KAFKA-3136](https://issues.apache.org/jira/browse/KAFKA-3136) | Rename KafkaStreaming to KafkaStreams |  Major | . | Guozhang Wang | Guozhang Wang |
-| [KAFKA-3125](https://issues.apache.org/jira/browse/KAFKA-3125) | Exception Hierarchy for Streams |  Major | . | Guozhang Wang |  |
+| [KAFKA-3125](https://issues.apache.org/jira/browse/KAFKA-3125) | Exception Hierarchy for Streams |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3108](https://issues.apache.org/jira/browse/KAFKA-3108) | KStream custom StreamPartitioner for windowed key |  Minor | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-3104](https://issues.apache.org/jira/browse/KAFKA-3104) | Windowed Stream Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3081](https://issues.apache.org/jira/browse/KAFKA-3081) | KTable Aggregation Implementation |  Major | . | Guozhang Wang | Guozhang Wang |

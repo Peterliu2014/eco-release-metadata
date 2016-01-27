@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 2.0.0 - Unreleased (as of 2016-01-26)
+## Release 2.0.0 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -89,6 +89,7 @@
 | [HIVE-12713](https://issues.apache.org/jira/browse/HIVE-12713) | Miscellaneous improvements in driver compile and execute logging |  Minor | Logging | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-12693](https://issues.apache.org/jira/browse/HIVE-12693) | LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution |  Major | llap | Gopal V | Gopal V |
 | [HIVE-12623](https://issues.apache.org/jira/browse/HIVE-12623) | Add an option to force allocation of fragments on requested nodes |  Major | llap | Siddharth Seth | Siddharth Seth |
+| [HIVE-12523](https://issues.apache.org/jira/browse/HIVE-12523) | display Hive query name in explain plan |  Major | . | Sergey Shelukhin | Sergey Shelukhin |
 | [HIVE-12496](https://issues.apache.org/jira/browse/HIVE-12496) | Open ServerTransport After MetaStore Initialization |  Minor | Metastore | Nemon Lou | Nemon Lou |
 | [HIVE-12470](https://issues.apache.org/jira/browse/HIVE-12470) | Allow splits to provide custom consistent locations, instead of being tied to data locality |  Major | llap | Siddharth Seth | Siddharth Seth |
 | [HIVE-12325](https://issues.apache.org/jira/browse/HIVE-12325) | Turn hive.map.groupby.sorted on by default |  Major | Logical Optimizer | Ashutosh Chauhan | Chetna Chaudhari |
@@ -195,7 +196,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-12926](https://issues.apache.org/jira/browse/HIVE-12926) | Another synchronization issue with tez/llap session pool in hs2 |  Critical | HiveServer2 | Siddharth Seth | Sergey Shelukhin |
 | [HIVE-12920](https://issues.apache.org/jira/browse/HIVE-12920) | LLAP fails to start with java.lang.NumberFormatException |  Minor | llap | Shinichi Yamashita | Shinichi Yamashita |
+| [HIVE-12915](https://issues.apache.org/jira/browse/HIVE-12915) | Tez session pool has concurrency issues during init |  Major | . | Takahiko Saito | Sergey Shelukhin |
 | [HIVE-12911](https://issues.apache.org/jira/browse/HIVE-12911) | PPD might get exercised even when flag is false if CBO is on |  Blocker | CBO, Logical Optimizer, Physical Optimizer | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12905](https://issues.apache.org/jira/browse/HIVE-12905) | Issue with mapjoin in tez under certain conditions |  Blocker | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12904](https://issues.apache.org/jira/browse/HIVE-12904) | LLAP: deadlock in task scheduling |  Critical | . | Hui Zheng | Sergey Shelukhin |
@@ -329,6 +332,7 @@
 | [HIVE-12365](https://issues.apache.org/jira/browse/HIVE-12365) | Added resource path is sent to cluster as an empty string when externally removed |  Major | Hive | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-12364](https://issues.apache.org/jira/browse/HIVE-12364) | Distcp job fails when run under Tez |  Critical | Tez | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12363](https://issues.apache.org/jira/browse/HIVE-12363) | Incorrect results with orc ppd across ORC versions |  Major | . | Ashutosh Chauhan | Gopal V |
+| [HIVE-12357](https://issues.apache.org/jira/browse/HIVE-12357) | Allow user to set tez job name |  Major | . | Gunther Hagleitner | Gunther Hagleitner |
 | [HIVE-12354](https://issues.apache.org/jira/browse/HIVE-12354) | MapJoin with double keys is slow on MR |  Major | . | Sergey Shelukhin | Sergey Shelukhin |
 | [HIVE-12353](https://issues.apache.org/jira/browse/HIVE-12353) | When Compactor fails it calls CompactionTxnHandler.markedCleaned().  it should not. |  Blocker | Transactions | Eugene Koifman | Eugene Koifman |
 | [HIVE-12352](https://issues.apache.org/jira/browse/HIVE-12352) | CompactionTxnHandler.markCleaned() may delete too much |  Blocker | Transactions | Eugene Koifman | Eugene Koifman |

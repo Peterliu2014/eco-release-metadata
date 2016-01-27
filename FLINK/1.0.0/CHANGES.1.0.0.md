@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-01-26)
+## Release 1.0.0 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -42,6 +42,7 @@
 | [FLINK-2978](https://issues.apache.org/jira/browse/FLINK-2978) | Integrate web submission interface into the new dashboard |  Major | Web Client, Webfrontend | Sachin Goel | Sachin Goel |
 | [FLINK-2955](https://issues.apache.org/jira/browse/FLINK-2955) | Add operations introduction in Table API page. |  Minor | Documentation | Chengxiang Li | Chengxiang Li |
 | [FLINK-2951](https://issues.apache.org/jira/browse/FLINK-2951) | Add Union operator to Table API. |  Minor | Documentation, Table API | Chengxiang Li | Chengxiang Li |
+| [FLINK-2871](https://issues.apache.org/jira/browse/FLINK-2871) | Add OuterJoin strategy with HashTable on outer side |  Minor | Local Runtime, Optimizer | Fabian Hueske | Chengxiang Li |
 
 
 ### IMPROVEMENTS:
@@ -60,7 +61,7 @@
 | [FLINK-3181](https://issues.apache.org/jira/browse/FLINK-3181) | The vertex-centric SSSP example and library method send unnecessary messages during the first superstep |  Major | Gelly | Vasia Kalavri | Vasia Kalavri |
 | [FLINK-3176](https://issues.apache.org/jira/browse/FLINK-3176) | Window Apply Website Example |  Trivial | website | radu |  |
 | [FLINK-3147](https://issues.apache.org/jira/browse/FLINK-3147) | HadoopOutputFormatBase should expose fields as protected |  Minor | . | Nick Dimiduk |  |
-| [FLINK-3135](https://issues.apache.org/jira/browse/FLINK-3135) | Add chainable driver for UNARY\_NO\_OP strategy |  Minor | Local Runtime | Fabian Hueske |  |
+| [FLINK-3135](https://issues.apache.org/jira/browse/FLINK-3135) | Add chainable driver for UNARY\_NO\_OP strategy |  Minor | Local Runtime | Fabian Hueske | ramkrishna.s.vasudevan |
 | [FLINK-3131](https://issues.apache.org/jira/browse/FLINK-3131) | Expose checkpoint metrics |  Major | Webfrontend | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3124](https://issues.apache.org/jira/browse/FLINK-3124) | Introduce a TaskInfo object to better represent task name, index, attempt number etc. |  Major | . | Sachin Goel | Sachin Goel |
 | [FLINK-3122](https://issues.apache.org/jira/browse/FLINK-3122) | Generalize value type in LabelPropagation |  Major | Gelly | Martin Junghanns | Martin Junghanns |
@@ -86,6 +87,7 @@
 | [FLINK-2966](https://issues.apache.org/jira/browse/FLINK-2966) | Improve the way job duration is reported on web frontend. |  Minor | Webfrontend | Sachin Goel | Sachin Goel |
 | [FLINK-2962](https://issues.apache.org/jira/browse/FLINK-2962) | Cluster startup script refers to unused variable |  Major | Start-Stop Scripts | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-2961](https://issues.apache.org/jira/browse/FLINK-2961) | Add support for basic type Date in Table API |  Minor | Table API | Timo Walther | Timo Walther |
+| [FLINK-2940](https://issues.apache.org/jira/browse/FLINK-2940) | Deploy multiple Scala versions for Maven artifacts |  Major | Build System | Maximilian Michels | Maximilian Michels |
 | [FLINK-2936](https://issues.apache.org/jira/browse/FLINK-2936) | ClassCastException when using EventTimeSourceFunction in non-EventTime program |  Major | Streaming | Fabian Hueske | Aljoscha Krettek |
 | [FLINK-2932](https://issues.apache.org/jira/browse/FLINK-2932) | Flink quickstart docs should ask users to download from https, not http |  Minor | Documentation | Frederick F. Kautz IV |  |
 | [FLINK-2904](https://issues.apache.org/jira/browse/FLINK-2904) | Web interface truncated task counts |  Minor | Webfrontend | Greg Hogan | Sachin Goel |
@@ -212,6 +214,7 @@
 | [FLINK-3070](https://issues.apache.org/jira/browse/FLINK-3070) | Create an asynchronous state handle interface |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
 | [FLINK-3057](https://issues.apache.org/jira/browse/FLINK-3057) | [py] Provide a way to pass information back to the plan process |  Minor | Python API | Chesnay Schepler | Chesnay Schepler |
 | [FLINK-2972](https://issues.apache.org/jira/browse/FLINK-2972) | Remove Twitter Chill dependency from flink-java module |  Major | Java API | Fabian Hueske |  |
+| [FLINK-2933](https://issues.apache.org/jira/browse/FLINK-2933) | Flink scala libraries exposed with maven should carry scala version |  Minor | Build System | Frederick F. Kautz IV | Maximilian Michels |
 | [FLINK-2919](https://issues.apache.org/jira/browse/FLINK-2919) | Apply JMH on FieldAccessMinibenchmark class. |  Minor | Tests | GaoLun | GaoLun |
 | [FLINK-2890](https://issues.apache.org/jira/browse/FLINK-2890) | Apply JMH on StringSerializationSpeedBenchmark class. |  Minor | Tests | GaoLun | GaoLun |
 | [FLINK-2889](https://issues.apache.org/jira/browse/FLINK-2889) | Apply JMH on LongSerializationSpeedBenchmark class |  Minor | Tests | GaoLun | GaoLun |

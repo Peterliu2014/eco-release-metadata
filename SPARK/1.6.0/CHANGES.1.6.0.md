@@ -1208,7 +1208,6 @@
 | [SPARK-11476](https://issues.apache.org/jira/browse/SPARK-11476) | Incorrect function referred to in MLib Random data generation documentation |  Minor | Documentation | Jason Blochowiak | Sean Owen |
 | [SPARK-11360](https://issues.apache.org/jira/browse/SPARK-11360) | Loss of nullability when writing parquet files |  Minor | Documentation | Xiao Li | Xiao Li |
 | [SPARK-11339](https://issues.apache.org/jira/browse/SPARK-11339) | Fix and document the list of functions in R base package that are masked by functions with same name in SparkR |  Major | SparkR | Sun Rui | Felix Cheung |
-| [SPARK-11337](https://issues.apache.org/jira/browse/SPARK-11337) | Make example code in user guide testable |  Critical | Documentation | Xiangrui Meng | Xusen Yin |
 | [SPARK-11335](https://issues.apache.org/jira/browse/SPARK-11335) | Update documentation on accessing Kafka offsets from Python |  Minor | Streaming | Nick Evans | Nick Evans |
 | [SPARK-11092](https://issues.apache.org/jira/browse/SPARK-11092) | Add source URLs to API documentation. |  Trivial | Build, Documentation | Jakob Odersky | Jakob Odersky |
 | [SPARK-11039](https://issues.apache.org/jira/browse/SPARK-11039) | Document all UI "retained\*" configurations |  Trivial | Documentation, Web UI | Nick Pritchard | Nick Pritchard |

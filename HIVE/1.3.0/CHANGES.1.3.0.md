@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.3.0 - Unreleased (as of 2016-01-26)
+## Release 1.3.0 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -105,6 +105,7 @@
 | [HIVE-12909](https://issues.apache.org/jira/browse/HIVE-12909) | Some encryption q-tests fail because trash is disabled in encryption\_with\_trash.q |  Major | Hive | Sergio Peña | Sergio Peña |
 | [HIVE-12906](https://issues.apache.org/jira/browse/HIVE-12906) | Backport to branch-1 -- HIVE-12894 Detect whether ORC is reading from ACID table correctly for Schema Evolution |  Critical | ORC | Matt McCline | Matt McCline |
 | [HIVE-12887](https://issues.apache.org/jira/browse/HIVE-12887) | Handle ORC schema on read with fewer columns than file schema (after Schema Evolution changes) |  Critical | ORC | Matt McCline | Matt McCline |
+| [HIVE-12886](https://issues.apache.org/jira/browse/HIVE-12886) | invalid column reference error on grouping by constant |  Major | . | Clemens Valiente | Yongzhi Chen |
 | [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | Verify sem.getInputs() and sem.getOutputs() |  Major | . | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12815](https://issues.apache.org/jira/browse/HIVE-12815) | column stats NPE for a query w/o a table |  Major | . | Sergey Shelukhin | Prasanth Jayachandran |
 | [HIVE-12795](https://issues.apache.org/jira/browse/HIVE-12795) | Vectorized execution causes ClassCastException |  Major | Query Processor | Yongzhi Chen | Yongzhi Chen |

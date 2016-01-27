@@ -180,4 +180,22 @@ The service user related configurations are newly introduced since in prod/test 
 Prevent Coprocessors being doubly-loaded; a particular coprocessor can only be loaded once.
 
 
+---
+
+* [HBASE-13127](https://issues.apache.org/jira/browse/HBASE-13127) | *Major* | **Add timeouts on all tests so less zombie sightings**
+
+Use junit facility to impose timeout on test. Use test category to chose which timeout to apply: small tests timeout after 30 seconds, medium tests after 180 seconds, and large tests after ten minutes.
+
+Updated junit version from 4.11 to 4.12. 4.12 has support for feature used here.
+
+Add this at the head of your junit4 class to add a category-based timeout:
+
+{code}
+@Rule public final TestRule timeout =   CategoryBasedTimeout.builder().withTimeout(this.getClass()).
+      withLookingForStuckThread(true).build();
+{code}
+
+For example:
+
+
 

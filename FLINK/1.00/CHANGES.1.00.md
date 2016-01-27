@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.00 - Unreleased (as of 2016-01-26)
+## Release 1.00 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -42,6 +42,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3290](https://issues.apache.org/jira/browse/FLINK-3290) | [py] Generalize OperationInfo transfer |  Major | Python API | Chesnay Schepler | Chesnay Schepler |
 
 
 ### BUG FIXES:

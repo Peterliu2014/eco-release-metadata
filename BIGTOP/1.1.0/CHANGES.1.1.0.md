@@ -18,7 +18,7 @@
 -->
 # Apache BigTop Changelog
 
-## Release 1.1.0 - Unreleased (as of 2016-01-26)
+## Release 1.1.0 - Unreleased (as of 2016-01-27)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -56,6 +56,7 @@
 | [BIGTOP-2143](https://issues.apache.org/jira/browse/BIGTOP-2143) | [Puppet] Automatically generate default repo |  Major | deployment | Evans Ye | Evans Ye |
 | [BIGTOP-2142](https://issues.apache.org/jira/browse/BIGTOP-2142) | Source cleanup: bigtop-repos shouldn't be top-level. |  Major | build | Konstantin Boudnik | Sergey Soldatov |
 | [BIGTOP-2141](https://issues.apache.org/jira/browse/BIGTOP-2141) | Have a way to specify alternative BOM file in the build time |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2119](https://issues.apache.org/jira/browse/BIGTOP-2119) | Bump Mahout version to 0.11.1 |  Major | general | Suneel Marthi | Andrew Musselman |
 | [BIGTOP-2110](https://issues.apache.org/jira/browse/BIGTOP-2110) | [Docker] Cache packages required by gradle to execute into bigtop/slaves images |  Major | build, docker | Evans Ye | Evans Ye |
 | [BIGTOP-2103](https://issues.apache.org/jira/browse/BIGTOP-2103) | [Docker] Move bigtop/slaves image build to gradle |  Major | build, docker | Evans Ye | Evans Ye |
 | [BIGTOP-2102](https://issues.apache.org/jira/browse/BIGTOP-2102) | Upgrade YCSB to 0.4.0 |  Major | build | YoungWoo Kim | YoungWoo Kim |
@@ -240,6 +241,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2278](https://issues.apache.org/jira/browse/BIGTOP-2278) | Wrap separate maven release steps into convenient gradle task |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2277](https://issues.apache.org/jira/browse/BIGTOP-2277) | release assembly needs to include bigtop\_toolchain |  Blocker | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2271](https://issues.apache.org/jira/browse/BIGTOP-2271) | Update maven rat config to match one from gradle |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2267](https://issues.apache.org/jira/browse/BIGTOP-2267) | Zeppeling 0.5.6 is out; let's bump it in our stack |  Major | build | Konstantin Boudnik |  |
