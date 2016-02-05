@@ -45,4 +45,21 @@ I have published this 3 lines of data to kafka only once....later on I just use 
 Let me know if I am missing anything and interpreting it wrongly.
 
 
+---
+
+* [KAFKA-3029](https://issues.apache.org/jira/browse/KAFKA-3029) | *Major* | **Make class org.apache.kafka.common.TopicPartition Serializable**
+
+The client class TopicPartition is exposed and used by consumer applications directly. In case where the application needs to checkpoint the state it is difficult to serialize different app classes that use TopicPartition as TopicParitition is not serializable.
+
+For instance consider the Spark use case where RDDs have to be checkpointed....the KafakaInputDstream (which we are currently modifying to use the new Kafka API rather than the Highlevel apis in previous version) cannot be serialized due to above limitation.
+
+I have created a patch to serialize TopicPartition class by making it implement serializable interface and have issued a pull request.
+
+Can this be merged for the next release (0.9.0.1)
+
+Thanks
+
+Praveen
+
+
 
