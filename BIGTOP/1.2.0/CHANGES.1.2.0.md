@@ -18,7 +18,7 @@
 -->
 # Apache BigTop Changelog
 
-## Release 1.2.0 - Unreleased (as of 2016-01-27)
+## Release 1.2.0 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -48,6 +48,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2303](https://issues.apache.org/jira/browse/BIGTOP-2303) | docker-hadoop.sh has bad indentation |  Minor | . | Faraaz Sareshwala | Faraaz Sareshwala |
+| [BIGTOP-2302](https://issues.apache.org/jira/browse/BIGTOP-2302) | BigTop deploy setup env debian uses yum instead of apt |  Minor | . | Faraaz Sareshwala | Faraaz Sareshwala |
+| [BIGTOP-2301](https://issues.apache.org/jira/browse/BIGTOP-2301) | Bigtop Homepage shows wrong url to CI |  Major | website | Olaf Flebbe | Olaf Flebbe |
 
 
 ### TESTS:
@@ -60,11 +63,13 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2180](https://issues.apache.org/jira/browse/BIGTOP-2180) | Apache Tajo to bigtop: make tests |  Major | tests | Yeongeon KIM | Yeongeon KIM |
 
 
 ### OTHER:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2289](https://issues.apache.org/jira/browse/BIGTOP-2289) | Set master version to 1.2.0-SNAPSHOT |  Major | general | Konstantin Boudnik | Konstantin Boudnik |
 
 

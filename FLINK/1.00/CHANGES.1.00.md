@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.00 - Unreleased (as of 2016-01-27)
+## Release 1.00 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -63,6 +63,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3275](https://issues.apache.org/jira/browse/FLINK-3275) | [py] Add support for Dataset.setParallelism() |  Major | Python API | Chesnay Schepler | Chesnay Schepler |
+| [FLINK-3140](https://issues.apache.org/jira/browse/FLINK-3140) | NULL value data layout in Row Serializer/Comparator |  Major | Table API | Chengxiang Li | Timo Walther |
 
 
 ### OTHER:

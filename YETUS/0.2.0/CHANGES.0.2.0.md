@@ -18,7 +18,7 @@
 -->
 # Apache Yetus Changelog
 
-## Release 0.2.0 - Unreleased (as of 2016-01-27)
+## Release 0.2.0 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -30,7 +30,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [YETUS-282](https://issues.apache.org/jira/browse/YETUS-282) | Allow the specification of a base JIRA URL |  Major | Release Doc Maker | Pathangi Jatinshravan | Pathangi Jatinshravan |
 | [YETUS-241](https://issues.apache.org/jira/browse/YETUS-241) | revamp parameterized site |  Major | build, website and documentation | Sean Busbey | Sean Busbey |
+| [YETUS-229](https://issues.apache.org/jira/browse/YETUS-229) | split --jenkins up |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-187](https://issues.apache.org/jira/browse/YETUS-187) | maven javac/javadoc can't use calcdiffs |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-70](https://issues.apache.org/jira/browse/YETUS-70) | add support for make, including cmake and autoconf |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-62](https://issues.apache.org/jira/browse/YETUS-62) | add auto-formatting of usage options |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
@@ -45,6 +47,7 @@
 | [YETUS-214](https://issues.apache.org/jira/browse/YETUS-214) | release doc maker should have option to specify output directory |  Major | Release Doc Maker | Sean Busbey | Pathangi Jatinshravan |
 | [YETUS-205](https://issues.apache.org/jira/browse/YETUS-205) | shelldocs lint test for precommit |  Major | Test Patch | Allen Wittenauer | Kengo Seki |
 | [YETUS-204](https://issues.apache.org/jira/browse/YETUS-204) | shelldocs lint mode |  Major | ShellDocs | Allen Wittenauer | Kengo Seki |
+| [YETUS-78](https://issues.apache.org/jira/browse/YETUS-78) | add support for orc |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 
 
 ### IMPROVEMENTS:
@@ -63,6 +66,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [YETUS-299](https://issues.apache.org/jira/browse/YETUS-299) | RAT exclusions must include symlinks for 0.1.0 release |  Blocker | build | Sean Busbey | Sean Busbey |
 | [YETUS-290](https://issues.apache.org/jira/browse/YETUS-290) | reference to another function in calcdiffs' description is wrong |  Trivial | Test Patch | Kengo Seki | Marco Zühlke |
 | [YETUS-275](https://issues.apache.org/jira/browse/YETUS-275) | removing files(?) causes pylint file open failures |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |
 | [YETUS-271](https://issues.apache.org/jira/browse/YETUS-271) | findbugs.sh will -1 if there are no java source code in the module. |  Major | Test Patch | Akira AJISAKA | Allen Wittenauer |
@@ -72,6 +76,7 @@
 | [YETUS-258](https://issues.apache.org/jira/browse/YETUS-258) | build.sh should detect missing third party dependecies and suggest how to install |  Major | build | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [YETUS-251](https://issues.apache.org/jira/browse/YETUS-251) | default patch-naming-rule points to old yetus url |  Major | Test Patch | Sean Busbey | Marco Zühlke |
 | [YETUS-249](https://issues.apache.org/jira/browse/YETUS-249) | asflicense with ant can fail and succeed simultaneously |  Major | Test Patch | Kengo Seki | Kengo Seki |
+| [YETUS-236](https://issues.apache.org/jira/browse/YETUS-236) | Binary artifact LICENSE/NOTICE claims to include several third party dependencies that are not present. |  Blocker | build | Sean Busbey | Allen Wittenauer |
 | [YETUS-235](https://issues.apache.org/jira/browse/YETUS-235) | releasedocmaker does not give an error if a non-existent version is given |  Major | Release Doc Maker | Sean Busbey | Kengo Seki |
 | [YETUS-232](https://issues.apache.org/jira/browse/YETUS-232) | releasedocmaker with range option fails if project name is specified in lower case |  Major | Release Doc Maker | Kengo Seki | Kengo Seki |
 | [YETUS-221](https://issues.apache.org/jira/browse/YETUS-221) | asflicense check exits multi-module Maven build early if there are pre-existing license problems. |  Major | Test Patch | Chris Nauroth | Allen Wittenauer |

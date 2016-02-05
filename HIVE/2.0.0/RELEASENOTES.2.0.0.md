@@ -87,18 +87,6 @@ LLAP Slider registry cleanup requires destroy with --force
 
 ---
 
-* [HIVE-12693](https://issues.apache.org/jira/browse/HIVE-12693) | *Major* | **LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution**
-
-commit 03473cc7fb830821b6d90f465cb604550388097d
-Author: Gopal V \<gopalv@apache.org\>
-
-    HIVE-12693: LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution (Gopal V, reviewed by Sergey Shelukhin)
-    
-    Signed-off-by: Gopal V \<gopalv@apache.org\>
-
-
----
-
 * [HIVE-12609](https://issues.apache.org/jira/browse/HIVE-12609) | *Major* | **Remove javaXML serialization**
 
 **WARNING: No release note provided for this incompatible change.**

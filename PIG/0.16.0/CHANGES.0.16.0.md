@@ -18,7 +18,7 @@
 -->
 # Apache Pig Changelog
 
-## Release 0.16.0 - Unreleased (as of 2016-01-27)
+## Release 0.16.0 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,6 +45,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4792](https://issues.apache.org/jira/browse/PIG-4792) | Do not add java and sun system properties to jobconf |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
+| [PIG-4787](https://issues.apache.org/jira/browse/PIG-4787) | Log JSONLoader exception while parsing records |  Minor | . | Rohini Palaniswamy | Rohini Palaniswamy |
+| [PIG-4761](https://issues.apache.org/jira/browse/PIG-4761) | Add more information to front end error messages |  Major | . | Eyal Allweil | Eyal Allweil |
 | [PIG-4744](https://issues.apache.org/jira/browse/PIG-4744) | Honor tez.staging-dir setting in tez-site.xml |  Major | tez | Daniel Dai | Rohini Palaniswamy |
 | [PIG-4717](https://issues.apache.org/jira/browse/PIG-4717) | Update Apache HTTPD LogParser to latest version |  Major | . | Niels Basjes | Niels Basjes |
 | [PIG-4708](https://issues.apache.org/jira/browse/PIG-4708) | Upgrade joda-time to 2.8 |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
@@ -70,6 +73,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4795](https://issues.apache.org/jira/browse/PIG-4795) | Flushing ObjectOutputStream before calling toByteArray on the underlying ByteArrayOutputStream |  Minor | . | emopers | emopers |
+| [PIG-4791](https://issues.apache.org/jira/browse/PIG-4791) | PORelationToExprProject filters records instead of returning emptybag in nested foreach after union |  Major | tez | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4782](https://issues.apache.org/jira/browse/PIG-4782) | OutOfMemoryError: GC overhead limit exceeded with POPartialAgg |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4779](https://issues.apache.org/jira/browse/PIG-4779) | testBZ2Concatenation[pig.bzip.use.hadoop.inputformat = true] failing due to successful read |  Minor | . | Koji Noguchi | Koji Noguchi |
 | [PIG-4775](https://issues.apache.org/jira/browse/PIG-4775) | Better default values for shuffle bytes per reducer |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |

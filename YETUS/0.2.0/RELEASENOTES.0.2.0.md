@@ -23,6 +23,13 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [YETUS-282](https://issues.apache.org/jira/browse/YETUS-282) | *Major* | **Allow the specification of a base JIRA URL**
+
+Allow specification of the Base JIRA URL as a command line option
+
+
+---
+
 * [YETUS-280](https://issues.apache.org/jira/browse/YETUS-280) | *Major* | **build systems should be able to predetermine module order**
 
 <!-- markdown -->
@@ -37,7 +44,37 @@ Developers:
 
 * [YETUS-241](https://issues.apache.org/jira/browse/YETUS-241) | *Major* | **revamp parameterized site**
 
-**WARNING: No release note provided for this important issue.**
+Website layout was changed to better accommodate multiple versions.
+
+
+---
+
+* [YETUS-229](https://issues.apache.org/jira/browse/YETUS-229) | *Major* | **split --jenkins up**
+
+<!-- markdown -->
+User-impacting:
+* Docker 1.6.0 or higher is now required.
+* --robot has been added to provide the same functionality as the older --jenkins flags, but without the assumptions of actually running underneath Jenkins.
+* --jenkins is now effectively --robot + some specific handling in messages and instances when running under Jenkins.
+* --sentinel has been added to provide cleaning of non-Yetus-based Docker containers and images.  It automatically enables --robot.
+* --dockerdelrep has been added to only print what would be cleaned in --robot, --jenkins, and --sentinel.
+* Options have been added to override the Jenkins-specific defaults for various settings:  
+  * --build-url to provide the base URL of the robot's web server
+  * --build-url-console to provide the relative URL to the console for this run
+  * --build-url-patchdir to provide the relative URL to the patch directory
+  * --instance to provide a string for parallelization differentiation
+* --console-urls option has been added to print locations using the --build-url on the console instead of absolute file system locations.  This is useful when looking at the test-patch console via something like the Jenkins console so that locations become clickable.
+* In rare situations, Docker images may not have been unique per run.  This should now be fixed.
+* The time reported for switching execution modes (reexec and docker) were missing.  This should now be fixed.
+* If --docker was the last option on the command line, it was not being removed when test-patch was being re-invoked inside the container.  This should now be fixed.
+* test-patch is now much better about telling you what options have been turned on.  This is useful when looking at test-patch's console when the actual command line options may not be visible.
+* Hadoop personality no longer has special options to run outside of it's Dockerfile on the ASF Jenkins.
+* The default project is now set to 'unknown'.
+
+Dev-impacting:
+* A ton of Docker-specific arg handling has been moved out of test-patch and into docker.sh, where it really belongs.
+* This removes a lot more hard-coded, ASF-specific Jenkins setup bits.  In some cases it was simply removed and in others, configurable.
+*  New EXEC\_MODES may be manipulated via the standard yetus\_add\_entry to list additional modes that test-patch may be running under.  Note that this gets printed to the screen *very* soon in the bootstrap process.
 
 
 ---

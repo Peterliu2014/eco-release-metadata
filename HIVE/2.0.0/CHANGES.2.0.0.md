@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 2.0.0 - Unreleased (as of 2016-01-27)
+## Release 2.0.0 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -196,12 +196,18 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-12985](https://issues.apache.org/jira/browse/HIVE-12985) | distribution configs are wrong and out of date |  Blocker | . | Alan Gates | Sergey Shelukhin |
+| [HIVE-12964](https://issues.apache.org/jira/browse/HIVE-12964) | TestOperationLoggingAPIWithMr,TestOperationLoggingAPIWithTez fail on branch-2.0 (with Java 7, at least) |  Major | . | Sergey Shelukhin | Prasanth Jayachandran |
+| [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
+| [HIVE-12945](https://issues.apache.org/jira/browse/HIVE-12945) | Bucket pruning: bucketing for -ve hashcodes have historical issues |  Critical | Tez | Gopal V | Gopal V |
+| [HIVE-12931](https://issues.apache.org/jira/browse/HIVE-12931) | Shuffle tokens stay around forever in LLAP |  Major | . | Siddharth Seth | Siddharth Seth |
 | [HIVE-12926](https://issues.apache.org/jira/browse/HIVE-12926) | Another synchronization issue with tez/llap session pool in hs2 |  Critical | HiveServer2 | Siddharth Seth | Sergey Shelukhin |
 | [HIVE-12920](https://issues.apache.org/jira/browse/HIVE-12920) | LLAP fails to start with java.lang.NumberFormatException |  Minor | llap | Shinichi Yamashita | Shinichi Yamashita |
 | [HIVE-12915](https://issues.apache.org/jira/browse/HIVE-12915) | Tez session pool has concurrency issues during init |  Major | . | Takahiko Saito | Sergey Shelukhin |
 | [HIVE-12911](https://issues.apache.org/jira/browse/HIVE-12911) | PPD might get exercised even when flag is false if CBO is on |  Blocker | CBO, Logical Optimizer, Physical Optimizer | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12905](https://issues.apache.org/jira/browse/HIVE-12905) | Issue with mapjoin in tez under certain conditions |  Blocker | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12904](https://issues.apache.org/jira/browse/HIVE-12904) | LLAP: deadlock in task scheduling |  Critical | . | Hui Zheng | Sergey Shelukhin |
+| [HIVE-12893](https://issues.apache.org/jira/browse/HIVE-12893) | Sorted dynamic partition does not work if subset of partition columns are constant folded |  Major | Logical Optimizer | Yi Zhang | Prasanth Jayachandran |
 | [HIVE-12879](https://issues.apache.org/jira/browse/HIVE-12879) | RowResolver of Semijoin not updated in CalcitePlanner |  Major | . | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | Verify sem.getInputs() and sem.getOutputs() |  Major | . | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12864](https://issues.apache.org/jira/browse/HIVE-12864) | StackOverflowError parsing queries with very large predicates |  Major | Parser | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
@@ -216,6 +222,7 @@
 | [HIVE-12800](https://issues.apache.org/jira/browse/HIVE-12800) | HiveFilterSetOpTransposeRule might be executed over non deterministic filter predicates |  Major | CBO | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12797](https://issues.apache.org/jira/browse/HIVE-12797) | Synchronization issues with tez/llap session pool in hs2 |  Critical | HiveServer2 | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12794](https://issues.apache.org/jira/browse/HIVE-12794) | LLAP cannot run queries against HBase due to missing HBase jars |  Major | . | Takahiko Saito | Sergey Shelukhin |
+| [HIVE-12790](https://issues.apache.org/jira/browse/HIVE-12790) | Metastore connection leaks in HiveServer2 |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-12788](https://issues.apache.org/jira/browse/HIVE-12788) | Setting hive.optimize.union.remove to TRUE will break UNION ALL with aggregate functions |  Major | Hive | Eric Lin | Chaoyu Tang |
 | [HIVE-12786](https://issues.apache.org/jira/browse/HIVE-12786) | CBO may fail for recoverable errors |  Major | CBO | Ashutosh Chauhan | Ashutosh Chauhan |
 | [HIVE-12785](https://issues.apache.org/jira/browse/HIVE-12785) | View with union type and UDF to `cast` the struct is broken |  Minor | Parser | Benoit Perroud | Pengcheng Xiong |
@@ -232,6 +239,7 @@
 | [HIVE-12738](https://issues.apache.org/jira/browse/HIVE-12738) | subquery with NOT IN failing due to ClassCastException |  Critical | Hive | Matt McCline | Matt McCline |
 | [HIVE-12735](https://issues.apache.org/jira/browse/HIVE-12735) | Constant folding for WHEN/CASE expression does not set return type correctly |  Major | Logical Optimizer | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12728](https://issues.apache.org/jira/browse/HIVE-12728) | Apply DDL restrictions for ORC schema evolution |  Critical | . | Prasanth Jayachandran | Prasanth Jayachandran |
+| [HIVE-12727](https://issues.apache.org/jira/browse/HIVE-12727) | refactor Hive strict checks to be more granular, allow order by no limit and no partition filter by default for now |  Blocker | . | Sergey Shelukhin | Sergey Shelukhin |
 | [HIVE-12726](https://issues.apache.org/jira/browse/HIVE-12726) | exclude hadoop jars from webhcat hcatalog/share/webhcat/svr/lib |  Major | WebHCat | Eugene Koifman | Eugene Koifman |
 | [HIVE-12724](https://issues.apache.org/jira/browse/HIVE-12724) | ACID: Major compaction fails to include the original bucket files into MR job |  Blocker | Hive, Transactions | Wei Zheng | Wei Zheng |
 | [HIVE-12722](https://issues.apache.org/jira/browse/HIVE-12722) | Create abstract subclass for HiveAuthorizer to shield implementations from interface changes |  Major | Authorization | Thejas M Nair | Thejas M Nair |
@@ -244,6 +252,7 @@
 | [HIVE-12694](https://issues.apache.org/jira/browse/HIVE-12694) | LLAP: Slider destroy semantics require force |  Major | llap | Gopal V | Gopal V |
 | [HIVE-12688](https://issues.apache.org/jira/browse/HIVE-12688) | HIVE-11826 makes hive unusable in properly secured cluster |  Blocker | . | Thejas M Nair | Thejas M Nair |
 | [HIVE-12687](https://issues.apache.org/jira/browse/HIVE-12687) | LLAP Workdirs need to default to YARN local |  Major | llap | Gopal V | Sergey Shelukhin |
+| [HIVE-12685](https://issues.apache.org/jira/browse/HIVE-12685) | Remove redundant hive-site.xml under common/src/test/resources/ |  Major | Configuration | Wei Zheng | Wei Zheng |
 | [HIVE-12684](https://issues.apache.org/jira/browse/HIVE-12684) | NPE in stats annotation when all values in decimal column are NULLs |  Major | Statistics | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12682](https://issues.apache.org/jira/browse/HIVE-12682) | Reducers in dynamic partitioning job spend a lot of time running hadoop.conf.Configuration.getOverlay |  Major | Hive | Carter Shanklin | Prasanth Jayachandran |
 | [HIVE-12675](https://issues.apache.org/jira/browse/HIVE-12675) | PerfLogger should log performance metrics at debug level |  Major | . | Hari Sankar Sivarama Subramaniyan | Hari Sankar Sivarama Subramaniyan |
@@ -1002,6 +1011,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HIVE-10427](https://issues.apache.org/jira/browse/HIVE-10427) | collect\_list() and collect\_set() should accept struct types as argument |  Major | UDF | Alexander Behm | Chao Sun |
+| [HIVE-12934](https://issues.apache.org/jira/browse/HIVE-12934) | Refactor llap module structure to allow for a usable client |  Major | . | Siddharth Seth | Siddharth Seth |
 | [HIVE-12658](https://issues.apache.org/jira/browse/HIVE-12658) | Task rejection by an llap daemon spams the log with RejectedExecutionExceptions |  Major | . | Siddharth Seth | Prasanth Jayachandran |
 | [HIVE-12520](https://issues.apache.org/jira/browse/HIVE-12520) | Fix schema\_evol\* tests on master |  Major | Tests | Ashutosh Chauhan | Ashutosh Chauhan |
 | [HIVE-12434](https://issues.apache.org/jira/browse/HIVE-12434) | Merge spark into master 11/17/1015 |  Major | Spark | Xuefu Zhang | Xuefu Zhang |

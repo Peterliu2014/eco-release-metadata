@@ -18,7 +18,7 @@
 -->
 # Apache BigTop Changelog
 
-## Release 1.1.0 - Unreleased (as of 2016-01-27)
+## Release 1.1.0 - Unreleased (as of 2016-02-05)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -96,6 +96,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2299](https://issues.apache.org/jira/browse/BIGTOP-2299) | test resources are breaking rat |  Blocker | tests | Konstantin Boudnik | Konstantin Boudnik |
+| [BIGTOP-2288](https://issues.apache.org/jira/browse/BIGTOP-2288) | workaround to fix invalid leveldbjni in maven repository |  Major | hadoop, ppc64le | Amir Sanjar | Amir Sanjar |
+| [BIGTOP-2281](https://issues.apache.org/jira/browse/BIGTOP-2281) | Add HIVE-12875 to Bigtop |  Major | hive | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2276](https://issues.apache.org/jira/browse/BIGTOP-2276) | Zeppeling added war\_tempdir location, which needs to be set |  Major | debian, rpm | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2275](https://issues.apache.org/jira/browse/BIGTOP-2275) | Update configuration files for jsvc |  Major | build, jsvc, ppc64le | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2272](https://issues.apache.org/jira/browse/BIGTOP-2272) | moved hdfs ssh key are failing rat check |  Blocker | build | Konstantin Boudnik | Konstantin Boudnik |
@@ -119,7 +122,7 @@
 | [BIGTOP-2200](https://issues.apache.org/jira/browse/BIGTOP-2200) | Fix download path for protobuf ubuntu-15.04 on ppc64le |  Major | toolchain | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2198](https://issues.apache.org/jira/browse/BIGTOP-2198) | adding bigtop/slaves:ubuntu-15.04 support for ppc64le |  Major | docker | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2196](https://issues.apache.org/jira/browse/BIGTOP-2196) | Docker configuration for ubuntu-15.04-ppc64le |  Major | docker | Olaf Flebbe | Olaf Flebbe |
-| [BIGTOP-2191](https://issues.apache.org/jira/browse/BIGTOP-2191) | openjdk-7 is missing in bigtop/slave:ubuntu-14.04-ppc64le docker image |  Critical | build, docker, toolchain | Amir Sanjar | Amir Sanjar |
+| [BIGTOP-2191](https://issues.apache.org/jira/browse/BIGTOP-2191) | openjdk-7 is missing in bigtop/slave:ubuntu-14.04-ppc64le docker image |  Critical | build, docker, ppc64le, toolchain | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2190](https://issues.apache.org/jira/browse/BIGTOP-2190) | libprotobuf8 2.5.0 installation fails on ubuntu 14.04 for ppc64le |  Major | build, docker, toolchain | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2189](https://issues.apache.org/jira/browse/BIGTOP-2189) | bigtop/slave:ubuntu-14.04 image does not support ppc64le |  Major | docker | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2188](https://issues.apache.org/jira/browse/BIGTOP-2188) | bigtop/puppet:ubuntu-14.04 image does not support ppc64le |  Major | docker | Amir Sanjar | Amir Sanjar |
@@ -296,8 +299,10 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2297](https://issues.apache.org/jira/browse/BIGTOP-2297) | Update provisioner pointers to (future) 1.1 release repos |  Major | provisioner | Konstantin Boudnik |  |
 | [BIGTOP-2214](https://issues.apache.org/jira/browse/BIGTOP-2214) | Bump up ignite-hadoop version to the latest stable 1.5.0.final |  Major | build | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2146](https://issues.apache.org/jira/browse/BIGTOP-2146) | Upgrade bigtop toolchain ant version to 1.9.6 |  Major | toolchain | Evans Ye | Olaf Flebbe |
+| [BIGTOP-2078](https://issues.apache.org/jira/browse/BIGTOP-2078) | Define Bigtop 1.1 release BOM |  Blocker | general | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2069](https://issues.apache.org/jira/browse/BIGTOP-2069) | Update README.md to reflect CTR trial |  Major | documentation | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-1953](https://issues.apache.org/jira/browse/BIGTOP-1953) | Upgrade bigtop\_toolchain to Maven 3.3.3 |  Major | toolchain | Jonathan Kelly | Olaf Flebbe |
 | [BIGTOP-1925](https://issues.apache.org/jira/browse/BIGTOP-1925) | Add ywkim as a maintainer for YCSB |  Trivial | . | YoungWoo Kim | YoungWoo Kim |
