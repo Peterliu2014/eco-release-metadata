@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.3.0 - Unreleased (as of 2016-02-05)
+## Release 1.3.0 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -92,6 +92,7 @@
 | [HIVE-10319](https://issues.apache.org/jira/browse/HIVE-10319) | Hive CLI startup takes a long time with a large number of databases |  Major | CLI | Nezih Yigitbasi | Nezih Yigitbasi |
 | [HIVE-10302](https://issues.apache.org/jira/browse/HIVE-10302) | Load small tables (for map join) in executor memory only once [Spark Branch] |  Major | . | Jimmy Xiang | Jimmy Xiang |
 | [HIVE-10239](https://issues.apache.org/jira/browse/HIVE-10239) | Create scripts to do metastore upgrade tests on jenkins for Derby and PostgreSQL |  Major | . | Naveen Gangam | Naveen Gangam |
+| [HIVE-10115](https://issues.apache.org/jira/browse/HIVE-10115) | HS2 running on a Kerberized cluster should offer Kerberos(GSSAPI) and Delegation token(DIGEST) when alternate authentication is enabled |  Major | Authentication | Mubashir Kazia | Mubashir Kazia |
 | [HIVE-8583](https://issues.apache.org/jira/browse/HIVE-8583) | HIVE-8341 Cleanup & Test for hive.script.operator.env.blacklist |  Minor | . | Lars Francke | Lars Francke |
 | [HIVE-8190](https://issues.apache.org/jira/browse/HIVE-8190) | LDAP user match for authentication on hiveserver2 |  Major | Authorization, Clients | LINTE | Naveen Gangam |
 | [HIVE-6758](https://issues.apache.org/jira/browse/HIVE-6758) | Beeline doesn't work with -e option when started in background |  Major | CLI | Johndee Burks | Mohit Sabharwal |
@@ -102,12 +103,16 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13018](https://issues.apache.org/jira/browse/HIVE-13018) | On branch-1 "RuntimeException: Vectorization is not supported for datatype:LIST" |  Critical | Hive | Matt McCline | Matt McCline |
+| [HIVE-13016](https://issues.apache.org/jira/browse/HIVE-13016) | ORC FileDump recovery utility fails in Windows |  Major | . | Jason Dere | Prasanth Jayachandran |
+| [HIVE-12999](https://issues.apache.org/jira/browse/HIVE-12999) | Tez: Vertex creation reduce NN IPCs |  Major | Tez | Gopal V | Gopal V |
 | [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12909](https://issues.apache.org/jira/browse/HIVE-12909) | Some encryption q-tests fail because trash is disabled in encryption\_with\_trash.q |  Major | Hive | Sergio Peña | Sergio Peña |
 | [HIVE-12906](https://issues.apache.org/jira/browse/HIVE-12906) | Backport to branch-1 -- HIVE-12894 Detect whether ORC is reading from ACID table correctly for Schema Evolution |  Critical | ORC | Matt McCline | Matt McCline |
 | [HIVE-12893](https://issues.apache.org/jira/browse/HIVE-12893) | Sorted dynamic partition does not work if subset of partition columns are constant folded |  Major | Logical Optimizer | Yi Zhang | Prasanth Jayachandran |
 | [HIVE-12887](https://issues.apache.org/jira/browse/HIVE-12887) | Handle ORC schema on read with fewer columns than file schema (after Schema Evolution changes) |  Critical | ORC | Matt McCline | Matt McCline |
 | [HIVE-12886](https://issues.apache.org/jira/browse/HIVE-12886) | invalid column reference error on grouping by constant |  Major | . | Clemens Valiente | Yongzhi Chen |
+| [HIVE-12885](https://issues.apache.org/jira/browse/HIVE-12885) | LDAP Authenticator improvements |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | Verify sem.getInputs() and sem.getOutputs() |  Major | . | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12815](https://issues.apache.org/jira/browse/HIVE-12815) | column stats NPE for a query w/o a table |  Major | . | Sergey Shelukhin | Prasanth Jayachandran |
 | [HIVE-12795](https://issues.apache.org/jira/browse/HIVE-12795) | Vectorized execution causes ClassCastException |  Major | Query Processor | Yongzhi Chen | Yongzhi Chen |
@@ -223,6 +228,7 @@
 | [HIVE-12022](https://issues.apache.org/jira/browse/HIVE-12022) | NPE in SARG with timestamp cast |  Major | . | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12021](https://issues.apache.org/jira/browse/HIVE-12021) | HivePreFilteringRule may introduce wrong common operands |  Major | CBO | Jesus Camacho Rodriguez | Jesus Camacho Rodriguez |
 | [HIVE-12012](https://issues.apache.org/jira/browse/HIVE-12012) | select query on json table with map containing numeric values fails |  Major | Serializers/Deserializers | Jagruti Varia | Jason Dere |
+| [HIVE-12007](https://issues.apache.org/jira/browse/HIVE-12007) | Hive LDAP Authenticator should allow just Domain without baseDN (for AD) |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-12003](https://issues.apache.org/jira/browse/HIVE-12003) | Hive Streaming API : Add check to ensure table is transactional |  Major | HCatalog, Hive, Transactions | Roshan Naik | Roshan Naik |
 | [HIVE-11998](https://issues.apache.org/jira/browse/HIVE-11998) | Improve Compaction process logging |  Major | Transactions | Eugene Koifman | Eugene Koifman |
 | [HIVE-11997](https://issues.apache.org/jira/browse/HIVE-11997) | Add ability to send Compaction Jobs to specific queue |  Major | Transactions | Eugene Koifman | Eugene Koifman |
@@ -394,6 +400,7 @@
 | [HIVE-11104](https://issues.apache.org/jira/browse/HIVE-11104) | Select operator doesn't propagate constants appearing in expressions |  Major | Logical Optimizer | Ashutosh Chauhan | Ashutosh Chauhan |
 | [HIVE-11102](https://issues.apache.org/jira/browse/HIVE-11102) | ReaderImpl: getColumnIndicesFromNames does not work for some cases |  Major | File Formats | Gopal V | Sergey Shelukhin |
 | [HIVE-11100](https://issues.apache.org/jira/browse/HIVE-11100) | Beeline should escape semi-colon in queries |  Minor | Beeline | Chaoyu Tang | Chaoyu Tang |
+| [HIVE-11097](https://issues.apache.org/jira/browse/HIVE-11097) | HiveInputFormat uses String.startsWith to compare splitPath and PathToAliases |  Critical | File Formats | Wan Chang | Wan Chang |
 | [HIVE-11095](https://issues.apache.org/jira/browse/HIVE-11095) | SerDeUtils  another bug ,when Text is reused |  Major | API, CLI | Xiaowei Wang | Xiaowei Wang |
 | [HIVE-11087](https://issues.apache.org/jira/browse/HIVE-11087) | DbTxnManager exceptions should include txnid |  Major | Transactions | Eugene Koifman | Eugene Koifman |
 | [HIVE-11073](https://issues.apache.org/jira/browse/HIVE-11073) | ORC FileDump utility ignores errors when writing output |  Minor | Hive | Elliot West | Elliot West |

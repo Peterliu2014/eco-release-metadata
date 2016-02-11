@@ -16,9 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 -->
-# Apache Spark Changelog
+# Apache Flink Changelog
 
-## Release 2+ - Unreleased (as of 2015-11-17)
+## Release 0.10.3 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -48,6 +48,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3372](https://issues.apache.org/jira/browse/FLINK-3372) | Setting custom YARN application name is ignored |  Major | YARN Client | Nick Dimiduk |  |
 
 
 ### TESTS:

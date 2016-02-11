@@ -217,7 +217,7 @@
 | [HIVE-10087](https://issues.apache.org/jira/browse/HIVE-10087) | Beeline's --silent option should suppress query from being echoed when running with -f option |  Minor | Beeline | Naveen Gangam | Naveen Gangam |
 | [HIVE-10086](https://issues.apache.org/jira/browse/HIVE-10086) | Hive throws error when accessing Parquet file schema using field name match |  Major | . | Sergio Peña | Sergio Peña |
 | [HIVE-10085](https://issues.apache.org/jira/browse/HIVE-10085) | Lateral view on top of a view throws RuntimeException |  Major | Logical Optimizer, Query Planning | Aihua Xu | Aihua Xu |
-| [HIVE-10083](https://issues.apache.org/jira/browse/HIVE-10083) | SMBJoin fails in case one table is uninitialized |  Minor | Logical Optimizer | Alain Schröder | Na Yang |
+| [HIVE-10083](https://issues.apache.org/jira/browse/HIVE-10083) | SMBJoin fails in case one table is uninitialized |  Minor | Logical Optimizer | Alain Blankenburg-Schröder | Na Yang |
 | [HIVE-10078](https://issues.apache.org/jira/browse/HIVE-10078) | Optionally allow logging of records processed in fixed intervals |  Major | . | Gunther Hagleitner | Gunther Hagleitner |
 | [HIVE-10074](https://issues.apache.org/jira/browse/HIVE-10074) | Ability to run HCat Client Unit tests in a system test setting |  Major | Tests | Deepesh Khandelwal | Deepesh Khandelwal |
 | [HIVE-10073](https://issues.apache.org/jira/browse/HIVE-10073) | Runtime exception when querying HBase with Spark [Spark Branch] |  Major | Spark | Jimmy Xiang | Jimmy Xiang |

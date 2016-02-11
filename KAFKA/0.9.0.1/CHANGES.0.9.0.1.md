@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.0.1 - Unreleased (as of 2016-02-05)
+## Release 0.9.0.1 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -44,6 +44,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3191](https://issues.apache.org/jira/browse/KAFKA-3191) | Improve offset committing JavaDoc in KafkaConsumer |  Minor | consumer | Adam Kunicki | Adam Kunicki |
 | [KAFKA-3166](https://issues.apache.org/jira/browse/KAFKA-3166) | Disable SSL client authentication for SASL\_SSL security protocol |  Major | security | Ismael Juma | Ismael Juma |
 | [KAFKA-3164](https://issues.apache.org/jira/browse/KAFKA-3164) | Document client and mirrormaker upgrade procedure/requirements |  Minor | . | Grant Henke | Grant Henke |
 | [KAFKA-3100](https://issues.apache.org/jira/browse/KAFKA-3100) | Broker.createBroker should work if json is version \> 2, but still compatible |  Major | core | Ismael Juma | Ismael Juma |
@@ -66,13 +67,16 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3216](https://issues.apache.org/jira/browse/KAFKA-3216) | "Modifying topics" section incorrectly says you can't change replication factor. |  Major | . | James Cheng | James Cheng |
 | [KAFKA-3198](https://issues.apache.org/jira/browse/KAFKA-3198) | Ticket Renewal Thread exits prematurely due to inverted comparison |  Critical | security | Adam Kunicki | Adam Kunicki |
 | [KAFKA-3194](https://issues.apache.org/jira/browse/KAFKA-3194) | Validate security.inter.broker.protocol against the advertised.listeners protocols |  Major | core | Grant Henke | Grant Henke |
 | [KAFKA-3179](https://issues.apache.org/jira/browse/KAFKA-3179) | Kafka consumer delivers message whose offset is earlier than sought offset. |  Major | clients | Jiangjie Qin | Jiangjie Qin |
 | [KAFKA-3170](https://issues.apache.org/jira/browse/KAFKA-3170) | Default value of fetch\_min\_bytes in new consumer is 1024 while doc says it is 1 |  Major | consumer | Rajini Sivaram | Rajini Sivaram |
 | [KAFKA-3169](https://issues.apache.org/jira/browse/KAFKA-3169) | Kafka broker throws OutOfMemory error with invalid SASL packet |  Critical | security | Rajini Sivaram | Rajini Sivaram |
+| [KAFKA-3159](https://issues.apache.org/jira/browse/KAFKA-3159) | Kafka consumer 0.9.0.0  client poll is very CPU intensive under certain conditions |  Major | clients | Rajiv Kurian | Jason Gustafson |
 | [KAFKA-3157](https://issues.apache.org/jira/browse/KAFKA-3157) | Mirror maker doesn't commit offset with new consumer when there is no more messages |  Major | . | TAO XIAO | TAO XIAO |
 | [KAFKA-3152](https://issues.apache.org/jira/browse/KAFKA-3152) | kafka-acl doesn't allow space in principal name |  Major | core | Jun Rao | Ismael Juma |
+| [KAFKA-3141](https://issues.apache.org/jira/browse/KAFKA-3141) | kafka-acls.sh throws ArrayIndexOutOfBoundsException for an invalid authorizer-property |  Major | . | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3134](https://issues.apache.org/jira/browse/KAFKA-3134) | Missing required configuration "value.deserializer" when initializing a KafkaConsumer with a valid "valueDeserializer" |  Major | . | Yifan Ying |  |
 | [KAFKA-3122](https://issues.apache.org/jira/browse/KAFKA-3122) | Memory leak in `Sender.completeBatch` on TOPIC\_AUTHORIZATION\_FAILED |  Major | clients | Ismael Juma | Ismael Juma |
 | [KAFKA-3098](https://issues.apache.org/jira/browse/KAFKA-3098) | "partition.assignment.strategy" appears twice in documentation |  Major | . | Gwen Shapira | David Jacot |
@@ -101,6 +105,7 @@
 | [KAFKA-2752](https://issues.apache.org/jira/browse/KAFKA-2752) | Add clean bounce system test for distributed Copycat |  Major | copycat | Ewen Cheslack-Postava | Ewen Cheslack-Postava |
 | [KAFKA-2695](https://issues.apache.org/jira/browse/KAFKA-2695) | Handle null string/bytes protocol primitives |  Major | . | Jason Gustafson | Jason Gustafson |
 | [KAFKA-2676](https://issues.apache.org/jira/browse/KAFKA-2676) | Incorrect package name in tests (unit and integration prefix) |  Major | core | Jun Rao | chen zhu |
+| [KAFKA-2589](https://issues.apache.org/jira/browse/KAFKA-2589) | Documentation bug: the default value for the "rebalance.backoff.ms" property is not specified correctly |  Major | config | Bogdan Dimitriu | Grant Henke |
 | [KAFKA-2578](https://issues.apache.org/jira/browse/KAFKA-2578) | Client Metadata internal state should be synchronized |  Trivial | . | Jason Gustafson | Edward Ribeiro |
 | [KAFKA-2478](https://issues.apache.org/jira/browse/KAFKA-2478) | KafkaConsumer javadoc example seems wrong |  Major | consumer | Dmitry Stratiychuk | Dmitry Stratiychuk |
 | [KAFKA-2143](https://issues.apache.org/jira/browse/KAFKA-2143) | Replicas get ahead of leader and fail |  Major | replication | Evan Huus | Jiangjie Qin |

@@ -18,7 +18,7 @@
 -->
 # Apache Pig Changelog
 
-## Release 0.16.0 - Unreleased (as of 2016-02-05)
+## Release 0.16.0 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,6 +45,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4802](https://issues.apache.org/jira/browse/PIG-4802) | Autoparallelism should estimate less when there is combiner |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4792](https://issues.apache.org/jira/browse/PIG-4792) | Do not add java and sun system properties to jobconf |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4787](https://issues.apache.org/jira/browse/PIG-4787) | Log JSONLoader exception while parsing records |  Minor | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4761](https://issues.apache.org/jira/browse/PIG-4761) | Add more information to front end error messages |  Major | . | Eyal Allweil | Eyal Allweil |
@@ -73,8 +74,11 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4801](https://issues.apache.org/jira/browse/PIG-4801) | Provide backward compatibility with mapreduce mapred.task settings |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
+| [PIG-4800](https://issues.apache.org/jira/browse/PIG-4800) | EvalFunc.getCacheFiles() fails for different namenode |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4795](https://issues.apache.org/jira/browse/PIG-4795) | Flushing ObjectOutputStream before calling toByteArray on the underlying ByteArrayOutputStream |  Minor | . | emopers | emopers |
 | [PIG-4791](https://issues.apache.org/jira/browse/PIG-4791) | PORelationToExprProject filters records instead of returning emptybag in nested foreach after union |  Major | tez | Rohini Palaniswamy | Rohini Palaniswamy |
+| [PIG-4790](https://issues.apache.org/jira/browse/PIG-4790) | Join after union fail due to UnionOptimizer |  Major | tez | Daniel Dai | Rohini Palaniswamy |
 | [PIG-4782](https://issues.apache.org/jira/browse/PIG-4782) | OutOfMemoryError: GC overhead limit exceeded with POPartialAgg |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4779](https://issues.apache.org/jira/browse/PIG-4779) | testBZ2Concatenation[pig.bzip.use.hadoop.inputformat = true] failing due to successful read |  Minor | . | Koji Noguchi | Koji Noguchi |
 | [PIG-4775](https://issues.apache.org/jira/browse/PIG-4775) | Better default values for shuffle bytes per reducer |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
@@ -85,6 +89,7 @@
 | [PIG-4768](https://issues.apache.org/jira/browse/PIG-4768) | EvalFunc reporter is null in Tez |  Major | tez | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4763](https://issues.apache.org/jira/browse/PIG-4763) | Insufficient check for the number of arguments in runpigmix.pl |  Trivial | . | Kengo Seki | Kengo Seki |
 | [PIG-4760](https://issues.apache.org/jira/browse/PIG-4760) | TezDAGStats.convertToHadoopCounters is not used, but impose MR counter limit |  Major | tez | Daniel Dai | Daniel Dai |
+| [PIG-4759](https://issues.apache.org/jira/browse/PIG-4759) | Fix Classresolution\_1 e2e failure |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4757](https://issues.apache.org/jira/browse/PIG-4757) | Job stats on successfully read/output records wrong with multiple inputs/outputs |  Major | tez | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4755](https://issues.apache.org/jira/browse/PIG-4755) | Typo in runpigmix script |  Major | . | Mit Desai | Mit Desai |
 | [PIG-4737](https://issues.apache.org/jira/browse/PIG-4737) | Check and fix clone implementation for all classes extending PhysicalOperator |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
@@ -100,6 +105,7 @@
 | [PIG-4703](https://issues.apache.org/jira/browse/PIG-4703) | TezOperator.stores shall not ship to backend |  Major | tez | Daniel Dai | Daniel Dai |
 | [PIG-4696](https://issues.apache.org/jira/browse/PIG-4696) | Empty map returned by a streaming\_python udf wrongly contains a null key |  Minor | impl | Cheolsoo Park | Cheolsoo Park |
 | [PIG-4691](https://issues.apache.org/jira/browse/PIG-4691) | [Pig on Tez] Support for whitelisting storefuncs for union optimization |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
+| [PIG-4690](https://issues.apache.org/jira/browse/PIG-4690) | Union with self replicate join will fail in Tez |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4689](https://issues.apache.org/jira/browse/PIG-4689) | CSV Writes incorrect header if two CSV files are created in one script |  Major | . | Niels Basjes | Niels Basjes |
 | [PIG-4688](https://issues.apache.org/jira/browse/PIG-4688) | Limit followed by POPartialAgg can give empty or partial results in Tez |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4683](https://issues.apache.org/jira/browse/PIG-4683) | Nested order is broken after PIG-3591 in some cases |  Major | impl | Daniel Dai | Daniel Dai |

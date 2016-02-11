@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 2.0.0 - Unreleased (as of 2016-02-05)
+## Release 2.0.0 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -83,6 +83,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13025](https://issues.apache.org/jira/browse/HIVE-13025) | need a better error message for when one needs to run schematool |  Blocker | . | Sergey Shelukhin | Sergey Shelukhin |
 | [HIVE-12769](https://issues.apache.org/jira/browse/HIVE-12769) | LLAP: Pick up java\_home from System properties for Slider |  Major | llap | Gopal V | Gopal V |
 | [HIVE-12761](https://issues.apache.org/jira/browse/HIVE-12761) | Add stack trace servlet to HS2 web ui |  Minor | HiveServer2 | Shinichi Yamashita | Shinichi Yamashita |
 | [HIVE-12751](https://issues.apache.org/jira/browse/HIVE-12751) | Fix NVL explain syntax |  Major | UDF | Gopal V | Gopal V |
@@ -196,6 +197,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13032](https://issues.apache.org/jira/browse/HIVE-13032) | Hive services need HADOOP\_CLIENT\_OPTS for proper log4j2 initialization |  Blocker | . | Prasanth Jayachandran | Prasanth Jayachandran |
+| [HIVE-13024](https://issues.apache.org/jira/browse/HIVE-13024) | schematool does not log anywhere |  Blocker | . | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12985](https://issues.apache.org/jira/browse/HIVE-12985) | distribution configs are wrong and out of date |  Blocker | . | Alan Gates | Sergey Shelukhin |
 | [HIVE-12964](https://issues.apache.org/jira/browse/HIVE-12964) | TestOperationLoggingAPIWithMr,TestOperationLoggingAPIWithTez fail on branch-2.0 (with Java 7, at least) |  Major | . | Sergey Shelukhin | Prasanth Jayachandran |
 | [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
@@ -435,6 +438,7 @@
 | [HIVE-12012](https://issues.apache.org/jira/browse/HIVE-12012) | select query on json table with map containing numeric values fails |  Major | Serializers/Deserializers | Jagruti Varia | Jason Dere |
 | [HIVE-12011](https://issues.apache.org/jira/browse/HIVE-12011) | unable to create temporary table using CTAS if regular table with that name already exists |  Major | . | Pengcheng Xiong | Pengcheng Xiong |
 | [HIVE-12008](https://issues.apache.org/jira/browse/HIVE-12008) | Hive queries failing when using count(\*) on column in view |  Major | . | Yongzhi Chen | Yongzhi Chen |
+| [HIVE-12007](https://issues.apache.org/jira/browse/HIVE-12007) | Hive LDAP Authenticator should allow just Domain without baseDN (for AD) |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-12004](https://issues.apache.org/jira/browse/HIVE-12004) | SDPO doesnt set colExprMap correctly on new RS |  Major | Logical Optimizer | Ashutosh Chauhan | Ashutosh Chauhan |
 | [HIVE-11995](https://issues.apache.org/jira/browse/HIVE-11995) | Remove repetitively setting permissions in insert/load overwrite partition |  Major | Security | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-11990](https://issues.apache.org/jira/browse/HIVE-11990) | Loading data inpath from a temporary table dir fails on Windows |  Major | . | Takahiko Saito | Hari Sankar Sivarama Subramaniyan |
@@ -581,6 +585,7 @@
 | [HIVE-11476](https://issues.apache.org/jira/browse/HIVE-11476) | TypeInfoParser cannot handle column names with spaces in them |  Minor | Types | Gopal V | Gopal V |
 | [HIVE-11473](https://issues.apache.org/jira/browse/HIVE-11473) | Upgrade Spark dependency to 1.5 [Spark Branch] |  Major | Spark | Jimmy Xiang | Rui Li |
 | [HIVE-11472](https://issues.apache.org/jira/browse/HIVE-11472) | ORC StringDirectTreeReader is thrashing the GC due to byte[] allocation per row |  Minor | . | Gopal V | Gopal V |
+| [HIVE-11470](https://issues.apache.org/jira/browse/HIVE-11470) | NPE in DynamicPartFileRecordWriterContainer on null part-keys. |  Major | HCatalog | Mithun Radhakrishnan | Mithun Radhakrishnan |
 | [HIVE-11469](https://issues.apache.org/jira/browse/HIVE-11469) | Update doc for InstanceCache to clearly define the contract on the SeedObject |  Major | Serializers/Deserializers | Swarnim Kulkarni | Swarnim Kulkarni |
 | [HIVE-11468](https://issues.apache.org/jira/browse/HIVE-11468) | Vectorize: Struct IN() clauses |  Critical | Hive | Matt McCline | Matt McCline |
 | [HIVE-11466](https://issues.apache.org/jira/browse/HIVE-11466) | HIVE-10166 generates more data on hive.log causing Jenkins to fill all the disk. |  Major | . | Sergio Peña | Xuefu Zhang |

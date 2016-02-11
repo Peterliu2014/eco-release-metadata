@@ -76,6 +76,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [TEZ-3031](https://issues.apache.org/jira/browse/TEZ-3031) | java.lang.NoSuchMethodError |  Major | . | gewenhui |  |
+| [TEZ-3030](https://issues.apache.org/jira/browse/TEZ-3030) | java.lang.NoClassDefFoundError: org/apache/hadoop/mapred/MRVersion |  Major | . | gewenhui |  |
 | [TEZ-2752](https://issues.apache.org/jira/browse/TEZ-2752) | logUnsuccessful completion in Attempt should write original finish time to ATS |  Major | . | Bikas Saha | Bikas Saha |
 | [TEZ-2445](https://issues.apache.org/jira/browse/TEZ-2445) | Disable the object cleanup in local mode in LogicalIOProcessorRuntimeTask |  Blocker | . | Jeff Zhang | Jeff Zhang |
 | [TEZ-2432](https://issues.apache.org/jira/browse/TEZ-2432) | Syntax error in DOAP file release section |  Major | . | Sebb | Hitesh Shah |

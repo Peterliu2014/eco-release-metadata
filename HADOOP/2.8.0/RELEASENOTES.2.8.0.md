@@ -1,21 +1,3 @@
-
-<!---
-# Licensed to the Apache Software Foundation (ASF) under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The ASF licenses this file
-# to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.  You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
--->
 # Apache Hadoop  2.8.0 Release Notes
 
 These release notes cover new developer and user-facing incompatibilities, important issues, features, and major improvements.
@@ -47,6 +29,13 @@ FileSystem#createNonRecursive() is undeprecated.
 * [HADOOP-12437](https://issues.apache.org/jira/browse/HADOOP-12437) | *Major* | **Allow SecurityUtil to lookup alternate hostnames**
 
 HADOOP-12437 introduces two new configuration settings: hadoop.security.dns.interface and hadoop.security.dns.nameserver. These settings can be used to control how Hadoop service instances look up their own hostname and may be required in some multi-homed environments where hosts are configured with multiple hostnames in DNS or hosts files. They supersede the existing settings dfs.datanode.dns.interface and dfs.datanode.dns.nameserver.
+
+
+---
+
+* [HADOOP-12426](https://issues.apache.org/jira/browse/HADOOP-12426) | *Minor* | **Add Entry point for Kerberos health check**
+
+Hadoop now includes a shell command named KDiag that helps with diagnosis of Kerberos misconfiguration problems.  Please refer to the Secure Mode documentation for full details on usage of the command.
 
 
 ---
@@ -227,6 +216,13 @@ Added SFTP filesystem by using the JSch library.
 * [HDFS-9503](https://issues.apache.org/jira/browse/HDFS-9503) | *Major* | **Replace -namenode option with -fs for NNThroughputBenchmark**
 
 The patch replaces -namenode option with -fs for specifying the remote name node against which the benchmark is running. Before this patch, if '-namenode' was not given, the benchmark would run in standalone mode, ignoring the 'fs.defaultFS' in config file even if it's remote. With this patch, the benchmark, as other tools, will rely on the 'fs.defaultFS' config, which is overridable by -fs command option, to run standalone mode or remote mode.
+
+
+---
+
+* [HDFS-9311](https://issues.apache.org/jira/browse/HDFS-9311) | *Major* | **Support optional offload of NameNode HA service health checks to a separate RPC server.**
+
+There is now support for offloading HA health check RPC activity to a separate RPC server endpoint running within the NameNode process.  This may improve reliability of HA health checks and prevent spurious failovers in highly overloaded conditions.  For more details, please refer to the hdfs-default.xml documentation for properties dfs.namenode.lifeline.rpc-address, dfs.namenode.lifeline.rpc-bind-host and dfs.namenode.lifeline.handler.count.
 
 
 ---

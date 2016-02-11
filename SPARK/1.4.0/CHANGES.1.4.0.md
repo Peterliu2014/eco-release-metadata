@@ -372,6 +372,7 @@
 | [SPARK-5563](https://issues.apache.org/jira/browse/SPARK-5563) | LDA with online variational inference |  Major | MLlib | Joseph K. Bradley | yuhao yang |
 | [SPARK-5560](https://issues.apache.org/jira/browse/SPARK-5560) | LDA EM should scale to more iterations |  Major | MLlib | Joseph K. Bradley | Joseph K. Bradley |
 | [SPARK-5559](https://issues.apache.org/jira/browse/SPARK-5559) | Flaky test: o.a.s.streaming.flume.FlumeStreamSuite |  Major | Streaming, Tests | Kousuke Saruta | Kousuke Saruta |
+| [SPARK-5541](https://issues.apache.org/jira/browse/SPARK-5541) | Allow running Maven or SBT in run-tests |  Major | Build | Patrick Wendell | Brennon York |
 | [SPARK-5522](https://issues.apache.org/jira/browse/SPARK-5522) | Accelerate the History Server start |  Major | Spark Core, Web UI | Liangliang Gu | Liangliang Gu |
 | [SPARK-5436](https://issues.apache.org/jira/browse/SPARK-5436) | Validate GradientBoostedTrees during training |  Major | MLlib | Joseph K. Bradley | Manoj Kumar |
 | [SPARK-5366](https://issues.apache.org/jira/browse/SPARK-5366) | check for mode of private key file |  Minor | EC2 | liu chang | liu chang |
@@ -389,8 +390,10 @@
 | [SPARK-4600](https://issues.apache.org/jira/browse/SPARK-4600) | org.apache.spark.graphx.VertexRDD.diff does not work |  Minor | Documentation, GraphX | Teppei Tosa | Brennon York |
 | [SPARK-4556](https://issues.apache.org/jira/browse/SPARK-4556) | Document that make-distribution.sh is required to make a runnable distribution |  Minor | Build, Deploy, Documentation | Sean Busbey | Sean Owen |
 | [SPARK-4550](https://issues.apache.org/jira/browse/SPARK-4550) | In sort-based shuffle, store map outputs in serialized form |  Critical | Shuffle, Spark Core | Sandy Ryza | Sandy Ryza |
+| [SPARK-4438](https://issues.apache.org/jira/browse/SPARK-4438) | Add HistoryServer RESTful API |  Major | Deploy | Gankun Luo | Josh Rosen |
 | [SPARK-4423](https://issues.apache.org/jira/browse/SPARK-4423) | Improve foreach() documentation to avoid confusion between local- and cluster-mode behavior |  Minor | Documentation | Josh Rosen | Ilya Ganelin |
 | [SPARK-4346](https://issues.apache.org/jira/browse/SPARK-4346) | YarnClientSchedulerBack.asyncMonitorApplication should be common with Client.monitorApplication |  Major | Scheduler, YARN | Thomas Graves | Weizhong |
+| [SPARK-4231](https://issues.apache.org/jira/browse/SPARK-4231) | Add RankingMetrics to examples.MovieLensALS |  Minor | Examples | Debasish Das | Debasish Das |
 | [SPARK-4011](https://issues.apache.org/jira/browse/SPARK-4011) | tighten the visibility of the members in Master/Worker class |  Minor | Spark Core | Nan Zhu | Nan Zhu |
 | [SPARK-3674](https://issues.apache.org/jira/browse/SPARK-3674) | Add support for launching YARN clusters in spark-ec2 |  Major | EC2 | Shivaram Venkataraman | Shivaram Venkataraman |
 | [SPARK-3642](https://issues.apache.org/jira/browse/SPARK-3642) | Better document the nuances of shared variables |  Minor | Documentation | Sandy Ryza | Sandy Ryza |
@@ -417,6 +420,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [SPARK-9380](https://issues.apache.org/jira/browse/SPARK-9380) | Pregel example fix in graphx-programming-guide |  Major | Documentation | Alexander Ulanov | Alexander Ulanov |
+| [SPARK-9328](https://issues.apache.org/jira/browse/SPARK-9328) | Netty IO layer should implement read timeouts |  Blocker | Shuffle, Spark Core | Josh Rosen | Josh Rosen |
 | [SPARK-9033](https://issues.apache.org/jira/browse/SPARK-9033) | scala.MatchError: interface java.util.Map (of class java.lang.Class) with Spark SQL |  Major | SQL | Pavel | Josh Rosen |
 | [SPARK-8726](https://issues.apache.org/jira/browse/SPARK-8726) | Wrong spark.executor.memory when using different EC2 master and worker machine types |  Major | EC2 | Stefano Parmesan | Stefano Parmesan |
 | [SPARK-8394](https://issues.apache.org/jira/browse/SPARK-8394) | HistoryServer doesn't read kerberos opts from config |  Minor | Spark Core | Steve Loughran | Marcelo Vanzin |
@@ -750,6 +754,7 @@
 | [SPARK-6207](https://issues.apache.org/jira/browse/SPARK-6207) | YARN secure cluster mode doesn't obtain a hive-metastore token |  Major | Spark Submit, SQL, YARN | Doug Balog | Doug Balog |
 | [SPARK-6205](https://issues.apache.org/jira/browse/SPARK-6205) | UISeleniumSuite fails for Hadoop 2.x test with NoClassDefFoundError |  Minor | Tests | Sean Owen | Sean Owen |
 | [SPARK-6201](https://issues.apache.org/jira/browse/SPARK-6201) | INSET should coerce types |  Major | SQL | Jianshi Huang | Adrian Wang |
+| [SPARK-6197](https://issues.apache.org/jira/browse/SPARK-6197) | handle json parse exception for eventlog file not finished writing |  Minor | Web UI | Zhang, Liye | Zhang, Liye |
 | [SPARK-6194](https://issues.apache.org/jira/browse/SPARK-6194) | collect() in PySpark will cause memory leak in JVM |  Critical | PySpark | Davies Liu | Davies Liu |
 | [SPARK-6188](https://issues.apache.org/jira/browse/SPARK-6188) | Instance types can be mislabeled when re-starting cluster with default arguments |  Minor | EC2 | Theodore Vasiloudis | Theodore Vasiloudis |
 | [SPARK-6145](https://issues.apache.org/jira/browse/SPARK-6145) | ORDER BY fails to resolve nested fields |  Critical | SQL | Michael Armbrust | Michael Armbrust |
@@ -805,6 +810,7 @@
 | [SPARK-5371](https://issues.apache.org/jira/browse/SPARK-5371) | Failure to analyze query with UNION ALL and double aggregation |  Critical | SQL | David Ross | Michael Armbrust |
 | [SPARK-5363](https://issues.apache.org/jira/browse/SPARK-5363) | Spark 1.2 freeze without error notification |  Blocker | PySpark | Tassilo Klein | Davies Liu |
 | [SPARK-5360](https://issues.apache.org/jira/browse/SPARK-5360) | For CoGroupedRDD, rdds for narrow dependencies and shuffle handles are included twice in serialized task |  Minor | Spark Core | Kay Ousterhout | Kay Ousterhout |
+| [SPARK-5331](https://issues.apache.org/jira/browse/SPARK-5331) | Spark workers can't find tachyon master as spark-ec2 doesn't set spark.tachyonStore.url |  Major | EC2 | Florian Verhein | Shivaram Venkataraman |
 | [SPARK-5320](https://issues.apache.org/jira/browse/SPARK-5320) | Joins on simple table created using select gives error |  Major | SQL | Kuldeep | Yuri Saito |
 | [SPARK-5281](https://issues.apache.org/jira/browse/SPARK-5281) | Registering table on RDD is giving MissingRequirementError |  Critical | SQL | sarsol | Iulian Dragos |
 | [SPARK-5277](https://issues.apache.org/jira/browse/SPARK-5277) | SparkSqlSerializer does not register user specified KryoRegistrators |  Major | SQL | Max Seiden | Max Seiden |

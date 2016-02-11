@@ -1011,7 +1011,7 @@
 | [SPARK-11578](https://issues.apache.org/jira/browse/SPARK-11578) | User facing api for typed aggregation |  Critical | SQL | Michael Armbrust | Michael Armbrust |
 | [SPARK-11564](https://issues.apache.org/jira/browse/SPARK-11564) | Dataset Java API |  Major | SQL | Reynold Xin | Reynold Xin |
 | [SPARK-11554](https://issues.apache.org/jira/browse/SPARK-11554) | add map/flatMap to GroupedDataset |  Major | SQL | Wenchen Fan | Wenchen Fan |
-| [SPARK-11552](https://issues.apache.org/jira/browse/SPARK-11552) | Replace example code in ml-decision-tree.md using include\_example |  Minor | Documentation, ML | Xusen Yin | sachin aggarwal |
+| [SPARK-11552](https://issues.apache.org/jira/browse/SPARK-11552) | Replace example code in ml-decision-tree.md using include\_example |  Minor | Documentation, ML | Xusen Yin | Sachin Aggarwal |
 | [SPARK-11551](https://issues.apache.org/jira/browse/SPARK-11551) | Replace example code in ml-features.md using include\_example |  Major | Documentation | Xusen Yin | somil deshmukh |
 | [SPARK-11550](https://issues.apache.org/jira/browse/SPARK-11550) | Replace example code in mllib-optimization.md using include\_example |  Major | Documentation | Xusen Yin | Pravin Gadakh |
 | [SPARK-11549](https://issues.apache.org/jira/browse/SPARK-11549) | Replace example code in mllib-evaluation-metrics.md using include\_example |  Major | Documentation | Xusen Yin | Vikas Nelamangala |

@@ -29,6 +29,34 @@ This issue fixes
 - In case of normal WAL (Not encrypted) we were loosing all cell tags on WAL replay after an RS crash
 - In case of encrypted WAL we were not even persisting Cell tags in WAL.  Tags from all unflushed (to HFile) Cells will get lost even after WAL replay recovery is done.
 
+As we use tags for Cell level security, this fixes 2 security issues
+ - Cell level visibility labels security breach . Making a visibility restricted cell global readable
+ - Cell level ACL availability issue.  A user who is cell level authorized to read this cell can not read it. It is a data loss for him.
+
+
+---
+
+* [HBASE-15157](https://issues.apache.org/jira/browse/HBASE-15157) | *Major* | **Add \*PerformanceTest for Append, CheckAnd\***
+
+Add append, increment, checkAndMutate, checkAndPut, and checkAndDelete tests to PerformanceEvaluation tool. Below are excerpts from new usage from PE:
+
+....
+Command:
+ append          Append on each row; clients overlap on keyspace so some concurrent operations
+ checkAndDelete  CheckAndDelete on each row; clients overlap on keyspace so some concurrent operations
+ checkAndMutate  CheckAndMutate on each row; clients overlap on keyspace so some concurrent operations
+ checkAndPut     CheckAndPut on each row; clients overlap on keyspace so some concurrent operations
+ filterScan      Run scan test using a filter to find a specific row based on it's value (make sure to use --rows=20)
+ increment       Increment on each row; clients overlap on keyspace so some concurrent operations
+ randomRead      Run random read test
+....
+Examples:
+...
+ To run 10 clients doing increments over ten rows:
+ $ bin/hbase org.apache.hadoop.hbase.PerformanceEvaluation --rows=10 --nomapred increment 10
+
+Removed IncrementPerformanceTest. It is not as configurable as the additions made here.
+
 
 ---
 
@@ -62,6 +90,8 @@ The config parameter, hbase.normalizer.enabled, has been dropped since it is not
 ---
 
 * [HBASE-15091](https://issues.apache.org/jira/browse/HBASE-15091) | *Blocker* | **Forward-port to 1.2+ HBASE-15031 "Fix merge of MVCC and SequenceID performance regression in branch-1.0 for Increments"**
+
+UPDATE: This forward port was not necessary. hbase-1.2.0 as it happens does not suffer the performance regression. HBASE-12751 which was added to hbase-1.2.0, actually fixed the performance regression in increment and append too. Ignore the below!!!! 
 
 Increments can be 10x slower (or more) when there is high concurrency since HBase 1.0.0 (HBASE-8763). 
 
@@ -178,6 +208,13 @@ I want to get a single column from lots of rows. So I create a list of gets. The
 * [HBASE-14926](https://issues.apache.org/jira/browse/HBASE-14926) | *Major* | **Hung ThriftServer; no timeout on read from client; if client crashes, worker thread gets stuck reading**
 
 Adds a timeout to server read from clients. Adds new configs hbase.thrift.server.socket.read.timeout for setting read timeout on server socket in milliseconds. Default is 60000;
+
+
+---
+
+* [HBASE-14822](https://issues.apache.org/jira/browse/HBASE-14822) | *Major* | **Renewing leases of scanners doesn't work**
+
+And 1.1, 1.0, and 0.98.
 
 
 ---

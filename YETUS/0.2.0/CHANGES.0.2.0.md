@@ -18,7 +18,7 @@
 -->
 # Apache Yetus Changelog
 
-## Release 0.2.0 - Unreleased (as of 2016-02-05)
+## Release 0.2.0 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -54,6 +54,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [YETUS-287](https://issues.apache.org/jira/browse/YETUS-287) | Update year to 2016 on website footer |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
+| [YETUS-281](https://issues.apache.org/jira/browse/YETUS-281) | hadoop: use built-in dependency order |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-280](https://issues.apache.org/jira/browse/YETUS-280) | build systems should be able to predetermine module order |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-273](https://issues.apache.org/jira/browse/YETUS-273) | Misleading warning messages when FINDBUGS\_HOME is not set |  Trivial | Test Patch | John Zhuge | Marco Zühlke |
 | [YETUS-272](https://issues.apache.org/jira/browse/YETUS-272) | add a way to flag/veto patches to code which jenkins doesn't test |  Minor | Test Patch | Steve Loughran | Allen Wittenauer |
@@ -68,6 +70,7 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [YETUS-299](https://issues.apache.org/jira/browse/YETUS-299) | RAT exclusions must include symlinks for 0.1.0 release |  Blocker | build | Sean Busbey | Sean Busbey |
 | [YETUS-290](https://issues.apache.org/jira/browse/YETUS-290) | reference to another function in calcdiffs' description is wrong |  Trivial | Test Patch | Kengo Seki | Marco Zühlke |
+| [YETUS-284](https://issues.apache.org/jira/browse/YETUS-284) | maven dependency solver needs enhancements |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-275](https://issues.apache.org/jira/browse/YETUS-275) | removing files(?) causes pylint file open failures |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |
 | [YETUS-271](https://issues.apache.org/jira/browse/YETUS-271) | findbugs.sh will -1 if there are no java source code in the module. |  Major | Test Patch | Akira AJISAKA | Allen Wittenauer |
 | [YETUS-267](https://issues.apache.org/jira/browse/YETUS-267) | use curl -L when given a patch URL |  Minor | Test Patch | Josh Elser | Josh Elser |
@@ -80,6 +83,7 @@
 | [YETUS-235](https://issues.apache.org/jira/browse/YETUS-235) | releasedocmaker does not give an error if a non-existent version is given |  Major | Release Doc Maker | Sean Busbey | Kengo Seki |
 | [YETUS-232](https://issues.apache.org/jira/browse/YETUS-232) | releasedocmaker with range option fails if project name is specified in lower case |  Major | Release Doc Maker | Kengo Seki | Kengo Seki |
 | [YETUS-221](https://issues.apache.org/jira/browse/YETUS-221) | asflicense check exits multi-module Maven build early if there are pre-existing license problems. |  Major | Test Patch | Chris Nauroth | Allen Wittenauer |
+| [YETUS-215](https://issues.apache.org/jira/browse/YETUS-215) | cli flag for "license" does the opposite of docs |  Critical | Release Doc Maker | Sean Busbey | Allen Wittenauer |
 | [YETUS-209](https://issues.apache.org/jira/browse/YETUS-209) | releasedocmaker's error message is unintelligible if a non-existent project is specified |  Minor | Release Doc Maker | Kengo Seki | Kengo Seki |
 | [YETUS-201](https://issues.apache.org/jira/browse/YETUS-201) | dsec file hanging around |  Trivial | Test Patch | Allen Wittenauer | Marco Zühlke |
 | [YETUS-182](https://issues.apache.org/jira/browse/YETUS-182) | document git hash in patchnames doc |  Major | Test Patch, website and documentation | Allen Wittenauer | Marco Zühlke |

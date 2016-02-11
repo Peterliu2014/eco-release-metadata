@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.9.1.0 - Unreleased (as of 2016-02-05)
+## Release 0.9.1.0 - Unreleased (as of 2016-02-11)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -44,7 +44,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3191](https://issues.apache.org/jira/browse/KAFKA-3191) | Improve offset committing JavaDoc in KafkaConsumer |  Minor | consumer | Adam Kunicki | Adam Kunicki |
 | [KAFKA-3164](https://issues.apache.org/jira/browse/KAFKA-3164) | Document client and mirrormaker upgrade procedure/requirements |  Minor | . | Grant Henke | Grant Henke |
+| [KAFKA-3162](https://issues.apache.org/jira/browse/KAFKA-3162) | KIP-42: Add Producer and Consumer Interceptors |  Major | . | Anna Povzner | Anna Povzner |
 | [KAFKA-3119](https://issues.apache.org/jira/browse/KAFKA-3119) | Adding -daemon option to zookeeper-server-start.sh USAGE |  Minor | config | Atul Soman | Atul Soman |
 | [KAFKA-3116](https://issues.apache.org/jira/browse/KAFKA-3116) | Failure to build |  Major | build | edwardt | Vahid Hashemian |
 | [KAFKA-3105](https://issues.apache.org/jira/browse/KAFKA-3105) | Use `Utils.atomicMoveWithFallback` instead of `File.rename` |  Major | . | Ismael Juma | Ismael Juma |
@@ -73,12 +75,16 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3217](https://issues.apache.org/jira/browse/KAFKA-3217) | Unit tests which dont close producers auto-create topics in Kafka brokers of other tests when port is reused |  Major | unit tests | Rajini Sivaram | Rajini Sivaram |
+| [KAFKA-3216](https://issues.apache.org/jira/browse/KAFKA-3216) | "Modifying topics" section incorrectly says you can't change replication factor. |  Major | . | James Cheng | James Cheng |
 | [KAFKA-3211](https://issues.apache.org/jira/browse/KAFKA-3211) | Handle Connect WorkerTask shutdown before startup correctly |  Major | copycat | Jason Gustafson | Jason Gustafson |
 | [KAFKA-3207](https://issues.apache.org/jira/browse/KAFKA-3207) | StateStore seems to be writing state to one topic but restoring from another |  Blocker | kafka streams | Tom Dearman | Guozhang Wang |
 | [KAFKA-3198](https://issues.apache.org/jira/browse/KAFKA-3198) | Ticket Renewal Thread exits prematurely due to inverted comparison |  Critical | security | Adam Kunicki | Adam Kunicki |
 | [KAFKA-3195](https://issues.apache.org/jira/browse/KAFKA-3195) | Transient test failure in OffsetCheckpointTest.testReadWrite |  Major | kafka streams | Ewen Cheslack-Postava | Ismael Juma |
 | [KAFKA-3194](https://issues.apache.org/jira/browse/KAFKA-3194) | Validate security.inter.broker.protocol against the advertised.listeners protocols |  Major | core | Grant Henke | Grant Henke |
+| [KAFKA-3189](https://issues.apache.org/jira/browse/KAFKA-3189) | Kafka server returns UnknownServerException for inherited exceptions |  Major | core | Jiangjie Qin | Grant Henke |
 | [KAFKA-3179](https://issues.apache.org/jira/browse/KAFKA-3179) | Kafka consumer delivers message whose offset is earlier than sought offset. |  Major | clients | Jiangjie Qin | Jiangjie Qin |
+| [KAFKA-3141](https://issues.apache.org/jira/browse/KAFKA-3141) | kafka-acls.sh throws ArrayIndexOutOfBoundsException for an invalid authorizer-property |  Major | . | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3140](https://issues.apache.org/jira/browse/KAFKA-3140) | PatternSyntaxException thrown in MM, causes MM to hang |  Major | tools | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3138](https://issues.apache.org/jira/browse/KAFKA-3138) | 0.9.0 docs still say that log compaction doesn't work on compressed topics. |  Major | . | James Cheng |  |
 | [KAFKA-3134](https://issues.apache.org/jira/browse/KAFKA-3134) | Missing required configuration "value.deserializer" when initializing a KafkaConsumer with a valid "valueDeserializer" |  Major | . | Yifan Ying |  |
@@ -91,6 +97,7 @@
 | [KAFKA-3069](https://issues.apache.org/jira/browse/KAFKA-3069) | Fix recursion in ZkSecurityMigrator |  Major | security | Flavio Junqueira | Flavio Junqueira |
 | [KAFKA-3068](https://issues.apache.org/jira/browse/KAFKA-3068) | NetworkClient may connect to a different Kafka cluster than originally configured |  Major | clients | Jun Rao | Eno Thereska |
 | [KAFKA-3055](https://issues.apache.org/jira/browse/KAFKA-3055) | JsonConverter mangles schema during serialization (fromConnectData) |  Major | copycat | Kishore Senji | Ewen Cheslack-Postava |
+| [KAFKA-3037](https://issues.apache.org/jira/browse/KAFKA-3037) | Number of alive brokers not known after single node cluster startup |  Minor | . | Stevo Slavic | Grant Henke |
 | [KAFKA-3009](https://issues.apache.org/jira/browse/KAFKA-3009) | Disallow star imports |  Major | . | Gwen Shapira | Manasvi Gupta |
 | [KAFKA-2999](https://issues.apache.org/jira/browse/KAFKA-2999) | Errors enum should be a 1 to 1 mapping of error codes and exceptions |  Major | . | Grant Henke | Grant Henke |
 | [KAFKA-2990](https://issues.apache.org/jira/browse/KAFKA-2990) | NoSuchMethodError when Kafka is compiled with 1.8 and run on 1.7 |  Major | . | Jason Gustafson | Jason Gustafson |
@@ -117,6 +124,7 @@
 | [KAFKA-2815](https://issues.apache.org/jira/browse/KAFKA-2815) | unit test failure in org.apache.kafka.streams.processor.internals.KafkaStreamingPartitionAssignorTest |  Major | . | Jun Rao | Grant Henke |
 | [KAFKA-2814](https://issues.apache.org/jira/browse/KAFKA-2814) | Kafka Connect system tests using REST interface fail on AWS |  Major | copycat, system tests | Ewen Cheslack-Postava | Ewen Cheslack-Postava |
 | [KAFKA-2803](https://issues.apache.org/jira/browse/KAFKA-2803) | Add hard bounce system test for distributed Kafka Connect |  Major | copycat | Ewen Cheslack-Postava | Ewen Cheslack-Postava |
+| [KAFKA-2589](https://issues.apache.org/jira/browse/KAFKA-2589) | Documentation bug: the default value for the "rebalance.backoff.ms" property is not specified correctly |  Major | config | Bogdan Dimitriu | Grant Henke |
 | [KAFKA-2578](https://issues.apache.org/jira/browse/KAFKA-2578) | Client Metadata internal state should be synchronized |  Trivial | . | Jason Gustafson | Edward Ribeiro |
 | [KAFKA-2421](https://issues.apache.org/jira/browse/KAFKA-2421) | Upgrade LZ4 to version 1.3 to avoid crashing with IBM Java 7 |  Major | . | Rajini Sivaram | Grant Henke |
 | [KAFKA-2399](https://issues.apache.org/jira/browse/KAFKA-2399) | Replace Stream.continually with Iterator.continually |  Minor | . | Ismael Juma | Ismael Juma |
@@ -167,6 +175,7 @@
 | [KAFKA-2763](https://issues.apache.org/jira/browse/KAFKA-2763) | Reduce stream task migrations and initialization costs |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-2733](https://issues.apache.org/jira/browse/KAFKA-2733) | Distinguish metric names inside the sensor registry |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-2727](https://issues.apache.org/jira/browse/KAFKA-2727) | initialize only the part of the topology relevant to the task |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
+| [KAFKA-2718](https://issues.apache.org/jira/browse/KAFKA-2718) | Reuse of temporary directories leading to transient unit test failures |  Major | core | Rajini Sivaram | Rajini Sivaram |
 | [KAFKA-2707](https://issues.apache.org/jira/browse/KAFKA-2707) | Make KStream processor names deterministic |  Major | . | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-2706](https://issues.apache.org/jira/browse/KAFKA-2706) | Make state stores first class citizens in the processor DAG |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-2694](https://issues.apache.org/jira/browse/KAFKA-2694) | Make a task id be a composite id of a topic group id and a partition id |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
