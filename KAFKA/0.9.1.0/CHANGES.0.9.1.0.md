@@ -75,6 +75,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3229](https://issues.apache.org/jira/browse/KAFKA-3229) | Root statestore is not registered with ProcessorStateManager, inner state store is registered instead |  Major | kafka streams | Tom Dearman |  |
 | [KAFKA-3217](https://issues.apache.org/jira/browse/KAFKA-3217) | Unit tests which dont close producers auto-create topics in Kafka brokers of other tests when port is reused |  Major | unit tests | Rajini Sivaram | Rajini Sivaram |
 | [KAFKA-3216](https://issues.apache.org/jira/browse/KAFKA-3216) | "Modifying topics" section incorrectly says you can't change replication factor. |  Major | . | James Cheng | James Cheng |
 | [KAFKA-3211](https://issues.apache.org/jira/browse/KAFKA-3211) | Handle Connect WorkerTask shutdown before startup correctly |  Major | copycat | Jason Gustafson | Jason Gustafson |

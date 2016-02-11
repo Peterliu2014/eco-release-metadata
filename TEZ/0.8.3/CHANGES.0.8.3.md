@@ -43,6 +43,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [TEZ-3093](https://issues.apache.org/jira/browse/TEZ-3093) | CriticalPathAnalyzer should be accessible via zeppelin |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
+| [TEZ-3090](https://issues.apache.org/jira/browse/TEZ-3090) | MRInput should make dagIdentifier, vertexIdentifier, etc available to the InputFormat jobConf |  Major | . | Siddharth Seth | Siddharth Seth |
 | [TEZ-3079](https://issues.apache.org/jira/browse/TEZ-3079) | Fix tez-tfile parser documentation |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-2974](https://issues.apache.org/jira/browse/TEZ-2974) | Tez tools: TFileRecordReader in tez-tools should support reading \>2 GB tfiles |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 

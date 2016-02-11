@@ -51,6 +51,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3355](https://issues.apache.org/jira/browse/FLINK-3355) | Allow passing RocksDB Option to RocksDBStateBackend |  Critical | Streaming | Gyula Fora | Stephan Ewen |
 | [FLINK-3348](https://issues.apache.org/jira/browse/FLINK-3348) | taskmanager.memory.off-heap missing bc documentation |  Trivial | Documentation | Flavio Pompermaier | Maximilian Michels |
 | [FLINK-3336](https://issues.apache.org/jira/browse/FLINK-3336) | Add Semi-Rebalance Data Shipping for DataStream |  Major | Streaming | Aljoscha Krettek | Aljoscha Krettek |
 | [FLINK-3334](https://issues.apache.org/jira/browse/FLINK-3334) | Change default log4j.properties Conversion pattern to include year-month-day in the timestamp |  Minor | other | Gyula Fora | Stephan Ewen |
@@ -126,6 +127,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [FLINK-3373](https://issues.apache.org/jira/browse/FLINK-3373) | Using a newer library of Apache HttpClient than 4.2.6 will get class loading problems |  Major | . | Jakob Sultan Ericsson | Stephan Ewen |
+| [FLINK-3369](https://issues.apache.org/jira/browse/FLINK-3369) | RemoteTransportException should be instance of CancelTaskException |  Major | . | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3361](https://issues.apache.org/jira/browse/FLINK-3361) | Wrong error messages for execution retry delay and akka ask pause config values |  Blocker | JobManager | Stephan Ewen | Stephan Ewen |
 | [FLINK-3357](https://issues.apache.org/jira/browse/FLINK-3357) | Drop JobId.toShortString() |  Major | Core | Stephan Ewen | Ufuk Celebi |
 | [FLINK-3353](https://issues.apache.org/jira/browse/FLINK-3353) | CSV-related tests may fail depending on locale |  Trivial | Tests | Stefano Baghino | Stefano Baghino |

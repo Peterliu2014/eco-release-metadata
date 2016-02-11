@@ -69,6 +69,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [YETUS-299](https://issues.apache.org/jira/browse/YETUS-299) | RAT exclusions must include symlinks for 0.1.0 release |  Blocker | build | Sean Busbey | Sean Busbey |
+| [YETUS-298](https://issues.apache.org/jira/browse/YETUS-298) | precommit jira plugin will try to download deleted attachments |  Critical | Test Patch | Sean Busbey | Allen Wittenauer |
 | [YETUS-290](https://issues.apache.org/jira/browse/YETUS-290) | reference to another function in calcdiffs' description is wrong |  Trivial | Test Patch | Kengo Seki | Marco Zühlke |
 | [YETUS-284](https://issues.apache.org/jira/browse/YETUS-284) | maven dependency solver needs enhancements |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-275](https://issues.apache.org/jira/browse/YETUS-275) | removing files(?) causes pylint file open failures |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |

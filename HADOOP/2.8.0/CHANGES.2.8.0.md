@@ -1,3 +1,21 @@
+
+<!---
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
 # Apache Hadoop Changelog
 
 ## Release 2.8.0 - Unreleased (as of 2016-02-11)
@@ -66,6 +84,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HADOOP-12788](https://issues.apache.org/jira/browse/HADOOP-12788) | OpensslAesCtrCryptoCodec should log which random number generator is used. |  Minor | . | Wei-Chiu Chuang | Wei-Chiu Chuang |
+| [HADOOP-12764](https://issues.apache.org/jira/browse/HADOOP-12764) | Increase default value of KMS maxHttpHeaderSize and make it configurable |  Minor | . | Zhe Zhang | Zhe Zhang |
 | [HADOOP-12758](https://issues.apache.org/jira/browse/HADOOP-12758) | Extend CSRF Filter with UserAgent Checks |  Major | security | Larry McCay | Larry McCay |
 | [HADOOP-12731](https://issues.apache.org/jira/browse/HADOOP-12731) | Remove useless boxing/unboxing code |  Minor | performance | Kousuke Saruta | Kousuke Saruta |
 | [HADOOP-12686](https://issues.apache.org/jira/browse/HADOOP-12686) | Update FileSystemShell documentation to mention the meaning of each columns of fs -du |  Minor | documentation, fs | Daisuke Kobayashi | Daisuke Kobayashi |
@@ -1063,6 +1082,7 @@
 | [YARN-4534](https://issues.apache.org/jira/browse/YARN-4534) | Remove the redundant symbol in yarn rmadmin help msg |  Trivial | . | Lin Yiqun | Lin Yiqun |
 | [YARN-4524](https://issues.apache.org/jira/browse/YARN-4524) | Cleanup AppSchedulingInfo |  Major | scheduler | Karthik Kambatla | Karthik Kambatla |
 | [YARN-4520](https://issues.apache.org/jira/browse/YARN-4520) | FinishAppEvent is leaked in leveldb if no app's container running on this node |  Major | nodemanager | sandflee | sandflee |
+| [YARN-4519](https://issues.apache.org/jira/browse/YARN-4519) | potential deadlock of CapacityScheduler between decrease container and assign containers |  Major | capacityscheduler | sandflee | MENG DING |
 | [YARN-4510](https://issues.apache.org/jira/browse/YARN-4510) | Fix SLS startup failure caused by NPE |  Critical | . | Bibin A Chundatt | Bibin A Chundatt |
 | [YARN-4502](https://issues.apache.org/jira/browse/YARN-4502) | Fix two AM containers get allocated when AM restart |  Critical | . | Yesha Vora | Vinod Kumar Vavilapalli |
 | [YARN-4477](https://issues.apache.org/jira/browse/YARN-4477) | FairScheduler: Handle condition which can result in an infinite loop in attemptScheduling. |  Major | fairscheduler | Tao Jie | Tao Jie |
@@ -1456,6 +1476,7 @@
 | [YARN-4162](https://issues.apache.org/jira/browse/YARN-4162) | CapacityScheduler: Add resource usage by partition and queue capacity by partition to REST API |  Major | api, client, resourcemanager | Naganarasimha G R | Naganarasimha G R |
 | [YARN-4141](https://issues.apache.org/jira/browse/YARN-4141) | Runtime Application Priority change should not throw exception for applications at finishing states |  Major | resourcemanager | Sunil G | Sunil G |
 | [YARN-4140](https://issues.apache.org/jira/browse/YARN-4140) | RM container allocation delayed incase of app submitted to Nodelabel partition |  Major | scheduler | Bibin A Chundatt | Bibin A Chundatt |
+| [YARN-4138](https://issues.apache.org/jira/browse/YARN-4138) | Roll back container resource allocation after resource increase token expires |  Major | api, nodemanager, resourcemanager | MENG DING | MENG DING |
 | [YARN-4136](https://issues.apache.org/jira/browse/YARN-4136) | LinuxContainerExecutor loses info when forwarding ResourceHandlerException |  Trivial | nodemanager | Steve Loughran | Bibin A Chundatt |
 | [YARN-4100](https://issues.apache.org/jira/browse/YARN-4100) | Add Documentation for Distributed and Delegated-Centralized Node Labels feature |  Major | api, client, resourcemanager | Naganarasimha G R | Naganarasimha G R |
 | [YARN-4098](https://issues.apache.org/jira/browse/YARN-4098) | Document ApplicationPriority feature |  Major | resourcemanager | Rohith Sharma K S | Rohith Sharma K S |

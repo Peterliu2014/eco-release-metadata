@@ -1,3 +1,21 @@
+
+<!---
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
 # Apache Hadoop Changelog
 
 ## Release 3.0.0 - Unreleased (as of 2016-02-11)
@@ -439,7 +457,9 @@
 | [HADOOP-11850](https://issues.apache.org/jira/browse/HADOOP-11850) | Typos in hadoop-common java docs |  Minor | . | Surendra Singh Lilhore | Surendra Singh Lilhore |
 | [HADOOP-11828](https://issues.apache.org/jira/browse/HADOOP-11828) | Implement the Hitchhiker erasure coding algorithm |  Major | . | Zhe Zhang | jack liuquan |
 | [HADOOP-11684](https://issues.apache.org/jira/browse/HADOOP-11684) | S3a to use thread pool that blocks clients |  Major | fs/s3 | Thomas Demoor | Thomas Demoor |
+| [HDFS-9789](https://issues.apache.org/jira/browse/HDFS-9789) | Correctly update DataNode's scheduled block size when writing small EC file |  Major | namenode | Namit Maheshwari | Jing Zhao |
 | [HDFS-9775](https://issues.apache.org/jira/browse/HDFS-9775) | Erasure Coding : Rename BlockRecoveryWork to BlockReconstructionWork |  Major | namenode | Rakesh R | Rakesh R |
+| [HDFS-9755](https://issues.apache.org/jira/browse/HDFS-9755) | Erasure Coding: allow to use multiple EC policies in striping related tests [Part 2] |  Major | erasure-coding, test | Rui Li | Rui Li |
 | [HDFS-9731](https://issues.apache.org/jira/browse/HDFS-9731) | Erasure Coding: Rename BlockECRecoveryCommand to BlockECReconstructionCommand |  Major | erasure-coding | Rakesh R | Rakesh R |
 | [HDFS-9658](https://issues.apache.org/jira/browse/HDFS-9658) | Erasure Coding: allow to use multiple EC policies in striping related tests |  Major | . | Rui Li | Rui Li |
 | [HDFS-9646](https://issues.apache.org/jira/browse/HDFS-9646) | ErasureCodingWorker may fail when recovering data blocks with length less than the first internal block |  Critical | erasure-coding | Takuya Fukudome | Jing Zhao |

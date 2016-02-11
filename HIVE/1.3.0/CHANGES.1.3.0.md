@@ -107,6 +107,7 @@
 | [HIVE-13016](https://issues.apache.org/jira/browse/HIVE-13016) | ORC FileDump recovery utility fails in Windows |  Major | . | Jason Dere | Prasanth Jayachandran |
 | [HIVE-12999](https://issues.apache.org/jira/browse/HIVE-12999) | Tez: Vertex creation reduce NN IPCs |  Major | Tez | Gopal V | Gopal V |
 | [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
+| [HIVE-12913](https://issues.apache.org/jira/browse/HIVE-12913) | Hive ptest is running tests on MR1 that must run only on MR2 |  Major | Testing Infrastructure | Sergio Peña | Sergio Peña |
 | [HIVE-12909](https://issues.apache.org/jira/browse/HIVE-12909) | Some encryption q-tests fail because trash is disabled in encryption\_with\_trash.q |  Major | Hive | Sergio Peña | Sergio Peña |
 | [HIVE-12906](https://issues.apache.org/jira/browse/HIVE-12906) | Backport to branch-1 -- HIVE-12894 Detect whether ORC is reading from ACID table correctly for Schema Evolution |  Critical | ORC | Matt McCline | Matt McCline |
 | [HIVE-12893](https://issues.apache.org/jira/browse/HIVE-12893) | Sorted dynamic partition does not work if subset of partition columns are constant folded |  Major | Logical Optimizer | Yi Zhang | Prasanth Jayachandran |
@@ -162,6 +163,7 @@
 | [HIVE-12461](https://issues.apache.org/jira/browse/HIVE-12461) | Branch-1 -Phadoop-1 build is broken |  Major | . | Xuefu Zhang | Aleksei Statkevich |
 | [HIVE-12450](https://issues.apache.org/jira/browse/HIVE-12450) | OrcFileMergeOperator does not use correct compression buffer size |  Critical | ORC | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12444](https://issues.apache.org/jira/browse/HIVE-12444) | Global Limit optimization on ACID table without base directory may throw exception |  Major | Hive, Transactions | Wei Zheng | Wei Zheng |
+| [HIVE-12441](https://issues.apache.org/jira/browse/HIVE-12441) | Driver.acquireLocksAndOpenTxn() should only call recordValidTxns() when needed |  Major | CLI, Transactions | Eugene Koifman | Wei Zheng |
 | [HIVE-12437](https://issues.apache.org/jira/browse/HIVE-12437) | SMB join in tez fails when one of the tables is empty |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12435](https://issues.apache.org/jira/browse/HIVE-12435) | SELECT COUNT(CASE WHEN...) GROUPBY returns 1 for 'NULL' in a case of ORC and vectorization is enabled. |  Critical | Vectorization | Takahiko Saito | Matt McCline |
 | [HIVE-12417](https://issues.apache.org/jira/browse/HIVE-12417) | Support for exclamation mark missing in regexp |  Major | . | Olaf Flebbe | Olaf Flebbe |
@@ -262,6 +264,7 @@
 | [HIVE-11883](https://issues.apache.org/jira/browse/HIVE-11883) | 'transactional' table property for ACID should be case insensitive |  Major | Transactions | Eugene Koifman | Eugene Koifman |
 | [HIVE-11878](https://issues.apache.org/jira/browse/HIVE-11878) | ClassNotFoundException can possibly  occur if multiple jars are registered one at a time in Hive |  Major | Hive | Ratandeep Ratti | Ratandeep Ratti |
 | [HIVE-11875](https://issues.apache.org/jira/browse/HIVE-11875) | JDBC Driver does not honor delegation token mechanism when readings params from ZooKeeper |  Major | JDBC | Vaibhav Gumashta | Vaibhav Gumashta |
+| [HIVE-11866](https://issues.apache.org/jira/browse/HIVE-11866) | Add framework to enable testing using LDAPServer using LDAP protocol |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-11860](https://issues.apache.org/jira/browse/HIVE-11860) | StatsNoJobTask fails to collect fast stats when table have subdirectories |  Major | . | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-11849](https://issues.apache.org/jira/browse/HIVE-11849) | NPE in HiveHBaseTableShapshotInputFormat in query with just count(\*) |  Major | HBase Handler | Jason Dere | Enis Soztutar |
 | [HIVE-11841](https://issues.apache.org/jira/browse/HIVE-11841) | KeyValuesInputMerger creates huge logs |  Major | Logging | Rajesh Balamohan | Rajesh Balamohan |
