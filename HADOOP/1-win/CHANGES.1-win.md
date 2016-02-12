@@ -18,13 +18,19 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 1-win - Unreleased (as of 2015-09-04)
+## Release 1-win - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [MAPREDUCE-4737](https://issues.apache.org/jira/browse/MAPREDUCE-4737) |  Hadoop does not close output file / does not call Mapper.cleanup if exception in map |  Major | . | Daniel Dai | Arun C Murthy |
+
+
+### IMPORTANT ISSUES:
+
+| JIRA | Summary | Priority | Component | Reporter | Contributor |
+|:---- |:---- | :--- |:---- |:---- |:---- |
 
 
 ### NEW FEATURES:

@@ -18,7 +18,7 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 0.20-append - Unreleased (as of 2015-09-04)
+## Release 0.20-append - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -26,6 +26,12 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HDFS-1554](https://issues.apache.org/jira/browse/HDFS-1554) | Append 0.20: New semantics for recoverLease |  Major | . | Hairong Kuang | Hairong Kuang |
 | [HDFS-630](https://issues.apache.org/jira/browse/HDFS-630) | In DFSOutputStream.nextBlockOutputStream(), the client can exclude specific datanodes when locating the next block. |  Major | hdfs-client, namenode | Ruyue Ma | Cosmin Lehene |
+
+
+### IMPORTANT ISSUES:
+
+| JIRA | Summary | Priority | Component | Reporter | Contributor |
+|:---- |:---- | :--- |:---- |:---- |:---- |
 
 
 ### NEW FEATURES:
