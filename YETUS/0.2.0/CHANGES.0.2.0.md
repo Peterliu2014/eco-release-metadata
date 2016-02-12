@@ -55,6 +55,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [YETUS-287](https://issues.apache.org/jira/browse/YETUS-287) | Update year to 2016 on website footer |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
+| [YETUS-281](https://issues.apache.org/jira/browse/YETUS-281) | hadoop: use built-in dependency order |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-280](https://issues.apache.org/jira/browse/YETUS-280) | build systems should be able to predetermine module order |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-273](https://issues.apache.org/jira/browse/YETUS-273) | Misleading warning messages when FINDBUGS\_HOME is not set |  Trivial | Test Patch | John Zhuge | Marco Zühlke |
 | [YETUS-272](https://issues.apache.org/jira/browse/YETUS-272) | add a way to flag/veto patches to code which jenkins doesn't test |  Minor | Test Patch | Steve Loughran | Allen Wittenauer |
