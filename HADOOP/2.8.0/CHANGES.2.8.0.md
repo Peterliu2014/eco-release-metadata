@@ -18,7 +18,7 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 2.8.0 - Unreleased (as of 2016-02-11)
+## Release 2.8.0 - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -506,6 +506,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12795](https://issues.apache.org/jira/browse/HADOOP-12795) | KMS does not log detailed stack trace for unexpected errors. |  Major | kms | Chris Nauroth | Chris Nauroth |
 | [HADOOP-12773](https://issues.apache.org/jira/browse/HADOOP-12773) | HBase classes fail to load with client/job classloader enabled |  Major | util | Sangjin Lee | Sangjin Lee |
 | [HADOOP-12766](https://issues.apache.org/jira/browse/HADOOP-12766) | The default value of "hadoop.workaround.non.threadsafe.getpwuid" is different between core-default.xml and NativeIO.java |  Minor | . | Akira AJISAKA | Akira AJISAKA |
 | [HADOOP-12761](https://issues.apache.org/jira/browse/HADOOP-12761) | incremental maven build is not really incremental |  Minor | build | Sangjin Lee | Sangjin Lee |
@@ -515,6 +516,7 @@
 | [HADOOP-12718](https://issues.apache.org/jira/browse/HADOOP-12718) | Incorrect error message by fs -put local dir without permission |  Minor | . | John Zhuge | John Zhuge |
 | [HADOOP-12712](https://issues.apache.org/jira/browse/HADOOP-12712) | Fix some cmake plugin and native build warnings |  Minor | native | Colin Patrick McCabe | Colin Patrick McCabe |
 | [HADOOP-12700](https://issues.apache.org/jira/browse/HADOOP-12700) | Remove unused import in TestCompressorDecompressor.java |  Minor | . | John Zhuge | John Zhuge |
+| [HADOOP-12699](https://issues.apache.org/jira/browse/HADOOP-12699) | TestKMS#testKMSProvider intermittently fails during 'test rollover draining' |  Major | . | Xiao Chen | Xiao Chen |
 | [HADOOP-12689](https://issues.apache.org/jira/browse/HADOOP-12689) | S3 filesystem operations stopped working correctly |  Major | tools | Matthew Paduano | Matthew Paduano |
 | [HADOOP-12682](https://issues.apache.org/jira/browse/HADOOP-12682) | Fix TestKMS#testKMSRestart\* failure |  Major | . | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [HADOOP-12681](https://issues.apache.org/jira/browse/HADOOP-12681) | start-build-env.sh fails in branch-2 |  Blocker | build | Akira AJISAKA | Kengo Seki |
@@ -1558,6 +1560,7 @@
 | [YARN-2729](https://issues.apache.org/jira/browse/YARN-2729) | Support script based NodeLabelsProvider Interface in Distributed Node Label Configuration Setup |  Major | nodemanager | Naganarasimha G R | Naganarasimha G R |
 | [YARN-2696](https://issues.apache.org/jira/browse/YARN-2696) | Queue sorting in CapacityScheduler should consider node label |  Major | capacityscheduler, resourcemanager | Wangda Tan | Wangda Tan |
 | [YARN-2619](https://issues.apache.org/jira/browse/YARN-2619) | NodeManager: Add cgroups support for disk I/O isolation |  Major | . | Wei Yan | Varun Vasudev |
+| [YARN-2575](https://issues.apache.org/jira/browse/YARN-2575) | Create separate ACLs for Reservation create/update/delete/list ops |  Major | capacityscheduler, fairscheduler, resourcemanager | Subru Krishnan | Sean Po |
 | [YARN-2556](https://issues.apache.org/jira/browse/YARN-2556) | Tool to measure the performance of the timeline server |  Major | timelineserver | Jonathan Eagles | Chang Li |
 | [YARN-2498](https://issues.apache.org/jira/browse/YARN-2498) | Respect labels in preemption policy of capacity scheduler for inter-queue preemption |  Major | resourcemanager | Wangda Tan | Wangda Tan |
 | [YARN-2495](https://issues.apache.org/jira/browse/YARN-2495) | Allow admin specify labels from each NM (Distributed configuration) |  Major | resourcemanager | Wangda Tan | Naganarasimha G R |

@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.2.2 - Unreleased (as of 2016-02-11)
+## Release 1.2.2 - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 

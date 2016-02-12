@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.3.0 - Unreleased (as of 2016-02-11)
+## Release 1.3.0 - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -103,6 +103,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13020](https://issues.apache.org/jira/browse/HIVE-13020) | Hive Metastore and HiveServer2 to Zookeeper fails with IBM JDK |  Major | HiveServer2, Metastore, Shims | Greg Senia | Greg Senia |
 | [HIVE-13018](https://issues.apache.org/jira/browse/HIVE-13018) | On branch-1 "RuntimeException: Vectorization is not supported for datatype:LIST" |  Critical | Hive | Matt McCline | Matt McCline |
 | [HIVE-13016](https://issues.apache.org/jira/browse/HIVE-13016) | ORC FileDump recovery utility fails in Windows |  Major | . | Jason Dere | Prasanth Jayachandran |
 | [HIVE-12999](https://issues.apache.org/jira/browse/HIVE-12999) | Tez: Vertex creation reduce NN IPCs |  Major | Tez | Gopal V | Gopal V |

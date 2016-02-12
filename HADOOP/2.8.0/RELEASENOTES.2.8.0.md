@@ -88,7 +88,7 @@ Fixes an Trash related issue wherein a delay in the periodic checkpointing of on
 
 * [HADOOP-12313](https://issues.apache.org/jira/browse/HADOOP-12313) | *Critical* | **NPE in JvmPauseMonitor when calling stop() before start()**
 
-HADOOP-12313 Allow stop() before start() completed in JvmPauseMonitor
+Allow stop() before start() completed in JvmPauseMonitor
 
 
 ---
@@ -107,13 +107,6 @@ HADOOP-12313 Allow stop() before start() completed in JvmPauseMonitor
 * --branch option lets one specify a branch to test against on the command line
 * On certain Jenkins machines, the artifact directory sometimes gets deleted from outside the test-patch script.  There is now some code to try to detect, alert, and quick exit if that happens.
 * Various semi-critical output and bug fixes
-
-
----
-
-* [HADOOP-11848](https://issues.apache.org/jira/browse/HADOOP-11848) | *Major* | **Incorrect arguments to sizeof in DomainSocket.c**
-
-Small one-line bug fix
 
 
 ---
@@ -290,13 +283,6 @@ The balancer will only run on blockpools included in this list.
 
 ---
 
-* [HDFS-8866](https://issues.apache.org/jira/browse/HDFS-8866) | *Trivial* | **Typo in docs: Rumtime -\> Runtime**
-
-HDFS-8866 Correct typo in WebHDFS.md
-
-
----
-
 * [HDFS-8831](https://issues.apache.org/jira/browse/HDFS-8831) | *Major* | **Trash Support for deletion in HDFS encryption zone**
 
 Trash is now supported for deletion of files within encryption zone after HDFS-8831. The deleted encrypted files will remain encrypted and be moved to .Trash subdirectory under the root of the encryption zone prefixed by $USER/current with checkpoint and expunge working similar to existing Trash.
@@ -445,13 +431,6 @@ Add a new configuration "yarn.timeline-service.version" to indicate what is the 
 
 ---
 
-* [YARN-3587](https://issues.apache.org/jira/browse/YARN-3587) | *Minor* | **Fix the javadoc of DelegationTokenSecretManager in projects of yarn, etc.**
-
-Update DelegationTokenSecretManager Javadoc (milliseconds)
-
-
----
-
 * [YARN-3443](https://issues.apache.org/jira/browse/YARN-3443) | *Major* | **Create a 'ResourceHandler' subsystem to ease addition of support for new resource types on the NM**
 
 The current cgroups implementation is closely tied to supporting CPU as a resource . This patch separates out CGroups implementation into a reusable class as well as provides a simple ResourceHandler subsystem that will enable us to add support for new resource types on the NM - e.g Network, Disk etc.
@@ -497,7 +476,7 @@ ResourceManager renews delegation tokens for applications. This behavior has bee
 
 * [YARN-2336](https://issues.apache.org/jira/browse/YARN-2336) | *Major* | **Fair scheduler REST api returns a missing '[' bracket JSON for deep queue tree**
 
-This incompatible change should be fixed on branch-2 because the API is broken in branch-2.
+**WARNING: No release note provided for this incompatible change.**
 
 
 ---

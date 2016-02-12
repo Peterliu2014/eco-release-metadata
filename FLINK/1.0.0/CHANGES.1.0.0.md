@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-02-11)
+## Release 1.0.0 - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -31,6 +31,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [FLINK-3292](https://issues.apache.org/jira/browse/FLINK-3292) | Bug in flink-jdbc. Not all JDBC drivers supported |  Minor | other | Subhobrata Dey |  |
+| [FLINK-3271](https://issues.apache.org/jira/browse/FLINK-3271) | Using webhdfs in a flink topology throws classnotfound exception |  Major | Core | Abhishek Agarwal | Abhishek Agarwal |
 
 
 ### NEW FEATURES:
@@ -51,6 +52,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3364](https://issues.apache.org/jira/browse/FLINK-3364) | Don't initialize SavepointStore in JobManager constructor |  Critical | . | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3355](https://issues.apache.org/jira/browse/FLINK-3355) | Allow passing RocksDB Option to RocksDBStateBackend |  Critical | Streaming | Gyula Fora | Stephan Ewen |
 | [FLINK-3348](https://issues.apache.org/jira/browse/FLINK-3348) | taskmanager.memory.off-heap missing bc documentation |  Trivial | Documentation | Flavio Pompermaier | Maximilian Michels |
 | [FLINK-3336](https://issues.apache.org/jira/browse/FLINK-3336) | Add Semi-Rebalance Data Shipping for DataStream |  Major | Streaming | Aljoscha Krettek | Aljoscha Krettek |
@@ -131,6 +133,7 @@
 | [FLINK-3361](https://issues.apache.org/jira/browse/FLINK-3361) | Wrong error messages for execution retry delay and akka ask pause config values |  Blocker | JobManager | Stephan Ewen | Stephan Ewen |
 | [FLINK-3357](https://issues.apache.org/jira/browse/FLINK-3357) | Drop JobId.toShortString() |  Major | Core | Stephan Ewen | Ufuk Celebi |
 | [FLINK-3353](https://issues.apache.org/jira/browse/FLINK-3353) | CSV-related tests may fail depending on locale |  Trivial | Tests | Stefano Baghino | Stefano Baghino |
+| [FLINK-3351](https://issues.apache.org/jira/browse/FLINK-3351) | RocksDB Backend cannot determine correct local db path |  Major | Streaming | Gyula Fora | Stephan Ewen |
 | [FLINK-3350](https://issues.apache.org/jira/browse/FLINK-3350) | Increase timeouts on Travis Builds |  Critical | Tests | Stephan Ewen | Ufuk Celebi |
 | [FLINK-3342](https://issues.apache.org/jira/browse/FLINK-3342) | Operator checkpoint statistics state size overflow |  Major | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3341](https://issues.apache.org/jira/browse/FLINK-3341) | Kafka connector's 'auto.offset.reset' inconsistent with Kafka |  Minor | . | Shikhar Bhushan | Robert Metzger |

@@ -185,6 +185,7 @@ The following shell environment variables have been deprecated:
 | TOOL\_PATH | HADOOP\_TOOLS\_PATH |
 
 In addition:
+
 * DEFAULT\_LIBEXEC\_DIR will NOT be automatically transitioned to HADOOP\_DEFAULT\_LIBEXEC\_DIR and will require changes to any scripts setting that value.  A warning will be printed to the screen if DEFAULT\_LIBEXEC\_DIR has been configured.
 * HADOOP\_TOOLS\_PATH is now properly handled as a multi-valued, Java classpath-style variable.  Prior, multiple values assigned to TOOL\_PATH would not work a predictable manner.
 

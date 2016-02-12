@@ -18,7 +18,7 @@
 -->
 # Apache Spark Changelog
 
-## Release 1.6.1 - Unreleased (as of 2016-02-11)
+## Release 1.6.1 - Unreleased (as of 2016-02-12)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -60,6 +60,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [SPARK-13265](https://issues.apache.org/jira/browse/SPARK-13265) | Refactoring of basic ML import/export for other file system besides HDFS |  Major | ML | Yu Ishikawa | Yu Ishikawa |
 | [SPARK-13122](https://issues.apache.org/jira/browse/SPARK-13122) | Race condition in MemoryStore.unrollSafely() causes memory leak |  Major | Spark Core, Streaming | Adam Budde | Adam Budde |
 | [SPARK-13121](https://issues.apache.org/jira/browse/SPARK-13121) | java mapWithState mishandles scala Option |  Critical | Java API, Streaming | Gabriele Nizzoli | Gabriele Nizzoli |
 | [SPARK-13101](https://issues.apache.org/jira/browse/SPARK-13101) | Dataset complex types mapping to DataFrame  (element nullability) mismatch |  Blocker | SQL | Deenar Toraskar | Wenchen Fan |
@@ -67,6 +68,7 @@
 | [SPARK-13087](https://issues.apache.org/jira/browse/SPARK-13087) | Grouping by a complex expression may lead to incorrect AttributeReferences in aggregations |  Critical | SQL | Mark Hamstra | Michael Armbrust |
 | [SPARK-13082](https://issues.apache.org/jira/browse/SPARK-13082) | sqlCtx.real.json() doesn't work with PythonRDD |  Major | PySpark | Gaëtan Lehmann | Shixiong Zhu |
 | [SPARK-13056](https://issues.apache.org/jira/browse/SPARK-13056) | Map column would throw NPE if value is null |  Major | SQL | Adrian Wang | Adrian Wang |
+| [SPARK-13047](https://issues.apache.org/jira/browse/SPARK-13047) | Pyspark Params.hasParam should not throw an error |  Minor | ML, PySpark | Seth Hendrickson | Seth Hendrickson |
 | [SPARK-12989](https://issues.apache.org/jira/browse/SPARK-12989) | Bad interaction between StarExpansion and ExtractWindowExpressions |  Major | SQL | Michael Armbrust | Xiao Li |
 | [SPARK-12961](https://issues.apache.org/jira/browse/SPARK-12961) | Work around memory leak in Snappy library |  Major | Spark Core | Josh Rosen | Liang-Chi Hsieh |
 | [SPARK-12859](https://issues.apache.org/jira/browse/SPARK-12859) | Names of input streams with receivers don't fit in Streaming page |  Trivial | Streaming, Web UI | Jacek Laskowski | Alex Bozarth |
