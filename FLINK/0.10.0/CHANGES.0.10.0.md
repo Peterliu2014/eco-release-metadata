@@ -136,7 +136,7 @@
 | [FLINK-2231](https://issues.apache.org/jira/browse/FLINK-2231) | Create a Serializer for Scala Enumerations |  Major | Scala API | Stephan Ewen | Alexander Alexandrov |
 | [FLINK-2226](https://issues.apache.org/jira/browse/FLINK-2226) | Fail YARN application on failed single-job YARN cluster |  Major | . | Maximilian Michels | Maximilian Michels |
 | [FLINK-2216](https://issues.apache.org/jira/browse/FLINK-2216) | Examples directory contains `flink-java-examples-0.9.0-javadoc.jar` |  Major | Build System | Ufuk Celebi | Ufuk Celebi |
-| [FLINK-2182](https://issues.apache.org/jira/browse/FLINK-2182) | Add stateful Streaming Sequence Source |  Minor | eaming, Streaming | Aljoscha Krettek | Aljoscha Krettek |
+| [FLINK-2182](https://issues.apache.org/jira/browse/FLINK-2182) | Add stateful Streaming Sequence Source |  Minor | Streaming | Aljoscha Krettek | Aljoscha Krettek |
 | [FLINK-2161](https://issues.apache.org/jira/browse/FLINK-2161) | Flink Scala Shell does not support external jars (e.g. Gelly, FlinkML) |  Major | . | Till Rohrmann | Nikolaas Steenbergen |
 | [FLINK-2155](https://issues.apache.org/jira/browse/FLINK-2155) | Add an additional checkstyle validation for illegal imports |  Major | Build System | Lokesh Rajaram | Lokesh Rajaram |
 | [FLINK-2152](https://issues.apache.org/jira/browse/FLINK-2152) | Provide zipWithIndex utility in flink-contrib |  Trivial | Java API | Robert Metzger | Andra Lungu |

@@ -55,7 +55,6 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [YETUS-287](https://issues.apache.org/jira/browse/YETUS-287) | Update year to 2016 on website footer |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
-| [YETUS-281](https://issues.apache.org/jira/browse/YETUS-281) | hadoop: use built-in dependency order |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-280](https://issues.apache.org/jira/browse/YETUS-280) | build systems should be able to predetermine module order |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-273](https://issues.apache.org/jira/browse/YETUS-273) | Misleading warning messages when FINDBUGS\_HOME is not set |  Trivial | Test Patch | John Zhuge | Marco Zühlke |
 | [YETUS-272](https://issues.apache.org/jira/browse/YETUS-272) | add a way to flag/veto patches to code which jenkins doesn't test |  Minor | Test Patch | Steve Loughran | Allen Wittenauer |
@@ -70,6 +69,7 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [YETUS-299](https://issues.apache.org/jira/browse/YETUS-299) | RAT exclusions must include symlinks for 0.1.0 release |  Blocker | build | Sean Busbey | Sean Busbey |
 | [YETUS-298](https://issues.apache.org/jira/browse/YETUS-298) | precommit jira plugin will try to download deleted attachments |  Critical | Test Patch | Sean Busbey | Allen Wittenauer |
+| [YETUS-297](https://issues.apache.org/jira/browse/YETUS-297) | when verify\_multijdk\_test is no, use JAVA\_HOME, not JDK\_DIR\_LIST |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-290](https://issues.apache.org/jira/browse/YETUS-290) | reference to another function in calcdiffs' description is wrong |  Trivial | Test Patch | Kengo Seki | Marco Zühlke |
 | [YETUS-284](https://issues.apache.org/jira/browse/YETUS-284) | maven dependency solver needs enhancements |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-275](https://issues.apache.org/jira/browse/YETUS-275) | removing files(?) causes pylint file open failures |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |
@@ -78,6 +78,7 @@
 | [YETUS-265](https://issues.apache.org/jira/browse/YETUS-265) | maven javadocs aren't calcdiff'd correctly |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-260](https://issues.apache.org/jira/browse/YETUS-260) | distclean step is not working |  Critical | Test Patch | Marco Zühlke | Marco Zühlke |
 | [YETUS-258](https://issues.apache.org/jira/browse/YETUS-258) | build.sh should detect missing third party dependecies and suggest how to install |  Major | build | Wei-Chiu Chuang | Wei-Chiu Chuang |
+| [YETUS-252](https://issues.apache.org/jira/browse/YETUS-252) | 'Max memory used' is unexplained, |  Major | website and documentation | stack | Allen Wittenauer |
 | [YETUS-251](https://issues.apache.org/jira/browse/YETUS-251) | default patch-naming-rule points to old yetus url |  Major | Test Patch | Sean Busbey | Marco Zühlke |
 | [YETUS-249](https://issues.apache.org/jira/browse/YETUS-249) | asflicense with ant can fail and succeed simultaneously |  Major | Test Patch | Kengo Seki | Kengo Seki |
 | [YETUS-236](https://issues.apache.org/jira/browse/YETUS-236) | Binary artifact LICENSE/NOTICE claims to include several third party dependencies that are not present. |  Blocker | build | Sean Busbey | Allen Wittenauer |

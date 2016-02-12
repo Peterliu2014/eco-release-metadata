@@ -85,6 +85,7 @@
 | [KAFKA-3194](https://issues.apache.org/jira/browse/KAFKA-3194) | Validate security.inter.broker.protocol against the advertised.listeners protocols |  Major | core | Grant Henke | Grant Henke |
 | [KAFKA-3189](https://issues.apache.org/jira/browse/KAFKA-3189) | Kafka server returns UnknownServerException for inherited exceptions |  Major | core | Jiangjie Qin | Grant Henke |
 | [KAFKA-3179](https://issues.apache.org/jira/browse/KAFKA-3179) | Kafka consumer delivers message whose offset is earlier than sought offset. |  Major | clients | Jiangjie Qin | Jiangjie Qin |
+| [KAFKA-3147](https://issues.apache.org/jira/browse/KAFKA-3147) | Memory records is not writable in MirrorMaker |  Major | . | Meghana Narasimhan | Mayuresh Gharat |
 | [KAFKA-3141](https://issues.apache.org/jira/browse/KAFKA-3141) | kafka-acls.sh throws ArrayIndexOutOfBoundsException for an invalid authorizer-property |  Major | . | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3140](https://issues.apache.org/jira/browse/KAFKA-3140) | PatternSyntaxException thrown in MM, causes MM to hang |  Major | tools | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3138](https://issues.apache.org/jira/browse/KAFKA-3138) | 0.9.0 docs still say that log compaction doesn't work on compressed topics. |  Major | . | James Cheng |  |

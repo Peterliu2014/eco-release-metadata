@@ -74,7 +74,7 @@ User-impacting:
 Dev-impacting:
 * A ton of Docker-specific arg handling has been moved out of test-patch and into docker.sh, where it really belongs.
 * This removes a lot more hard-coded, ASF-specific Jenkins setup bits.  In some cases it was simply removed and in others, configurable.
-*  New EXEC\_MODES may be manipulated via the standard yetus\_add\_entry to list additional modes that test-patch may be running under.  Note that this gets printed to the screen *very* soon in the bootstrap process.
+*  New EXEC_MODES may be manipulated via the standard yetus_add_entry to list additional modes that test-patch may be running under.  Note that this gets printed to the screen *very* soon in the bootstrap process.
 
 
 ---
@@ -114,8 +114,8 @@ User-facing:
 Developer-facing:
 
 * BUILDTOOLCWD has changed in an incompatible way: instead of true/false it nows takes several different types of values.  See documentation for more information
-* modules\_workers now supports @@@BASEDIR@@@@ and @@@MODULEDIR@@@ as replaceable parameters on the command line
-* New buildtool\_changed\_modules function support to allow build tools to change the module list
+* modules_workers now supports @@@BASEDIR@@@@ and @@@MODULEDIR@@@ as replaceable parameters on the command line
+* New buildtool_changed_modules function support to allow build tools to change the module list
 
 
 ---
@@ -123,7 +123,7 @@ Developer-facing:
 * [YETUS-62](https://issues.apache.org/jira/browse/YETUS-62) | *Major* | **add auto-formatting of usage options**
 
 <!-- markdown -->
-test-patch and smart-apply-patch now have variable size output to match the screen dimensions when printing the usage information.  As a result, the `plugin\_usage` functions now use the `yetus\_add\_option` to add options to output. Plug-ins written to use raw echos will still work, but the output will be strange looking.
+test-patch and smart-apply-patch now have variable size output to match the screen dimensions when printing the usage information.  As a result, the `plugin_usage` functions now use the `yetus_add_option` to add options to output. Plug-ins written to use raw echos will still work, but the output will be strange looking.
 
 
 

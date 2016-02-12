@@ -59,7 +59,9 @@
 | [FLINK-3334](https://issues.apache.org/jira/browse/FLINK-3334) | Change default log4j.properties Conversion pattern to include year-month-day in the timestamp |  Minor | other | Gyula Fora | Stephan Ewen |
 | [FLINK-3306](https://issues.apache.org/jira/browse/FLINK-3306) | Auto type registration at Kryo is buggy |  Major | Java API | Stephan Ewen | Stephan Ewen |
 | [FLINK-3305](https://issues.apache.org/jira/browse/FLINK-3305) | Remove JavaKaffee serializer util |  Blocker | Java API | Stephan Ewen | Stephan Ewen |
+| [FLINK-3290](https://issues.apache.org/jira/browse/FLINK-3290) | [py] Generalize OperationInfo transfer |  Major | Python API | Chesnay Schepler | Chesnay Schepler |
 | [FLINK-3278](https://issues.apache.org/jira/browse/FLINK-3278) | Add Partitioned State Backend Based on RocksDB |  Major | Streaming | Aljoscha Krettek | Aljoscha Krettek |
+| [FLINK-3270](https://issues.apache.org/jira/browse/FLINK-3270) | Add example for reading and writing to Kafka |  Major | Examples, Kafka Connector | Robert Metzger | Robert Metzger |
 | [FLINK-3265](https://issues.apache.org/jira/browse/FLINK-3265) | RabbitMQ Source not threadsafe: ConcurrentModificationException |  Blocker | Streaming Connectors | Robert Metzger | Maximilian Michels |
 | [FLINK-3262](https://issues.apache.org/jira/browse/FLINK-3262) | Remove fuzzy versioning from Bower dependencies |  Trivial | Webfrontend | Greg Hogan | Greg Hogan |
 | [FLINK-3246](https://issues.apache.org/jira/browse/FLINK-3246) | Consolidate maven project names with \*-parent suffix |  Major | . | Stephan Ewen | Stephan Ewen |
@@ -170,6 +172,7 @@
 | [FLINK-3189](https://issues.apache.org/jira/browse/FLINK-3189) | Error while parsing job arguments passed by CLI |  Minor | Command-line client | Filip Leczycki | Matthias J. Sax |
 | [FLINK-3188](https://issues.apache.org/jira/browse/FLINK-3188) | Deletes in Kafka source should be passed on to KeyedDeserializationSchema |  Major | Kafka Connector | Sebastian Klemke | Robert Metzger |
 | [FLINK-3185](https://issues.apache.org/jira/browse/FLINK-3185) | Silent failure during job graph recovery |  Major | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
+| [FLINK-3180](https://issues.apache.org/jira/browse/FLINK-3180) | MemoryLogger does not log direct memory |  Major | Distributed Runtime | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3175](https://issues.apache.org/jira/browse/FLINK-3175) | KafkaITCase.testOffsetAutocommitTest |  Critical | Kafka Connector, Tests | Matthias J. Sax | Robert Metzger |
 | [FLINK-3173](https://issues.apache.org/jira/browse/FLINK-3173) | Bump org.apache.httpcomponents.httpclient version to 4.2.6 |  Minor | . | Till Rohrmann | Till Rohrmann |
 | [FLINK-3171](https://issues.apache.org/jira/browse/FLINK-3171) | Consolidate zoo of wrapper classes for input/output-stream to data-input/output-view |  Major | . | Stephan Ewen | Stephan Ewen |
@@ -233,6 +236,7 @@
 | [FLINK-2826](https://issues.apache.org/jira/browse/FLINK-2826) | transformed is modified in BroadcastVariableMaterialization#decrementReferenceInternal without proper locking |  Major | . | Ted Yu | Ted Yu |
 | [FLINK-2800](https://issues.apache.org/jira/browse/FLINK-2800) | kryo serialization problem |  Major | Type Serialization System | Stefano Bortoli | Till Rohrmann |
 | [FLINK-2797](https://issues.apache.org/jira/browse/FLINK-2797) | CLI: Missing option to submit jobs in detached mode |  Major | Command-line client | Maximilian Michels | Sachin Goel |
+| [FLINK-2769](https://issues.apache.org/jira/browse/FLINK-2769) | Web dashboard port not configurable on client side |  Critical | Webfrontend | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-2671](https://issues.apache.org/jira/browse/FLINK-2671) | Instable Test StreamCheckpointNotifierITCase |  Critical | Tests | Matthias J. Sax | Stephan Ewen |
 | [FLINK-2622](https://issues.apache.org/jira/browse/FLINK-2622) | Scala DataStream API does not have writeAsText method which supports WriteMode |  Major | Scala API, Streaming | Till Rohrmann | Till Rohrmann |
 | [FLINK-2586](https://issues.apache.org/jira/browse/FLINK-2586) | Unstable Storm Compatibility Tests |  Critical | Storm Compatibility | Stephan Ewen | Matthias J. Sax |
@@ -258,10 +262,12 @@
 | [FLINK-3363](https://issues.apache.org/jira/browse/FLINK-3363) | JobManager does not shut down dedicated executor properly |  Major | JobManager | Stephan Ewen | Stephan Ewen |
 | [FLINK-3312](https://issues.apache.org/jira/browse/FLINK-3312) | Add convenience accessor methods for extended state interface |  Major | Core | Stephan Ewen | Stephan Ewen |
 | [FLINK-3285](https://issues.apache.org/jira/browse/FLINK-3285) | Skip Maven deployment of flink-java8 |  Major | Java API | Maximilian Michels | Maximilian Michels |
+| [FLINK-3275](https://issues.apache.org/jira/browse/FLINK-3275) | [py] Add support for Dataset.setParallelism() |  Major | Python API | Chesnay Schepler | Chesnay Schepler |
 | [FLINK-3224](https://issues.apache.org/jira/browse/FLINK-3224) | The Streaming API does not call setInputType if a format implements InputTypeConfigurable |  Major | DataStream API | Nick Dimiduk |  |
 | [FLINK-3208](https://issues.apache.org/jira/browse/FLINK-3208) | Rename Gelly vertex-centric model to scatter-gather |  Major | Gelly | Vasia Kalavri | Vasia Kalavri |
 | [FLINK-3201](https://issues.apache.org/jira/browse/FLINK-3201) | Enhance Partitioned State Interface with State Types |  Major | Streaming | Aljoscha Krettek | Aljoscha Krettek |
 | [FLINK-3195](https://issues.apache.org/jira/browse/FLINK-3195) | Restructure examples projects and package streaming examples |  Major | Examples | Stephan Ewen | Stephan Ewen |
+| [FLINK-3140](https://issues.apache.org/jira/browse/FLINK-3140) | NULL value data layout in Row Serializer/Comparator |  Major | Table API | Chengxiang Li | Timo Walther |
 | [FLINK-3071](https://issues.apache.org/jira/browse/FLINK-3071) | Add asynchronous materialization thread |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
 | [FLINK-3070](https://issues.apache.org/jira/browse/FLINK-3070) | Create an asynchronous state handle interface |  Major | Streaming | Stephan Ewen | Aljoscha Krettek |
 | [FLINK-3057](https://issues.apache.org/jira/browse/FLINK-3057) | [py] Provide a way to pass information back to the plan process |  Minor | Python API | Chesnay Schepler | Chesnay Schepler |
