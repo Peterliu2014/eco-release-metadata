@@ -158,21 +158,6 @@ This change introduces a new configuration key used to throttle decommissioning 
 
 ---
 
-* [HDFS-7326](https://issues.apache.org/jira/browse/HDFS-7326) | *Minor* | **Add documentation for hdfs debug commands**
-
-Added documentation for the hdfs debug commands to the following URL in the documentation website.
-
-hadoop-project-dist/hadoop-hdfs/HDFSCommands.html
-
-In order to view the new documentation, build the website in a staging area:
-$ mvn clean site; mvn site:stage -DstagingDirectory=/tmp/hadoop-site
-
-Point your browser to 
-file:///tmp/hadoop-site/hadoop-project/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html
-
-
----
-
 * [HDFS-7270](https://issues.apache.org/jira/browse/HDFS-7270) | *Major* | **Add congestion signaling capability to DataNode write protocol**
 
 Introduced a new configuration dfs.pipeline.ecn. When the configuration is turned on, DataNodes will signal in the writing pipelines when they are overloaded. The client can back off based on this congestion signal to avoid overloading the system.
@@ -233,10 +218,11 @@ Based on the reconfiguration framework provided by HADOOP-7001, enable reconfigu
 
 * [MAPREDUCE-5583](https://issues.apache.org/jira/browse/MAPREDUCE-5583) | *Major* | **Ability to limit running map and reduce tasks**
 
+<!-- markdown -->
 This introduces two new MR2 job configs, mentioned below, which allow users to control the maximum simultaneously-running tasks of the submitted job, across the cluster:
 
-\* mapreduce.job.running.map.limit (default: 0, for no limit)
-\* mapreduce.job.running.reduce.limit (default: 0, for no limit)
+* mapreduce.job.running.map.limit (default: 0, for no limit)
+* mapreduce.job.running.reduce.limit (default: 0, for no limit)
 
 This is controllable at a per-job level.
 
