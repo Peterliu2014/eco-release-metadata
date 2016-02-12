@@ -30,13 +30,6 @@ ProtocolBuffer is packaged in Ubuntu
 
 ---
 
-* [HADOOP-11729](https://issues.apache.org/jira/browse/HADOOP-11729) | *Minor* | **Fix link to cgroups doc in site.xml**
-
-Committed this to trunk, branch-2, and branch-2.7. Thanks Masatake for your contribution!
-
-
----
-
 * [HADOOP-11498](https://issues.apache.org/jira/browse/HADOOP-11498) | *Major* | **Bump the version of HTrace to 3.1.0-incubating**
 
 **WARNING: No release note provided for this incompatible change.**
@@ -44,19 +37,14 @@ Committed this to trunk, branch-2, and branch-2.7. Thanks Masatake for your cont
 
 ---
 
-* [HADOOP-11497](https://issues.apache.org/jira/browse/HADOOP-11497) | *Major* | **Fix typo in ClusterSetup.html#Hadoop\_Startup**
-
-Correct startup command for cluster data nodes
-
-
----
-
 * [HADOOP-11492](https://issues.apache.org/jira/browse/HADOOP-11492) | *Major* | **Bump up curator version to 2.7.1**
 
+<!-- markdown -->
 Apache Curator version change: Apache Hadoop has updated the version of Apache Curator used from 2.6.0 to 2.7.1. This change should be binary and source compatible for the majority of downstream users. Notable exceptions:
-# Binary incompatible change: org.apache.curator.utils.PathUtils.validatePath(String) changed return types. Downstream users of this method will need to recompile.
-# Source incompatible change: org.apache.curator.framework.recipes.shared.SharedCountReader added a method to its interface definition. Downstream users with custom implementations of this interface can continue without binary compatibility problems but will need to modify their source code to recompile.
-# Source incompatible change: org.apache.curator.framework.recipes.shared.SharedValueReader added a method to its interface definition. Downstream users with custom implementations of this interface can continue without binary compatibility problems but will need to modify their source code to recompile.
+
+* Binary incompatible change: org.apache.curator.utils.PathUtils.validatePath(String) changed return types. Downstream users of this method will need to recompile.
+* Source incompatible change: org.apache.curator.framework.recipes.shared.SharedCountReader added a method to its interface definition. Downstream users with custom implementations of this interface can continue without binary compatibility problems but will need to modify their source code to recompile.
+* Source incompatible change: org.apache.curator.framework.recipes.shared.SharedValueReader added a method to its interface definition. Downstream users with custom implementations of this interface can continue without binary compatibility problems but will need to modify their source code to recompile.
 
 Downstream users are reminded that while the Hadoop community will attempt to avoid egregious incompatible dependency changes, there is currently no policy around when Hadoop's exposed dependencies will change across versions (ref http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/Compatibility.html#Java\_Classpath).
 
@@ -84,13 +72,6 @@ fs.s3a.max.total.tasks:    the maximum number of tasks that the LinkedBlockingQu
 * [HADOOP-11385](https://issues.apache.org/jira/browse/HADOOP-11385) | *Critical* | **Prevent cross site scripting attack on JMXJSONServlet**
 
 **WARNING: No release note provided for this incompatible change.**
-
-
----
-
-* [HADOOP-11348](https://issues.apache.org/jira/browse/HADOOP-11348) | *Minor* | **Remove unused variable from CMake error message for finding openssl**
-
-Test failure is unrelated.  Committed to 2.7.  Thanks, Dian.
 
 
 ---
@@ -148,13 +129,6 @@ New fs -find command
 
 ---
 
-* [HDFS-8001](https://issues.apache.org/jira/browse/HDFS-8001) | *Trivial* | **RpcProgramNfs3 : wrong parsing of dfs.blocksize**
-
-patch is fully backward compatible.
-
-
----
-
 * [HDFS-7806](https://issues.apache.org/jira/browse/HDFS-7806) | *Minor* | **Refactor: move StorageType from hadoop-hdfs to hadoop-common**
 
 This fix moves the public class StorageType from the package org.apache.hadoop.hdfs to org.apache.hadoop.fs.
@@ -173,13 +147,6 @@ LibHDFS now supports 32-bit build targets on Windows.
 
 1. Introduced quota by storage type as a hard limit on the amount of space usage allowed for different storage types (SSD, DISK, ARCHIVE) under the target directory.
 2. Added {{SetQuotaByStorageType}} API and {{-storagetype}} option for  {{hdfs dfsadmin -setSpaceQuota/-clrSpaceQuota}} commands to allow set/clear quota by storage type under the target directory.
-
-
----
-
-* [HDFS-7457](https://issues.apache.org/jira/browse/HDFS-7457) | *Major* | **DatanodeID generates excessive garbage**
-
-Thanks for the reviews, gentlemen. I've committed this to trunk and branch-2. Thanks for identifying and working on the issue, Daryn.
 
 
 ---
@@ -286,24 +253,6 @@ Removed commons-httpclient dependency from hadoop-yarn-server-web-proxy module.
 * [YARN-3154](https://issues.apache.org/jira/browse/YARN-3154) | *Blocker* | **Should not upload partial logs for MR jobs or other "short-running' applications**
 
 Applications which made use of the LogAggregationContext in their application will need to revisit this code in order to make sure that their logs continue to get rolled out.
-
-
----
-
-* [YARN-2230](https://issues.apache.org/jira/browse/YARN-2230) | *Minor* | **Fix description of yarn.scheduler.maximum-allocation-vcores in yarn-default.xml (or code)**
-
-I have modified the description of the yarn.scheduler.maximum-allocation-vcores setting in yarn-default.xml to be reflective of the actual behavior (throw InvalidRequestException when the limit is crossed).
-
-Since this is a documentation change, I have not added any test cases.
-
-Please review the patch, thanks!
-
-
----
-
-* [YARN-1904](https://issues.apache.org/jira/browse/YARN-1904) | *Major* | **Uniform the XXXXNotFound messages from ClientRMService and ApplicationHistoryClientService**
-
-I just committed this. Thanks Zhijie!
 
 
 
