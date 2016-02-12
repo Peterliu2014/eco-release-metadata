@@ -83,7 +83,8 @@ big_console_header Hadoop
 ${RDM} --project HADOOP --project HDFS \
         --project YARN --project MAPREDUCE \
         --projecttitle "Apache Hadoop" \
-        --version 2.6.4 --license \
+        --version 2.6.4 --verson 2.6.10 \
+        --license --range \
         --outputdir HADOOP
 
 ${RDM} --project HADOOP --project HDFS --project YARN --project MAPREDUCE \

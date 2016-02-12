@@ -114,8 +114,8 @@ User-facing:
 Developer-facing:
 
 * BUILDTOOLCWD has changed in an incompatible way: instead of true/false it nows takes several different types of values.  See documentation for more information
-* modules_workers now supports @@@BASEDIR@@@@ and @@@MODULEDIR@@@ as replaceable parameters on the command line
-* New buildtool_changed_modules function support to allow build tools to change the module list
+* `modules_workers` now supports @@@BASEDIR@@@@ and @@@MODULEDIR@@@ as replaceable parameters on the command line
+* New `buildtool_changed_modules` function support to allow build tools to change the module list
 
 
 ---
