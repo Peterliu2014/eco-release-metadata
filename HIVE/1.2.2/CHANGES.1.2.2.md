@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.2.2 - Unreleased (as of 2016-02-12)
+## Release 1.2.2 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -51,6 +51,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-12981](https://issues.apache.org/jira/browse/HIVE-12981) | ThriftCLIService uses incompatible getShortName() implementation |  Critical | Authentication, Authorization, CLI, Security | Bolke de Bruin | Bolke de Bruin |
 | [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | Verify sem.getInputs() and sem.getOutputs() |  Major | . | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12610](https://issues.apache.org/jira/browse/HIVE-12610) | Hybrid Grace Hash Join should fail task faster if processing first batch fails, instead of continuing processing the rest |  Major | Hive | Wei Zheng | Wei Zheng |
@@ -83,6 +84,7 @@
 | [HIVE-11050](https://issues.apache.org/jira/browse/HIVE-11050) | testCliDriver\_vector\_outer\_join.\* failures in Unit tests due to unstable data creation queries |  Blocker | Hive | Matt McCline | Matt McCline |
 | [HIVE-11028](https://issues.apache.org/jira/browse/HIVE-11028) | Tez: table self join and join with another table fails with IndexOutOfBoundsException |  Major | Query Planning | Jason Dere | Jason Dere |
 | [HIVE-10996](https://issues.apache.org/jira/browse/HIVE-10996) | Aggregation / Projection over Multi-Join Inner Query producing incorrect results |  Critical | Query Planning | Gautam Kowshik | Jesus Camacho Rodriguez |
+| [HIVE-10308](https://issues.apache.org/jira/browse/HIVE-10308) | Vectorization execution throws java.lang.IllegalArgumentException: Unsupported complex type: MAP |  Major | Vectorization | Selina Zhang | Matt McCline |
 | [HIVE-9013](https://issues.apache.org/jira/browse/HIVE-9013) | Hive set command exposes metastore db password |  Major | . | Binglin Chang | Binglin Chang |
 
 

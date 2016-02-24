@@ -23,6 +23,20 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HADOOP-12805](https://issues.apache.org/jira/browse/HADOOP-12805) | *Major* | **Annotate CanUnbuffer with @InterfaceAudience.Public**
+
+Made CanBuffer interface public for use in client applications.
+
+
+---
+
+* [HADOOP-12794](https://issues.apache.org/jira/browse/HADOOP-12794) | *Major* | **Support additional compression levels for GzipCodec**
+
+Added New compression levels for GzipCodec that can be set in zlib.compress.level
+
+
+---
+
 * [MAPREDUCE-5485](https://issues.apache.org/jira/browse/MAPREDUCE-5485) | *Critical* | **Allow repeating job commit by extending OutputCommitter API**
 
 Previously, the MR job will get failed if AM get restarted for some reason (like node failure, etc.) during its doing commit job no matter if AM attempts reach to the maximum attempts. 

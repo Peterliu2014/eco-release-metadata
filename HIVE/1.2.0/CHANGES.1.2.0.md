@@ -387,6 +387,7 @@
 | [HIVE-5733](https://issues.apache.org/jira/browse/HIVE-5733) | Publish hive-exec artifact without all the dependencies |  Major | . | Jarek Jarcec Cecho | Amareshwari Sriramadasu |
 | [HIVE-5672](https://issues.apache.org/jira/browse/HIVE-5672) | Insert with custom separator not supported for non-local directory |  Major | . | Romain Rigaux | Nemon Lou |
 | [HIVE-5545](https://issues.apache.org/jira/browse/HIVE-5545) | HCatRecord getInteger method returns String when used on Partition columns of type INT |  Major | HCatalog | Rishav Rohit | Sushanth Sowmyan |
+| [HIVE-5530](https://issues.apache.org/jira/browse/HIVE-5530) | null pointer exception when case returns null |  Minor | SQL | N Campbell | Navis |
 | [HIVE-4625](https://issues.apache.org/jira/browse/HIVE-4625) | HS2 should not attempt to get delegation token from metastore if using embedded metastore |  Major | HiveServer2 | Thejas M Nair | Hari Sankar Sivarama Subramaniyan |
 
 

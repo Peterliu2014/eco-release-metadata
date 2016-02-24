@@ -18,7 +18,7 @@
 -->
 # Apache Yetus Changelog
 
-## Release 0.2.0 - Unreleased (as of 2016-02-12)
+## Release 0.2.0 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -84,6 +84,7 @@
 | [YETUS-249](https://issues.apache.org/jira/browse/YETUS-249) | asflicense with ant can fail and succeed simultaneously |  Major | Test Patch | Kengo Seki | Kengo Seki |
 | [YETUS-236](https://issues.apache.org/jira/browse/YETUS-236) | Binary artifact LICENSE/NOTICE claims to include several third party dependencies that are not present. |  Blocker | build | Sean Busbey | Allen Wittenauer |
 | [YETUS-235](https://issues.apache.org/jira/browse/YETUS-235) | releasedocmaker does not give an error if a non-existent version is given |  Major | Release Doc Maker | Sean Busbey | Kengo Seki |
+| [YETUS-233](https://issues.apache.org/jira/browse/YETUS-233) | rdm release notes in markdown are corrupting underscores in some instances |  Major | Release Doc Maker | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-232](https://issues.apache.org/jira/browse/YETUS-232) | releasedocmaker with range option fails if project name is specified in lower case |  Major | Release Doc Maker | Kengo Seki | Kengo Seki |
 | [YETUS-221](https://issues.apache.org/jira/browse/YETUS-221) | asflicense check exits multi-module Maven build early if there are pre-existing license problems. |  Major | Test Patch | Chris Nauroth | Allen Wittenauer |
 | [YETUS-215](https://issues.apache.org/jira/browse/YETUS-215) | cli flag for "license" does the opposite of docs |  Critical | Release Doc Maker | Sean Busbey | Allen Wittenauer |

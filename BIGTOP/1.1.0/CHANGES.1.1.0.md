@@ -18,7 +18,7 @@
 -->
 # Apache BigTop Changelog
 
-## Release 1.1.0 - Unreleased (as of 2016-02-12)
+## Release 1.1.0 - 2016-01-30
 
 ### INCOMPATIBLE CHANGES:
 
@@ -96,6 +96,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [BIGTOP-2344](https://issues.apache.org/jira/browse/BIGTOP-2344) | distributions does not mention ppc64el, i386 obsolete |  Major | build, ppc64le | Olaf Flebbe | Olaf Flebbe |
 | [BIGTOP-2299](https://issues.apache.org/jira/browse/BIGTOP-2299) | test resources are breaking rat |  Blocker | tests | Konstantin Boudnik | Konstantin Boudnik |
 | [BIGTOP-2288](https://issues.apache.org/jira/browse/BIGTOP-2288) | workaround to fix invalid leveldbjni in maven repository |  Major | hadoop, ppc64le | Amir Sanjar | Amir Sanjar |
 | [BIGTOP-2281](https://issues.apache.org/jira/browse/BIGTOP-2281) | Add HIVE-12875 to Bigtop |  Major | hive | Olaf Flebbe | Olaf Flebbe |

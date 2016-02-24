@@ -23,6 +23,13 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HIVE-13021](https://issues.apache.org/jira/browse/HIVE-13021) | *Critical* | **GenericUDAFEvaluator.isEstimable(agg) always returns false**
+
+GenericUDAFEvaluator.isEstimable(agg) always returns false (Gopal V, reviewed by Prasanth Jayachandran)
+
+
+---
+
 * [HIVE-12875](https://issues.apache.org/jira/browse/HIVE-12875) | *Major* | **Verify sem.getInputs() and sem.getOutputs()**
 
 No release notes needed here.

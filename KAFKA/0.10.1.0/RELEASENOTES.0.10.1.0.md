@@ -16,17 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 -->
-# Apache HBase  1.2.1 Release Notes
+# Apache Kafka  0.10.1.0 Release Notes
 
 These release notes cover new developer and user-facing incompatibilities, important issues, features, and major improvements.
-
-
----
-
-* [HBASE-15219](https://issues.apache.org/jira/browse/HBASE-15219) | *Critical* | **Canary tool does not return non-zero exit code when one of regions is in stuck state**
-
-A new flag is added for Canary tool: -treatFailureAsError
-When this flag is specified, read / write failure would result in Canary tool exit code of 5.
 
 
 

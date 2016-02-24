@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 0.10.2 - Unreleased (as of 2016-02-12)
+## Release 0.10.2 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -42,7 +42,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
-| [FLINK-3147](https://issues.apache.org/jira/browse/FLINK-3147) | HadoopOutputFormatBase should expose fields as protected |  Minor | . | Nick Dimiduk |  |
+| [FLINK-3147](https://issues.apache.org/jira/browse/FLINK-3147) | HadoopOutputFormatBase should expose fields as protected |  Minor | . | Nick Dimiduk | Nick Dimiduk |
 | [FLINK-2962](https://issues.apache.org/jira/browse/FLINK-2962) | Cluster startup script refers to unused variable |  Major | Start-Stop Scripts | Ufuk Celebi | Ufuk Celebi |
 
 
@@ -78,7 +78,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
-| [FLINK-3224](https://issues.apache.org/jira/browse/FLINK-3224) | The Streaming API does not call setInputType if a format implements InputTypeConfigurable |  Major | DataStream API | Nick Dimiduk |  |
+| [FLINK-3224](https://issues.apache.org/jira/browse/FLINK-3224) | The Streaming API does not call setInputType if a format implements InputTypeConfigurable |  Major | DataStream API | Nick Dimiduk | Nick Dimiduk |
 
 
 ### OTHER:

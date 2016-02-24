@@ -23,6 +23,14 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HBASE-15219](https://issues.apache.org/jira/browse/HBASE-15219) | *Critical* | **Canary tool does not return non-zero exit code when one of regions is in stuck state**
+
+A new flag is added for Canary tool: -treatFailureAsError
+When this flag is specified, read / write failure would result in Canary tool exit code of 5.
+
+
+---
+
 * [HBASE-15218](https://issues.apache.org/jira/browse/HBASE-15218) | *Blocker* | **On RS crash and replay of WAL, loosing all Tags in Cells**
 
 This issue fixes 
@@ -32,6 +40,17 @@ This issue fixes
 As we use tags for Cell level security, this fixes 2 security issues
  - Cell level visibility labels security breach . Making a visibility restricted cell global readable
  - Cell level ACL availability issue.  A user who is cell level authorized to read this cell can not read it. It is a data loss for him.
+
+
+---
+
+* [HBASE-15184](https://issues.apache.org/jira/browse/HBASE-15184) | *Critical* | **SparkSQL Scan operation doesn't work on kerberos cluster**
+
+Before this patch, users of the spark HBaseContext would fail due to lack of  privilege exceptions.  
+
+Note: 
+\* It is preferred to have spark in spark-on-yarn mode if Kerberos is used. 
+\* This is orthogonal to issues with a kerberized spark cluster via InputFormats.
 
 
 ---
@@ -82,6 +101,13 @@ When authenticating as server, HBASE\_SERVER\_JAAS\_OPTS is concatenated to HBAS
 
 ---
 
+* [HBASE-15129](https://issues.apache.org/jira/browse/HBASE-15129) | *Major* | **Set default value for hbase.fs.tmp.dir rather than fully depend on hbase-default.xml**
+
+Before HBASE-15129, if somehow hbase-default.xml is not on classpath, default values for hbase.fs.tmp.dir and hbase.bulkload.staging.dir are left empty. After HBASE-15129,  default values of both properties are set to "/user/\<user.name\>/hbase-staging".
+
+
+---
+
 * [HBASE-15125](https://issues.apache.org/jira/browse/HBASE-15125) | *Major* | **HBaseFsck's adoptHdfsOrphan function creates region with wrong end key boundary**
 
 **WARNING: No release note provided for this important issue.**
@@ -92,6 +118,15 @@ When authenticating as server, HBASE\_SERVER\_JAAS\_OPTS is concatenated to HBAS
 * [HBASE-15111](https://issues.apache.org/jira/browse/HBASE-15111) | *Trivial* | **"hbase version" should write to stdout**
 
 The `hbase version` command now outputs directly to stdout rather than to a logger. This change allows the version information to be output consistently regardless of logger configuration. Naturally, this also means the command output ignores all logger configuration. Furthermore, the move from loggers to direct output changes the output of the command to omit metadata commonly included in logger ouput such as a timestamp, log level, and logger name.
+
+
+---
+
+* [HBASE-15100](https://issues.apache.org/jira/browse/HBASE-15100) | *Blocker* | **Master WALProcs still never clean up**
+
+The constructor for o.a.h.hbase.ProcedureInfo was mistakenly labeled IA.Public in previous releases and has now changed to IA.Private. Downstream users are safe to consume ProcedureInfo objects returned from HBase public interfaces, but should not expect to be able to reliably create new instances themselves.
+
+The method ProcedureInfo.setNonceKey has been removed, because it should not have been exposed to clients.
 
 
 ---
@@ -189,6 +224,13 @@ heap	memstore perc	maxLogs
 
 ---
 
+* [HBASE-14949](https://issues.apache.org/jira/browse/HBASE-14949) | *Major* | **Resolve name conflict when splitting if there are duplicated WAL entries**
+
+Now we can write duplicated WAL entries into different WAL files. This feature is required by the replication consistency fix and new implementation of WAL writer.
+
+
+---
+
 * [HBASE-14946](https://issues.apache.org/jira/browse/HBASE-14946) | *Critical* | **Don't allow multi's to over run the max result size.**
 
 The HBase region server will now send a chunk of get responses to a client if the total response size is too large. This will only be done for clients 1.2.0 and beyond. Older clients by default will have the old behavior.
@@ -221,6 +263,23 @@ After this change setting "hbase.hregion.percolumnfamilyflush.size.lower.bound" 
 This patch changes the semantic around namespace create/delete/modify when coprocessor asks that the invocation be by-passed. Previous the by-pass was done silently -- the method would just return with no indication as to whether by-pass route had been taken or not.  This patch adds throwing of a BypassCoprocessorException which is thrown if we have been asked to bypass a call.
 
 The bypass facility has been in place since hbase 1.0.0 when namespace creation/deletion, etc.., was originally added in HBASE-8408 (HBASE-15071 is about addressing bypass handling in a general way)
+
+
+---
+
+* [HBASE-14877](https://issues.apache.org/jira/browse/HBASE-14877) | *Major* | **maven archetype: client application**
+
+This patch introduces a new infrastructure for creation and maintenance of Maven archetypes in the context of the hbase project, and it also introduces the first archetype, which end-users may utilize to generate a simple hbase-client dependent project.
+
+NOTE that this patch should introduce two new WARNINGs ("Using platform encoding ... to copy filtered resources") into the hbase install process. These warnings are hard-wired into the maven-archetype-plugin:create-from-project goal. See hbase/hbase-archetypes/README.md, footnote [6] for details.
+
+After applying the patch, see hbase/hbase-archetypes/README.md for details regarding the new archetype infrastructure introduced by this patch. (The README text is also conveniently positioned at the top of the patch itself.) 
+
+Here is the opening paragraph of the README.md file: 
+================= 
+The hbase-archetypes subproject of hbase provides an infrastructure for creation and maintenance of Maven archetypes pertinent to HBase. Upon deployment to the archetype catalog of the central Maven repository, these archetypes may be used by end-user developers to autogenerate completely configured Maven projects (including fully-functioning sample code) through invocation of the archetype:generate goal of the maven-archetype-plugin. 
+======== 
+The README.md file also contains several paragraphs under the heading, "Notes for contributors and committers to the HBase project", which explains the layout of 'hbase-archetypes', and how archetypes are created and installed into the local Maven repository, ready for deployment to the central Maven repository. It also outlines how new archetypes may be developed and added to the collection in the future.
 
 
 ---
@@ -1076,6 +1135,20 @@ The Result.EMPTY\_RESULT object is now immutable. In previous releases, the obje
 * [HBASE-13270](https://issues.apache.org/jira/browse/HBASE-13270) | *Major* | **Setter for Result#getStats is #addResults; confusing!**
 
 Deprecates Result#addResults in favor of Result#setStatistics
+
+
+---
+
+* [HBASE-13259](https://issues.apache.org/jira/browse/HBASE-13259) | *Critical* | **mmap() based BucketCache IOEngine**
+
+mmap() based bucket cache can be configured by specifying the property
+{code}
+\<property\>
+  \<name\>hbase.bucketcache.ioengine\</name\>
+  \<value\> mmap://filepath \</value\>
+\</property\>
+{code}
+This mode of bucket cache is ideal when your file based bucket cache size is lesser than then available RAM. When the cache is bigger than the available RAM then the kernel page faults will make this cache perform lesser particularly in case of scans.
 
 
 ---
@@ -1953,6 +2026,17 @@ CopyTable now can generate HFiles and bulkload to the destination table.
 * [HBASE-11990](https://issues.apache.org/jira/browse/HBASE-11990) | *Major* | **Make setting the start and stop row for a specific prefix easier**
 
 Added new utility method, setRowPrefixFilter, to Scan to easily scan for a specific row prefix
+
+
+---
+
+* [HBASE-11927](https://issues.apache.org/jira/browse/HBASE-11927) | *Major* | **Use Native Hadoop Library for HFile checksum (And flip default from CRC32 to CRC32C)**
+
+Checksumming is cpu intensive. HBase computes additional checksums for HFiles (hdfs does checksums too) and stores them inline with file data. During reading, these checksums are verified to ensure data is not corrupted. This patch tries to use Hadoop Native Library for checksum computation, if it’s available, otherwise falls back to standard Java libraries. Instructions to load NHL in HBase can be found here (http://hbase.apache.org/book.html#hadoop.native.lib).
+
+Default checksum algorithm has been changed from CRC32 to CRC32C primarily because of two reasons: 1) CRC32C has better error detection properties, and 2) New Intel processors have a dedicated instruction for crc32c computation (SSE4.2 instruction set)\*. This change is fully backward compatible. Also, users should not see any differences except decrease in cpu usage. To keep old settings, set configuration ‘hbase.hstore.checksum.algorithm’ to ‘CRC32’.
+
+\* On linux, run 'cat /proc/cpuinfo’ and look for sse4\_2 in list of flags to see if your processor supports SSE4.2.
 
 
 ---

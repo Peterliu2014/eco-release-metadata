@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.3.0 - Unreleased (as of 2016-02-12)
+## Release 1.3.0 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -104,10 +104,20 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13093](https://issues.apache.org/jira/browse/HIVE-13093) | hive metastore does not exit on start failure |  Major | Metastore | Thejas M Nair | Thejas M Nair |
+| [HIVE-13092](https://issues.apache.org/jira/browse/HIVE-13092) | Vectorized java.lang.ClassCastException: org.apache.hadoop.hive.serde2.typeinfo.ListTypeInfo cannot be cast to org.apache.hadoop.hive.serde2.typeinfo.PrimitiveTypeInfo |  Critical | Hive | Matt McCline | Matt McCline |
+| [HIVE-13090](https://issues.apache.org/jira/browse/HIVE-13090) | Hive metastore crashes on NPE with ZooKeeperTokenStore |  Major | Metastore, Security | Thejas M Nair | Piotr Wikieł |
+| [HIVE-13082](https://issues.apache.org/jira/browse/HIVE-13082) | Enable constant propagation optimization in query with left semi join |  Major | Query Processor | Chaoyu Tang | Chaoyu Tang |
+| [HIVE-13065](https://issues.apache.org/jira/browse/HIVE-13065) | Hive throws NPE when writing map type data to a HBase backed table |  Major | HBase Handler | Yongzhi Chen | Yongzhi Chen |
+| [HIVE-13042](https://issues.apache.org/jira/browse/HIVE-13042) | OrcFiledump runs into an ArrayIndexOutOfBoundsException when running against old versions of ORC files |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
+| [HIVE-13039](https://issues.apache.org/jira/browse/HIVE-13039) | BETWEEN predicate is not functioning correctly with predicate pushdown on Parquet table |  Major | Physical Optimizer | Yongzhi Chen | Yongzhi Chen |
+| [HIVE-13021](https://issues.apache.org/jira/browse/HIVE-13021) | GenericUDAFEvaluator.isEstimable(agg) always returns false |  Critical | UDF | Sergey Zadoroshnyak | Gopal V |
 | [HIVE-13020](https://issues.apache.org/jira/browse/HIVE-13020) | Hive Metastore and HiveServer2 to Zookeeper fails with IBM JDK |  Major | HiveServer2, Metastore, Shims | Greg Senia | Greg Senia |
 | [HIVE-13018](https://issues.apache.org/jira/browse/HIVE-13018) | On branch-1 "RuntimeException: Vectorization is not supported for datatype:LIST" |  Critical | Hive | Matt McCline | Matt McCline |
 | [HIVE-13016](https://issues.apache.org/jira/browse/HIVE-13016) | ORC FileDump recovery utility fails in Windows |  Major | . | Jason Dere | Prasanth Jayachandran |
 | [HIVE-12999](https://issues.apache.org/jira/browse/HIVE-12999) | Tez: Vertex creation reduce NN IPCs |  Major | Tez | Gopal V | Gopal V |
+| [HIVE-12981](https://issues.apache.org/jira/browse/HIVE-12981) | ThriftCLIService uses incompatible getShortName() implementation |  Critical | Authentication, Authorization, CLI, Security | Bolke de Bruin | Bolke de Bruin |
+| [HIVE-12965](https://issues.apache.org/jira/browse/HIVE-12965) | Insert overwrite local directory should perserve the overwritten directory permission |  Major | . | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-12947](https://issues.apache.org/jira/browse/HIVE-12947) | SMB join in tez has ClassCastException when container reuse is on |  Critical | Tez | Vikram Dixit K | Vikram Dixit K |
 | [HIVE-12913](https://issues.apache.org/jira/browse/HIVE-12913) | Hive ptest is running tests on MR1 that must run only on MR2 |  Major | Testing Infrastructure | Sergio Peña | Sergio Peña |
 | [HIVE-12909](https://issues.apache.org/jira/browse/HIVE-12909) | Some encryption q-tests fail because trash is disabled in encryption\_with\_trash.q |  Major | Hive | Sergio Peña | Sergio Peña |
@@ -132,6 +142,7 @@
 | [HIVE-12688](https://issues.apache.org/jira/browse/HIVE-12688) | HIVE-11826 makes hive unusable in properly secured cluster |  Blocker | . | Thejas M Nair | Thejas M Nair |
 | [HIVE-12684](https://issues.apache.org/jira/browse/HIVE-12684) | NPE in stats annotation when all values in decimal column are NULLs |  Major | Statistics | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12682](https://issues.apache.org/jira/browse/HIVE-12682) | Reducers in dynamic partitioning job spend a lot of time running hadoop.conf.Configuration.getOverlay |  Major | Hive | Carter Shanklin | Prasanth Jayachandran |
+| [HIVE-12673](https://issues.apache.org/jira/browse/HIVE-12673) | Orcfiledump throws NPE when no files are available |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [HIVE-12660](https://issues.apache.org/jira/browse/HIVE-12660) | HS2 memory leak with .hiverc file use |  Major | HiveServer2 | Thejas M Nair | Thejas M Nair |
 | [HIVE-12625](https://issues.apache.org/jira/browse/HIVE-12625) | Backport to branch-1 HIVE-11981 ORC Schema Evolution Issues (Vectorized, ACID, and Non-Vectorized) |  Critical | ORC | Matt McCline | Matt McCline |
 | [HIVE-12620](https://issues.apache.org/jira/browse/HIVE-12620) | Misc improvement to Acid module |  Major | Transactions | Eugene Koifman | Eugene Koifman |
@@ -490,6 +501,7 @@
 | [HIVE-10423](https://issues.apache.org/jira/browse/HIVE-10423) | HIVE-7948 breaks deploy\_e2e\_artifacts.sh |  Major | . | Eugene Koifman | Aswathy Chellammal Sreekumar |
 | [HIVE-10415](https://issues.apache.org/jira/browse/HIVE-10415) | hive.start.cleanup.scratchdir configuration is not taking effect |  Major | . | Chinna Rao Lalam | Chinna Rao Lalam |
 | [HIVE-10370](https://issues.apache.org/jira/browse/HIVE-10370) | Hive does not compile with -Phadoop-1 option |  Critical | . | Hari Sankar Sivarama Subramaniyan | Prasanth Jayachandran |
+| [HIVE-10308](https://issues.apache.org/jira/browse/HIVE-10308) | Vectorization execution throws java.lang.IllegalArgumentException: Unsupported complex type: MAP |  Major | Vectorization | Selina Zhang | Matt McCline |
 | [HIVE-10286](https://issues.apache.org/jira/browse/HIVE-10286) | SARGs: Type Safety via PredicateLeaf.type |  Major | File Formats, Serializers/Deserializers | Gopal V | Prasanth Jayachandran |
 | [HIVE-10233](https://issues.apache.org/jira/browse/HIVE-10233) | Hive on tez: memory manager for grace hash join |  Major | Tez | Vikram Dixit K | Gunther Hagleitner |
 | [HIVE-10191](https://issues.apache.org/jira/browse/HIVE-10191) | ORC: Cleanup writer per-row synchronization |  Major | File Formats | Gopal V | Gopal V |
@@ -522,6 +534,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HIVE-13055](https://issues.apache.org/jira/browse/HIVE-13055) | Add unit tests for HIVE-11512 |  Major | HiveServer2 | Naveen Gangam | Naveen Gangam |
 | [HIVE-12697](https://issues.apache.org/jira/browse/HIVE-12697) | Remove deprecated post option from webhcat test files |  Major | WebHCat | Aswathy Chellammal Sreekumar | Aswathy Chellammal Sreekumar |
 | [HIVE-11946](https://issues.apache.org/jira/browse/HIVE-11946) | TestNotificationListener is flaky |  Minor | . | Jimmy Xiang | Jimmy Xiang |
 | [HIVE-11620](https://issues.apache.org/jira/browse/HIVE-11620) | Fix several qtest output order |  Minor | . | Jimmy Xiang | Jimmy Xiang |

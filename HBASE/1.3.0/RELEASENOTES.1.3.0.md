@@ -23,6 +23,14 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HBASE-15219](https://issues.apache.org/jira/browse/HBASE-15219) | *Critical* | **Canary tool does not return non-zero exit code when one of regions is in stuck state**
+
+A new flag is added for Canary tool: -treatFailureAsError
+When this flag is specified, read / write failure would result in Canary tool exit code of 5.
+
+
+---
+
 * [HBASE-15218](https://issues.apache.org/jira/browse/HBASE-15218) | *Blocker* | **On RS crash and replay of WAL, loosing all Tags in Cells**
 
 This issue fixes 
@@ -75,6 +83,13 @@ When authenticating as server, HBASE\_SERVER\_JAAS\_OPTS is concatenated to HBAS
 
 ---
 
+* [HBASE-15129](https://issues.apache.org/jira/browse/HBASE-15129) | *Major* | **Set default value for hbase.fs.tmp.dir rather than fully depend on hbase-default.xml**
+
+Before HBASE-15129, if somehow hbase-default.xml is not on classpath, default values for hbase.fs.tmp.dir and hbase.bulkload.staging.dir are left empty. After HBASE-15129,  default values of both properties are set to "/user/\<user.name\>/hbase-staging".
+
+
+---
+
 * [HBASE-15125](https://issues.apache.org/jira/browse/HBASE-15125) | *Major* | **HBaseFsck's adoptHdfsOrphan function creates region with wrong end key boundary**
 
 **WARNING: No release note provided for this important issue.**
@@ -85,6 +100,15 @@ When authenticating as server, HBASE\_SERVER\_JAAS\_OPTS is concatenated to HBAS
 * [HBASE-15111](https://issues.apache.org/jira/browse/HBASE-15111) | *Trivial* | **"hbase version" should write to stdout**
 
 The `hbase version` command now outputs directly to stdout rather than to a logger. This change allows the version information to be output consistently regardless of logger configuration. Naturally, this also means the command output ignores all logger configuration. Furthermore, the move from loggers to direct output changes the output of the command to omit metadata commonly included in logger ouput such as a timestamp, log level, and logger name.
+
+
+---
+
+* [HBASE-15100](https://issues.apache.org/jira/browse/HBASE-15100) | *Blocker* | **Master WALProcs still never clean up**
+
+The constructor for o.a.h.hbase.ProcedureInfo was mistakenly labeled IA.Public in previous releases and has now changed to IA.Private. Downstream users are safe to consume ProcedureInfo objects returned from HBase public interfaces, but should not expect to be able to reliably create new instances themselves.
+
+The method ProcedureInfo.setNonceKey has been removed, because it should not have been exposed to clients.
 
 
 ---
@@ -197,6 +221,13 @@ heap	memstore perc	maxLogs
 10G	        40%	                        80
 20G	        40%	                        160
 32G	        40%	                        256
+
+
+---
+
+* [HBASE-14949](https://issues.apache.org/jira/browse/HBASE-14949) | *Major* | **Resolve name conflict when splitting if there are duplicated WAL entries**
+
+Now we can write duplicated WAL entries into different WAL files. This feature is required by the replication consistency fix and new implementation of WAL writer.
 
 
 ---

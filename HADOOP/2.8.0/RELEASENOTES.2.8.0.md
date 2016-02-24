@@ -23,6 +23,30 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HADOOP-12805](https://issues.apache.org/jira/browse/HADOOP-12805) | *Major* | **Annotate CanUnbuffer with @InterfaceAudience.Public**
+
+Made CanBuffer interface public for use in client applications.
+
+
+---
+
+* [HADOOP-12794](https://issues.apache.org/jira/browse/HADOOP-12794) | *Major* | **Support additional compression levels for GzipCodec**
+
+Added New compression levels for GzipCodec that can be set in zlib.compress.level
+
+
+---
+
+* [HADOOP-12668](https://issues.apache.org/jira/browse/HADOOP-12668) | *Critical* | **Support excluding weak Ciphers in HttpServer2 through ssl-server.conf**
+
+The Code Changes include following:
+- Modified DFSUtil.java in Apache HDFS project for supplying new parameter ssl.server.exclude.cipher.list
+- Modified HttpServer2.java in Apache Hadoop-common project to work with new parameter and exclude ciphers using jetty setExcludeCihers method.
+- Modfied associated test classes to owrk with existing code and also cover the newfunctionality in junit
+
+
+---
+
 * [HADOOP-12657](https://issues.apache.org/jira/browse/HADOOP-12657) | *Minor* | **Add a option to skip newline on empty files with getMerge -nl**
 
 Added -skip-empty-file option to hadoop fs -getmerge command. With the option, delimiter (LF) is not printed for empty files even if -nl option is used.
@@ -33,6 +57,20 @@ Added -skip-empty-file option to hadoop fs -getmerge command. With the option, d
 * [HADOOP-12635](https://issues.apache.org/jira/browse/HADOOP-12635) | *Major* | **Adding Append API support for WASB**
 
 The Azure Blob Storage file system (WASB) now includes optional support for use of the append API by a single writer on a path.  Please note that the implementation differs from the semantics of HDFS append.  HDFS append internally guarantees that only a single writer may append to a path at a given time.  WASB does not enforce this guarantee internally.  Instead, the application must enforce access by a single writer, such as by running single-threaded or relying on some external locking mechanism to coordinate concurrent processes.  Refer to the Azure Blob Storage documentation page for more details on enabling append in configuration.
+
+
+---
+
+* [HADOOP-12555](https://issues.apache.org/jira/browse/HADOOP-12555) | *Minor* | **WASB to read credentials from a credential provider**
+
+The hadoop-azure file system now supports configuration of the Azure Storage account credentials using the standard Hadoop Credential Provider API.  For details, please refer to the documentation on hadoop-azure and the Credential Provider API.
+
+
+---
+
+* [HADOOP-12548](https://issues.apache.org/jira/browse/HADOOP-12548) | *Major* | **Read s3a creds from a Credential Provider**
+
+The S3A Hadoop-compatible file system now support reading its S3 credentials from the Hadoop Credential Provider API in addition to XML configuration files.
 
 
 ---
@@ -224,9 +262,23 @@ Added SFTP filesystem by using the JSch library.
 
 ---
 
+* [HDFS-9711](https://issues.apache.org/jira/browse/HDFS-9711) | *Major* | **Integrate CSRF prevention filter in WebHDFS.**
+
+WebHDFS now supports options to enforce cross-site request forgery (CSRF) prevention for HTTP requests to both the NameNode and the DataNode.  Please refer to the updated WebHDFS documentation for a description of this feature and further details on how to configure it.
+
+
+---
+
 * [HDFS-9503](https://issues.apache.org/jira/browse/HDFS-9503) | *Major* | **Replace -namenode option with -fs for NNThroughputBenchmark**
 
 The patch replaces -namenode option with -fs for specifying the remote name node against which the benchmark is running. Before this patch, if '-namenode' was not given, the benchmark would run in standalone mode, ignoring the 'fs.defaultFS' in config file even if it's remote. With this patch, the benchmark, as other tools, will rely on the 'fs.defaultFS' config, which is overridable by -fs command option, to run standalone mode or remote mode.
+
+
+---
+
+* [HDFS-9425](https://issues.apache.org/jira/browse/HDFS-9425) | *Major* | **Expose number of blocks per volume as a metric**
+
+Number of blocks per volume is made available as a metric.
 
 
 ---

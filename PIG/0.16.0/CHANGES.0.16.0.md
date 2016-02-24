@@ -18,7 +18,7 @@
 -->
 # Apache Pig Changelog
 
-## Release 0.16.0 - Unreleased (as of 2016-02-12)
+## Release 0.16.0 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,6 +45,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4803](https://issues.apache.org/jira/browse/PIG-4803) | Improve performance of regex-based builtin functions |  Major | . | Eyal Allweil | Eyal Allweil |
 | [PIG-4802](https://issues.apache.org/jira/browse/PIG-4802) | Autoparallelism should estimate less when there is combiner |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4792](https://issues.apache.org/jira/browse/PIG-4792) | Do not add java and sun system properties to jobconf |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4787](https://issues.apache.org/jira/browse/PIG-4787) | Log JSONLoader exception while parsing records |  Minor | . | Rohini Palaniswamy | Rohini Palaniswamy |
@@ -74,6 +75,11 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4814](https://issues.apache.org/jira/browse/PIG-4814) | AvroStorage does not take namenode HA as part of schema file url |  Major | . | Daniel Dai | Daniel Dai |
+| [PIG-4812](https://issues.apache.org/jira/browse/PIG-4812) | Register Groovy UDF with relative path does not work |  Major | . | Daniel Dai | Daniel Dai |
+| [PIG-4811](https://issues.apache.org/jira/browse/PIG-4811) | Upgrade groovy library to address MethodClosure vulnerability |  Major | . | Daniel Dai | Daniel Dai |
+| [PIG-4808](https://issues.apache.org/jira/browse/PIG-4808) | PluckTuple overwrites regex if used more than once in the same script |  Major | . | Eyal Allweil | Eyal Allweil |
+| [PIG-4806](https://issues.apache.org/jira/browse/PIG-4806) | UDFContext can be reset in the middle during Tez input and output initialization |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4801](https://issues.apache.org/jira/browse/PIG-4801) | Provide backward compatibility with mapreduce mapred.task settings |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4800](https://issues.apache.org/jira/browse/PIG-4800) | EvalFunc.getCacheFiles() fails for different namenode |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4795](https://issues.apache.org/jira/browse/PIG-4795) | Flushing ObjectOutputStream before calling toByteArray on the underlying ByteArrayOutputStream |  Minor | . | emopers | emopers |

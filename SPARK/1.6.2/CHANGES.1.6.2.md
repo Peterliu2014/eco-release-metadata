@@ -16,9 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 -->
-# Apache Kafka Changelog
+# Apache Spark Changelog
 
-## Release 0.8.2.1 - Unreleased (as of 2016-02-24)
+## Release 1.6.2 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -48,11 +48,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
-| [KAFKA-1984](https://issues.apache.org/jira/browse/KAFKA-1984) | java producer may miss an available partition |  Blocker | producer | Jun Rao | Jun Rao |
-| [KAFKA-1971](https://issues.apache.org/jira/browse/KAFKA-1971) | starting a broker with a conflicting id will delete the previous broker registration |  Blocker | . | Jun Rao | Jun Rao |
-| [KAFKA-1952](https://issues.apache.org/jira/browse/KAFKA-1952) | High CPU Usage in 0.8.2 release |  Critical | . | Jay Kreps | Jun Rao |
-| [KAFKA-1919](https://issues.apache.org/jira/browse/KAFKA-1919) | Metadata request issued with no backoff in new producer if there are no topics |  Blocker | . | Jay Kreps | Jay Kreps |
-| [KAFKA-1100](https://issues.apache.org/jira/browse/KAFKA-1100) | metrics shouldn't have generation/timestamp specific names |  Major | . | Jason Rosenberg |  |
+| [SPARK-13390](https://issues.apache.org/jira/browse/SPARK-13390) | Java Spark createDataFrame with List parameter bug |  Minor | Spark Core | mike niemaz | Shixiong Zhu |
+| [SPARK-13355](https://issues.apache.org/jira/browse/SPARK-13355) | Replace GraphImpl.fromExistingRDDs by Graph |  Major | ML, MLlib | Xiangrui Meng | Xiangrui Meng |
+| [SPARK-12746](https://issues.apache.org/jira/browse/SPARK-12746) | ArrayType(\_, true) should also accept ArrayType(\_, false) |  Major | ML, SQL | Earthson Lu | Earthson Lu |
 
 
 ### TESTS:

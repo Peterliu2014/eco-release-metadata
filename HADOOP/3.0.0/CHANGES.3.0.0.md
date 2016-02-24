@@ -18,7 +18,7 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 3.0.0 - Unreleased (as of 2016-02-12)
+## Release 3.0.0 - Unreleased (as of 2016-02-24)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -60,6 +60,7 @@
 | [HDFS-5079](https://issues.apache.org/jira/browse/HDFS-5079) | Cleaning up NNHAStatusHeartbeat.State DatanodeProtocolProtos. |  Major | datanode, namenode | Konstantin Shvachko | Tao Luo |
 | [HDFS-3034](https://issues.apache.org/jira/browse/HDFS-3034) | Remove the deprecated Syncable.sync() method |  Major | hdfs-client | Tsz Wo Nicholas Sze | Tsz Wo Nicholas Sze |
 | [HDFS-2538](https://issues.apache.org/jira/browse/HDFS-2538) | option to disable fsck dots |  Minor | . | Allen Wittenauer | Mohammad Kamrul Islam |
+| [MAPREDUCE-6613](https://issues.apache.org/jira/browse/MAPREDUCE-6613) | Change mapreduce.jobhistory.jhist.format default from json to binary |  Minor | . | Ray Chiang | Ray Chiang |
 | [MAPREDUCE-6336](https://issues.apache.org/jira/browse/MAPREDUCE-6336) | Enable v2 FileOutputCommitter by default |  Major | mrv2 | Gera Shegalov | Siqi Li |
 | [MAPREDUCE-6234](https://issues.apache.org/jira/browse/MAPREDUCE-6234) | TestHighRamJob fails due to the change in MAPREDUCE-5785 |  Major | contrib/gridmix, mrv2 | Masatake Iwasaki | Masatake Iwasaki |
 | [MAPREDUCE-6223](https://issues.apache.org/jira/browse/MAPREDUCE-6223) | TestJobConf#testNegativeValueForTaskVmem failures |  Major | test | Gera Shegalov | Varun Saxena |
@@ -317,6 +318,7 @@
 | [HADOOP-7256](https://issues.apache.org/jira/browse/HADOOP-7256) | Resource leak during failure scenario of closing of resources. |  Minor | . | ramkrishna.s.vasudevan | ramkrishna.s.vasudevan |
 | [HADOOP-6871](https://issues.apache.org/jira/browse/HADOOP-6871) | When the value of a configuration key is set to its unresolved form, it causes the IllegalStateException in Configuration.get() stating that substitution depth is too large. |  Major | conf | Arvind Prabhakar | Arvind Prabhakar |
 | [HADOOP-6220](https://issues.apache.org/jira/browse/HADOOP-6220) | HttpServer wraps InterruptedExceptions by IOExceptions if interrupted in startup |  Minor | util | Steve Loughran | Steve Loughran |
+| [HDFS-9787](https://issues.apache.org/jira/browse/HDFS-9787) | SNNs stop uploading FSImage to ANN once isPrimaryCheckPointer changed to false. |  Major | ha | Guocui Mi | Guocui Mi |
 | [HDFS-9777](https://issues.apache.org/jira/browse/HDFS-9777) | Fix typos in DFSAdmin command line and documentation |  Trivial | hdfs-client | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [HDFS-9713](https://issues.apache.org/jira/browse/HDFS-9713) | DataXceiver#copyBlock should return if block is pinned |  Major | datanode | Uma Maheswara Rao G | Uma Maheswara Rao G |
 | [HDFS-9701](https://issues.apache.org/jira/browse/HDFS-9701) | DN may deadlock when hot-swapping under load |  Major | . | Xiao Chen | Xiao Chen |
@@ -458,6 +460,10 @@
 | [HADOOP-11850](https://issues.apache.org/jira/browse/HADOOP-11850) | Typos in hadoop-common java docs |  Minor | . | Surendra Singh Lilhore | Surendra Singh Lilhore |
 | [HADOOP-11828](https://issues.apache.org/jira/browse/HADOOP-11828) | Implement the Hitchhiker erasure coding algorithm |  Major | . | Zhe Zhang | jack liuquan |
 | [HADOOP-11684](https://issues.apache.org/jira/browse/HADOOP-11684) | S3a to use thread pool that blocks clients |  Major | fs/s3 | Thomas Demoor | Thomas Demoor |
+| [HDFS-9830](https://issues.apache.org/jira/browse/HDFS-9830) | Remove references to hftp in ViewFs documentation in trunk |  Minor | documentation, fs | Wei-Chiu Chuang | Wei-Chiu Chuang |
+| [HDFS-9829](https://issues.apache.org/jira/browse/HDFS-9829) | Erasure Coding: Improve few exception handling logic of ErasureCodingWorker |  Minor | erasure-coding | Rakesh R | Rakesh R |
+| [HDFS-9818](https://issues.apache.org/jira/browse/HDFS-9818) | Correctly handle EC reconstruction work caused by not enough racks |  Major | datanode, namenode | Takuya Fukudome | Jing Zhao |
+| [HDFS-9816](https://issues.apache.org/jira/browse/HDFS-9816) | Erasure Coding: allow to use multiple EC policies in striping related tests [Part 3] |  Major | erasure-coding, test | Rui Li | Rui Li |
 | [HDFS-9794](https://issues.apache.org/jira/browse/HDFS-9794) | Streamer threads may leak if failure happens when closing the striped outputstream |  Critical | hdfs-client | Namit Maheshwari | Jing Zhao |
 | [HDFS-9789](https://issues.apache.org/jira/browse/HDFS-9789) | Correctly update DataNode's scheduled block size when writing small EC file |  Major | namenode | Namit Maheshwari | Jing Zhao |
 | [HDFS-9775](https://issues.apache.org/jira/browse/HDFS-9775) | Erasure Coding : Rename BlockRecoveryWork to BlockReconstructionWork |  Major | namenode | Rakesh R | Rakesh R |
