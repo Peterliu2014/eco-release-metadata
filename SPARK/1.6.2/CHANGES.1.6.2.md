@@ -18,7 +18,7 @@
 -->
 # Apache Spark Changelog
 
-## Release 1.6.2 - Unreleased (as of 2016-02-24)
+## Release 1.6.2 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -48,9 +48,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
-| [SPARK-13390](https://issues.apache.org/jira/browse/SPARK-13390) | Java Spark createDataFrame with List parameter bug |  Minor | Spark Core | mike niemaz | Shixiong Zhu |
-| [SPARK-13355](https://issues.apache.org/jira/browse/SPARK-13355) | Replace GraphImpl.fromExistingRDDs by Graph |  Major | ML, MLlib | Xiangrui Meng | Xiangrui Meng |
-| [SPARK-12746](https://issues.apache.org/jira/browse/SPARK-12746) | ArrayType(\_, true) should also accept ArrayType(\_, false) |  Major | ML, SQL | Earthson Lu | Earthson Lu |
+| [SPARK-12941](https://issues.apache.org/jira/browse/SPARK-12941) | Spark-SQL JDBC Oracle dialect fails to map string datatypes to Oracle VARCHAR datatype |  Major | Spark Core | Jose Martinez Poblete | Thomas Sebastian |
 
 
 ### TESTS:

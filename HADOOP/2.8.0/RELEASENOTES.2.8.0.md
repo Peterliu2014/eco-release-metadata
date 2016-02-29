@@ -68,6 +68,13 @@ The hadoop-azure file system now supports configuration of the Azure Storage acc
 
 ---
 
+* [HADOOP-12552](https://issues.apache.org/jira/browse/HADOOP-12552) | *Minor* | **Fix undeclared/unused dependency to httpclient**
+
+Dependency on commons-httpclient::commons-httpclient was removed from hadoop-common. Downstream projects using commons-httpclient transitively provided by hadoop-common need to add explicit dependency to their pom. Since commons-httpclient is EOL, it is recommended to migrate to org.apache.httpcomponents:httpclient which is the successor.
+
+
+---
+
 * [HADOOP-12548](https://issues.apache.org/jira/browse/HADOOP-12548) | *Major* | **Read s3a creds from a Credential Provider**
 
 The S3A Hadoop-compatible file system now support reading its S3 credentials from the Hadoop Credential Provider API in addition to XML configuration files.

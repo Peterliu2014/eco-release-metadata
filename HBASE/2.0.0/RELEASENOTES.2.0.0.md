@@ -23,6 +23,27 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HBASE-15323](https://issues.apache.org/jira/browse/HBASE-15323) | *Major* | **Hbase Rest CheckAndDeleteAPi should be able to delete more cells**
+
+Fixed an issue in REST server checkAndDelete operation where the remaining cells other than the to-be-checked column are also applied in the Delete operation. Also fixed an issue in RemoteHTable where the Delete object was not passed correctly to the REST server side.
+
+
+---
+
+* [HBASE-15290](https://issues.apache.org/jira/browse/HBASE-15290) | *Major* | **Hbase Rest CheckAndAPI should save other cells along with compared cell**
+
+Fixed an issue in REST server checkAndPut operation where the remaining cells other than the to-be-checked column are also applied in the put operation .
+
+
+---
+
+* [HBASE-15264](https://issues.apache.org/jira/browse/HBASE-15264) | *Major* | **Implement a fan out HDFS OutputStream**
+
+Implement a fan-out asynchronous DFSOutputStream for implementing new WAL writer.
+
+
+---
+
 * [HBASE-15219](https://issues.apache.org/jira/browse/HBASE-15219) | *Critical* | **Canary tool does not return non-zero exit code when one of regions is in stuck state**
 
 A new flag is added for Canary tool: -treatFailureAsError
@@ -263,6 +284,13 @@ After this change setting "hbase.hregion.percolumnfamilyflush.size.lower.bound" 
 This patch changes the semantic around namespace create/delete/modify when coprocessor asks that the invocation be by-passed. Previous the by-pass was done silently -- the method would just return with no indication as to whether by-pass route had been taken or not.  This patch adds throwing of a BypassCoprocessorException which is thrown if we have been asked to bypass a call.
 
 The bypass facility has been in place since hbase 1.0.0 when namespace creation/deletion, etc.., was originally added in HBASE-8408 (HBASE-15071 is about addressing bypass handling in a general way)
+
+
+---
+
+* [HBASE-14878](https://issues.apache.org/jira/browse/HBASE-14878) | *Major* | **maven archetype: client application with shaded jars**
+
+Adds new hbase-shaded-client archetype; also corrects an omission found in hbase-archetypes/README.md in the section headed "How to add a new archetype".
 
 
 ---

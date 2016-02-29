@@ -18,7 +18,7 @@
 -->
 # Apache Spark Changelog
 
-## Release 1.6.1 - Unreleased (as of 2016-02-24)
+## Release 1.6.1 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -61,8 +61,15 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [SPARK-13482](https://issues.apache.org/jira/browse/SPARK-13482) | `spark.storage.memoryMapThreshold` has two kind of the value. |  Major | Block Manager | SaintBacchus | SaintBacchus |
+| [SPARK-13475](https://issues.apache.org/jira/browse/SPARK-13475) | HiveCompatibilitySuite should still run in PR builder even if a PR only changes sql/core |  Major | SQL, Tests | Yin Huai | Yin Huai |
+| [SPARK-13473](https://issues.apache.org/jira/browse/SPARK-13473) | Predicate can't be pushed through project with nondeterministic field |  Major | SQL | Cheng Lian | Cheng Lian |
+| [SPARK-13454](https://issues.apache.org/jira/browse/SPARK-13454) | Cannot drop table whose name starts with underscore |  Major | SQL | Cheng Lian | Yin Huai |
+| [SPARK-13441](https://issues.apache.org/jira/browse/SPARK-13441) | NullPointerException when either HADOOP\_CONF\_DIR or YARN\_CONF\_DIR is not readable |  Minor | YARN | Terence Yim | Terence Yim |
 | [SPARK-13410](https://issues.apache.org/jira/browse/SPARK-13410) | unionAll AnalysisException with DataFrames containing UDT columns. |  Major | SQL | Franklyn Dsouza | Franklyn Dsouza |
+| [SPARK-13390](https://issues.apache.org/jira/browse/SPARK-13390) | Java Spark createDataFrame with List parameter bug |  Minor | Spark Core | mike niemaz | Shixiong Zhu |
 | [SPARK-13371](https://issues.apache.org/jira/browse/SPARK-13371) | TaskSetManager.dequeueSpeculativeTask compares Option[String] and String directly. |  Major | Scheduler | Guoqiang Li | Sean Owen |
+| [SPARK-13355](https://issues.apache.org/jira/browse/SPARK-13355) | Replace GraphImpl.fromExistingRDDs by Graph |  Major | ML, MLlib | Xiangrui Meng | Xiangrui Meng |
 | [SPARK-13312](https://issues.apache.org/jira/browse/SPARK-13312) | ML Model Selection via Train Validation Split example uses incorrect data |  Minor | Documentation | Jeremy | Jeremy |
 | [SPARK-13300](https://issues.apache.org/jira/browse/SPARK-13300) | Spark examples page gives errors : Liquid error: pygments |  Minor | Documentation | stefan | Amit Ranjit |
 | [SPARK-13298](https://issues.apache.org/jira/browse/SPARK-13298) | DAG visualization does not render correctly for jobs |  Major | Web UI | Lucas Woltmann | Shixiong Zhu |
@@ -80,6 +87,7 @@
 | [SPARK-12989](https://issues.apache.org/jira/browse/SPARK-12989) | Bad interaction between StarExpansion and ExtractWindowExpressions |  Major | SQL | Michael Armbrust | Xiao Li |
 | [SPARK-12961](https://issues.apache.org/jira/browse/SPARK-12961) | Work around memory leak in Snappy library |  Major | Spark Core | Josh Rosen | Liang-Chi Hsieh |
 | [SPARK-12921](https://issues.apache.org/jira/browse/SPARK-12921) | Use SparkHadoopUtil reflection to access TaskAttemptContext in SpecificParquetRecordReaderBase |  Major | Spark Core, SQL | Josh Rosen | Josh Rosen |
+| [SPARK-12874](https://issues.apache.org/jira/browse/SPARK-12874) | ML StringIndexer does not protect itself from column name duplication |  Major | ML | Wojciech Jurczyk | Yu Ishikawa |
 | [SPARK-12859](https://issues.apache.org/jira/browse/SPARK-12859) | Names of input streams with receivers don't fit in Streaming page |  Trivial | Streaming, Web UI | Jacek Laskowski | Alex Bozarth |
 | [SPARK-12841](https://issues.apache.org/jira/browse/SPARK-12841) | UnresolvedException with cast |  Blocker | SQL | Michael Armbrust | Wenchen Fan |
 | [SPARK-12807](https://issues.apache.org/jira/browse/SPARK-12807) | Spark External Shuffle not working in Hadoop clusters with Jackson 2.2.3 |  Critical | Shuffle, YARN | Steve Loughran | Steve Loughran |
@@ -90,6 +98,7 @@
 | [SPARK-12760](https://issues.apache.org/jira/browse/SPARK-12760) | inaccurate description for difference between local vs cluster mode in closure handling |  Minor | Documentation | Mortada Mehyar | Mortada Mehyar |
 | [SPARK-12755](https://issues.apache.org/jira/browse/SPARK-12755) | Spark may attempt to rebuild application UI before finishing writing the event logs in possible race condition |  Minor | Spark Core | Michael Allman | Michael Allman |
 | [SPARK-12747](https://issues.apache.org/jira/browse/SPARK-12747) | Postgres JDBC ArrayType(DoubleType) 'Unable to find server array type' |  Major | SQL | Brandon Bradley | Liang-Chi Hsieh |
+| [SPARK-12746](https://issues.apache.org/jira/browse/SPARK-12746) | ArrayType(\_, true) should also accept ArrayType(\_, false) |  Major | ML, SQL | Earthson Lu | Earthson Lu |
 | [SPARK-12739](https://issues.apache.org/jira/browse/SPARK-12739) | Details of batch in Streaming tab uses two Duration columns |  Minor | Streaming, Web UI | Jacek Laskowski | Mario Briggs |
 | [SPARK-12734](https://issues.apache.org/jira/browse/SPARK-12734) | Fix Netty exclusions and use Maven Enforcer to prevent bug from being reintroduced |  Major | Build, Project Infra | Josh Rosen | Josh Rosen |
 | [SPARK-12711](https://issues.apache.org/jira/browse/SPARK-12711) | ML StopWordsRemover does not protect itself from column name duplication |  Trivial | ML, MLlib | Grzegorz Chilkiewicz | Grzegorz Chilkiewicz |
@@ -122,6 +131,7 @@
 | [SPARK-12502](https://issues.apache.org/jira/browse/SPARK-12502) | Script /dev/run-tests fails when IBM Java is used |  Minor | Tests | Kazuaki Ishizaki | Kazuaki Ishizaki |
 | [SPARK-12499](https://issues.apache.org/jira/browse/SPARK-12499) | make\_distribution should not override MAVEN\_OPTS |  Minor | Build | Adrian Bridgett | Adrian Bridgett |
 | [SPARK-12489](https://issues.apache.org/jira/browse/SPARK-12489) | Fix minor issues found by Findbugs |  Minor | MLlib, Spark Core, SQL | Shixiong Zhu | Shixiong Zhu |
+| [SPARK-12486](https://issues.apache.org/jira/browse/SPARK-12486) | Executors are not always terminated successfully by the worker. |  Major | Spark Core | Nong Li | Nong Li |
 | [SPARK-12478](https://issues.apache.org/jira/browse/SPARK-12478) | Dataset fields of product types can't be null |  Major | SQL | Cheng Lian | Apache Spark |
 | [SPARK-12477](https://issues.apache.org/jira/browse/SPARK-12477) | [SQL] Tungsten projection fails for null values in array fields |  Major | SQL | Pierre Borckmans | Pierre Borckmans |
 | [SPARK-12470](https://issues.apache.org/jira/browse/SPARK-12470) | Incorrect calculation of row size in o.a.s.sql.catalyst.expressions.codegen.GenerateUnsafeRowJoiner |  Minor | SQL | Pete Robbins | Pete Robbins |
@@ -131,6 +141,7 @@
 | [SPARK-12363](https://issues.apache.org/jira/browse/SPARK-12363) | PowerIterationClustering test case failed if we deprecated KMeans.setRuns |  Minor | MLlib | Yanbo Liang | Liang-Chi Hsieh |
 | [SPARK-12346](https://issues.apache.org/jira/browse/SPARK-12346) | GLM summary crashes with NoSuchElementException if attributes are missing names |  Major | SparkR | Eric Liang | Eric Liang |
 | [SPARK-12327](https://issues.apache.org/jira/browse/SPARK-12327) | lint-r checks fail with commented code |  Major | SparkR | Shivaram Venkataraman | Felix Cheung |
+| [SPARK-12316](https://issues.apache.org/jira/browse/SPARK-12316) | Stack overflow with endless call of `Delegation token thread` when application end. |  Major | YARN | SaintBacchus | SaintBacchus |
 | [SPARK-12300](https://issues.apache.org/jira/browse/SPARK-12300) | Fix schema inferance on local collections |  Minor | PySpark, SQL | holdenk | holdenk |
 | [SPARK-12268](https://issues.apache.org/jira/browse/SPARK-12268) | pyspark shell uses execfile which breaks python3 compatibility |  Major | PySpark | Erik Selin | Erik Selin |
 | [SPARK-12026](https://issues.apache.org/jira/browse/SPARK-12026) | ChiSqTest gets slower and slower over time when number of features is large |  Major | MLlib | Hunter Kelly | yuhao yang |
@@ -163,6 +174,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [SPARK-13439](https://issues.apache.org/jira/browse/SPARK-13439) | Document that spark.mesos.uris is comma-separated |  Trivial | Mesos | Michael Gummelt | Michael Gummelt |
 | [SPARK-13350](https://issues.apache.org/jira/browse/SPARK-13350) | Configuration documentation incorrectly states that PYSPARK\_PYTHON's default is "python" |  Trivial | Documentation | Christopher Aycock | Christopher Aycock |
 | [SPARK-13274](https://issues.apache.org/jira/browse/SPARK-13274) | Fix Aggregator Links on GroupedDataset Scala API |  Trivial | Documentation | Raela Wang | Raela Wang |
 | [SPARK-13214](https://issues.apache.org/jira/browse/SPARK-13214) | Fix dynamic allocation docs |  Trivial | Documentation | Bill Chambers | Bill Chambers |
@@ -172,5 +184,6 @@
 | [SPARK-12722](https://issues.apache.org/jira/browse/SPARK-12722) | Typo in Spark Pipeline example |  Trivial | Documentation | Tom Chan | Jeff Lam |
 | [SPARK-12507](https://issues.apache.org/jira/browse/SPARK-12507) | Expose closeFileAfterWrite and allowBatching configurations for Streaming |  Minor | Documentation, Streaming | Shixiong Zhu | Apache Spark |
 | [SPARK-12351](https://issues.apache.org/jira/browse/SPARK-12351) | Add documentation of submitting Mesos jobs with cluster mode |  Major | . | Timothy Chen | Timothy Chen |
+| [SPARK-13474](https://issues.apache.org/jira/browse/SPARK-13474) | Update packaging scripts to stage artifacts to home.apache.org |  Major | Project Infra | Josh Rosen | Josh Rosen |
 
 

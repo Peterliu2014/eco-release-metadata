@@ -18,7 +18,7 @@
 -->
 # Apache Hive Changelog
 
-## Release 1.3.0 - Unreleased (as of 2016-02-24)
+## Release 1.3.0 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -115,6 +115,7 @@
 | [HIVE-13020](https://issues.apache.org/jira/browse/HIVE-13020) | Hive Metastore and HiveServer2 to Zookeeper fails with IBM JDK |  Major | HiveServer2, Metastore, Shims | Greg Senia | Greg Senia |
 | [HIVE-13018](https://issues.apache.org/jira/browse/HIVE-13018) | On branch-1 "RuntimeException: Vectorization is not supported for datatype:LIST" |  Critical | Hive | Matt McCline | Matt McCline |
 | [HIVE-13016](https://issues.apache.org/jira/browse/HIVE-13016) | ORC FileDump recovery utility fails in Windows |  Major | . | Jason Dere | Prasanth Jayachandran |
+| [HIVE-13013](https://issues.apache.org/jira/browse/HIVE-13013) | Further Improve concurrency in TxnHandler |  Critical | Metastore, Transactions | Eugene Koifman | Eugene Koifman |
 | [HIVE-12999](https://issues.apache.org/jira/browse/HIVE-12999) | Tez: Vertex creation reduce NN IPCs |  Major | Tez | Gopal V | Gopal V |
 | [HIVE-12981](https://issues.apache.org/jira/browse/HIVE-12981) | ThriftCLIService uses incompatible getShortName() implementation |  Critical | Authentication, Authorization, CLI, Security | Bolke de Bruin | Bolke de Bruin |
 | [HIVE-12965](https://issues.apache.org/jira/browse/HIVE-12965) | Insert overwrite local directory should perserve the overwritten directory permission |  Major | . | Chaoyu Tang | Chaoyu Tang |
@@ -234,6 +235,7 @@
 | [HIVE-12084](https://issues.apache.org/jira/browse/HIVE-12084) | Hive queries with ORDER BY and large LIMIT fails with OutOfMemoryError Java heap space |  Major | . | Hari Sankar Sivarama Subramaniyan | Hari Sankar Sivarama Subramaniyan |
 | [HIVE-12083](https://issues.apache.org/jira/browse/HIVE-12083) | HIVE-10965 introduces thrift error if partNames or colNames are empty |  Major | Metastore | Sushanth Sowmyan | Sushanth Sowmyan |
 | [HIVE-12076](https://issues.apache.org/jira/browse/HIVE-12076) | WebHCat listing jobs after the given JobId even when templeton.jobs.listorder is set to lexicographicaldesc |  Major | . | Kiran Kumar Kolli | Kiran Kumar Kolli |
+| [HIVE-12064](https://issues.apache.org/jira/browse/HIVE-12064) | prevent transactional=false |  Critical | Transactions | Eugene Koifman | Wei Zheng |
 | [HIVE-12058](https://issues.apache.org/jira/browse/HIVE-12058) | Change hive script to record errors when calling hbase fails |  Major | Hive, HiveServer2 | Yongzhi Chen | Yongzhi Chen |
 | [HIVE-12053](https://issues.apache.org/jira/browse/HIVE-12053) | Stats performance regression caused by HIVE-11786 |  Major | Metastore | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-12046](https://issues.apache.org/jira/browse/HIVE-12046) | Re-create spark client if connection is dropped |  Minor | Spark | Jimmy Xiang | Jimmy Xiang |

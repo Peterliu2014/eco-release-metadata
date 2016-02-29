@@ -37,6 +37,13 @@ Added New compression levels for GzipCodec that can be set in zlib.compress.leve
 
 ---
 
+* [HDFS-9395](https://issues.apache.org/jira/browse/HDFS-9395) | *Major* | **Make HDFS audit logging consistant**
+
+**WARNING: No release note provided for this incompatible change.**
+
+
+---
+
 * [MAPREDUCE-5485](https://issues.apache.org/jira/browse/MAPREDUCE-5485) | *Critical* | **Allow repeating job commit by extending OutputCommitter API**
 
 Previously, the MR job will get failed if AM get restarted for some reason (like node failure, etc.) during its doing commit job no matter if AM attempts reach to the maximum attempts. 

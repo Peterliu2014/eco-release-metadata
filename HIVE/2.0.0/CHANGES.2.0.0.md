@@ -85,7 +85,6 @@
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HIVE-13025](https://issues.apache.org/jira/browse/HIVE-13025) | need a better error message for when one needs to run schematool |  Blocker | . | Sergey Shelukhin | Sergey Shelukhin |
 | [HIVE-12769](https://issues.apache.org/jira/browse/HIVE-12769) | LLAP: Pick up java\_home from System properties for Slider |  Major | llap | Gopal V | Gopal V |
-| [HIVE-12761](https://issues.apache.org/jira/browse/HIVE-12761) | Add stack trace servlet to HS2 web ui |  Minor | HiveServer2 | Shinichi Yamashita | Shinichi Yamashita |
 | [HIVE-12751](https://issues.apache.org/jira/browse/HIVE-12751) | Fix NVL explain syntax |  Major | UDF | Gopal V | Gopal V |
 | [HIVE-12713](https://issues.apache.org/jira/browse/HIVE-12713) | Miscellaneous improvements in driver compile and execute logging |  Minor | Logging | Chaoyu Tang | Chaoyu Tang |
 | [HIVE-12693](https://issues.apache.org/jira/browse/HIVE-12693) | LLAP: Use Slider Anti-Affinity scheduling mode for daemon distribution |  Major | llap | Gopal V | Gopal V |
@@ -875,6 +874,7 @@
 | [HIVE-12832](https://issues.apache.org/jira/browse/HIVE-12832) | RDBMS schema changes for HIVE-11388 |  Major | Metastore | Alan Gates | Alan Gates |
 | [HIVE-12798](https://issues.apache.org/jira/browse/HIVE-12798) | CBO: Calcite Operator To Hive Operator (Calcite Return Path): MiniTezCliDriver.vector\* queries failures due to NPE in Vectorizer.onExpressionHasNullSafes() |  Major | CBO | Hari Sankar Sivarama Subramaniyan | Hari Sankar Sivarama Subramaniyan |
 | [HIVE-12783](https://issues.apache.org/jira/browse/HIVE-12783) | fix the unit test failures in TestSparkClient and TestSparkSessionManagerImpl |  Blocker | Test | Pengcheng Xiong | Owen O'Malley |
+| [HIVE-12761](https://issues.apache.org/jira/browse/HIVE-12761) | Add stack trace servlet to HS2 web ui |  Minor | HiveServer2 | Shinichi Yamashita | Shinichi Yamashita |
 | [HIVE-12739](https://issues.apache.org/jira/browse/HIVE-12739) | Log4j2.x needs HADOOP\_USER\_CLASSPATH\_FIRST to be set |  Major | Logging | Prasanth Jayachandran | Prasanth Jayachandran |
 | [HIVE-12711](https://issues.apache.org/jira/browse/HIVE-12711) | Document howto disable web ui in config of hive.server2.webui.port |  Major | HiveServer2 | Thejas M Nair | Thejas M Nair |
 | [HIVE-12692](https://issues.apache.org/jira/browse/HIVE-12692) | Make use of the Tez HadoopShim in TaskRunner usage |  Major | llap | Siddharth Seth | Siddharth Seth |

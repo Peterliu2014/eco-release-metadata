@@ -23,6 +23,20 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HBASE-15323](https://issues.apache.org/jira/browse/HBASE-15323) | *Major* | **Hbase Rest CheckAndDeleteAPi should be able to delete more cells**
+
+Fixed an issue in REST server checkAndDelete operation where the remaining cells other than the to-be-checked column are also applied in the Delete operation. Also fixed an issue in RemoteHTable where the Delete object was not passed correctly to the REST server side.
+
+
+---
+
+* [HBASE-15290](https://issues.apache.org/jira/browse/HBASE-15290) | *Major* | **Hbase Rest CheckAndAPI should save other cells along with compared cell**
+
+Fixed an issue in REST server checkAndPut operation where the remaining cells other than the to-be-checked column are also applied in the put operation .
+
+
+---
+
 * [HBASE-15224](https://issues.apache.org/jira/browse/HBASE-15224) | *Major* | **Undo  "hbase.increment.fast.but.narrow.consistency" option; it is not necessary since HBASE-15213**
 
 HBASE-15031 “Fix merge of MVCC and SequenceID performance regression in branch-1.0 for Increments” and HBASE-15092 ‘Forward-port to 1.2+ HBASE-15031 "Fix merge of MVCC and SequenceID performance regression in branch-1.0 for Increments"’ added a workaround ‘fast-path’ to restore an increment performance regression that came into hbase 1.0 when we unified mvcc and sequence id in HBASE-8763. The workaround became available in hbase-1.0.3 and hbase-1.1.3. The workaround involved setting the flag  "hbase.increment.fast.but.narrow.consistency"  in your configuration and restarting.

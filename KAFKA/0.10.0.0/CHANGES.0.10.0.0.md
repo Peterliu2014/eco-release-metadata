@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.10.0.0 - Unreleased (as of 2016-02-24)
+## Release 0.10.0.0 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,7 +45,10 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3291](https://issues.apache.org/jira/browse/KAFKA-3291) | DumpLogSegment tool should also provide an option to only verify index sanity. |  Major | tools | Parth Brahmbhatt | Parth Brahmbhatt |
 | [KAFKA-3272](https://issues.apache.org/jira/browse/KAFKA-3272) | Add debugging options to kafka-run-class.sh so we can easily run remote debugging |  Minor | tools | Christian Posta |  |
+| [KAFKA-3259](https://issues.apache.org/jira/browse/KAFKA-3259) | KIP-31/KIP-32 clean-ups |  Major | . | Ismael Juma | Ismael Juma |
+| [KAFKA-3253](https://issues.apache.org/jira/browse/KAFKA-3253) | Skip duplicate message size check if there is no re-compression during log appending. |  Major | . | Jiangjie Qin | Ismael Juma |
 | [KAFKA-3227](https://issues.apache.org/jira/browse/KAFKA-3227) | Conservative update of Kafka dependencies |  Major | build | Ismael Juma | Ismael Juma |
 | [KAFKA-3191](https://issues.apache.org/jira/browse/KAFKA-3191) | Improve offset committing JavaDoc in KafkaConsumer |  Minor | consumer | Adam Kunicki | Adam Kunicki |
 | [KAFKA-3164](https://issues.apache.org/jira/browse/KAFKA-3164) | Document client and mirrormaker upgrade procedure/requirements |  Minor | . | Grant Henke | Grant Henke |
@@ -74,17 +77,20 @@
 | [KAFKA-2881](https://issues.apache.org/jira/browse/KAFKA-2881) | Documentation improvement |  Major | . | Gwen Shapira | Guozhang Wang |
 | [KAFKA-2879](https://issues.apache.org/jira/browse/KAFKA-2879) | Make MiniKDC test service slightly more generic |  Major | . | Gwen Shapira | Gwen Shapira |
 | [KAFKA-2668](https://issues.apache.org/jira/browse/KAFKA-2668) | Add a metric that records the total number of metrics |  Major | . | Joel Koshy | Dong Lin |
-| [KAFKA-2547](https://issues.apache.org/jira/browse/KAFKA-2547) | Make DynamicConfigManager to use the ZkNodeChangeNotificationListener introduced as part of KAFKA-2211 |  Major | . | Parth Brahmbhatt | Parth Brahmbhatt |
 
 
 ### BUG FIXES:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3292](https://issues.apache.org/jira/browse/KAFKA-3292) | ClientQuotaManager.getOrCreateQuotaSensors() may return a null ClientSensors.throttleTimeSensor |  Major | . | Jun Rao | Ismael Juma |
+| [KAFKA-3280](https://issues.apache.org/jira/browse/KAFKA-3280) | KafkaConsumer Javadoc contains misleading description of heartbeat behavior and correct use |  Major | consumer | Richard Whaling | Neha Narkhede |
+| [KAFKA-3278](https://issues.apache.org/jira/browse/KAFKA-3278) | clientId is not unique in producer/consumer registration leads to mbean warning |  Minor | kafka streams | Tom Dearman | Tom Dearman |
 | [KAFKA-3256](https://issues.apache.org/jira/browse/KAFKA-3256) | Large number of system test failures |  Major | . | Geoff Anderson | Jiangjie Qin |
+| [KAFKA-3243](https://issues.apache.org/jira/browse/KAFKA-3243) | Fix Kafka basic ops documentation for Mirror maker, blacklist is not supported for new consumers |  Major | . | Ashish K Singh | Ashish K Singh |
 | [KAFKA-3242](https://issues.apache.org/jira/browse/KAFKA-3242) | "Add Partition" log message doesn't actually indicate adding a partition |  Major | . | Gwen Shapira |  |
 | [KAFKA-3235](https://issues.apache.org/jira/browse/KAFKA-3235) | Unclosed stream in AppInfoParser static block |  Minor | . | Ted Yu |  |
-| [KAFKA-3229](https://issues.apache.org/jira/browse/KAFKA-3229) | Root statestore is not registered with ProcessorStateManager, inner state store is registered instead |  Major | kafka streams | Tom Dearman |  |
+| [KAFKA-3229](https://issues.apache.org/jira/browse/KAFKA-3229) | Root statestore is not registered with ProcessorStateManager, inner state store is registered instead |  Major | kafka streams | Tom Dearman | Tom Dearman |
 | [KAFKA-3225](https://issues.apache.org/jira/browse/KAFKA-3225) | Method commit() of class SourceTask never invoked |  Major | copycat | Krzysztof Dębski | Ewen Cheslack-Postava |
 | [KAFKA-3217](https://issues.apache.org/jira/browse/KAFKA-3217) | Unit tests which dont close producers auto-create topics in Kafka brokers of other tests when port is reused |  Major | unit tests | Rajini Sivaram | Rajini Sivaram |
 | [KAFKA-3216](https://issues.apache.org/jira/browse/KAFKA-3216) | "Modifying topics" section incorrectly says you can't change replication factor. |  Major | . | James Cheng | James Cheng |
@@ -151,6 +157,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3255](https://issues.apache.org/jira/browse/KAFKA-3255) | Extra unit tests for NetworkClient.connectionDelay(Node node, long now) |  Trivial | core | Frank Scholten |  |
+| [KAFKA-3214](https://issues.apache.org/jira/browse/KAFKA-3214) | Add consumer system tests for compressed topics |  Major | consumer | Jason Gustafson | Anna Povzner |
 | [KAFKA-2989](https://issues.apache.org/jira/browse/KAFKA-2989) | Verify all partitions consumed after rebalancing in system tests |  Major | . | Jason Gustafson | Jason Gustafson |
 | [KAFKA-2979](https://issues.apache.org/jira/browse/KAFKA-2979) | Enable authorizer and ACLs in ducktape tests |  Major | system tests | Flavio Junqueira | Flavio Junqueira |
 | [KAFKA-2949](https://issues.apache.org/jira/browse/KAFKA-2949) | Make EndToEndAuthorizationTest replicated |  Major | . | Flavio Junqueira | Flavio Junqueira |
@@ -167,9 +174,11 @@
 | [KAFKA-3277](https://issues.apache.org/jira/browse/KAFKA-3277) | Update trunk version to be 0.10.0.0-SNAPSHOT |  Major | build | Ismael Juma | Ismael Juma |
 | [KAFKA-3276](https://issues.apache.org/jira/browse/KAFKA-3276) | Rename 0.10.0.0 to 0.10.1.0 and 0.9.1.0 to 0.10.0.0 in JIRA |  Major | . | Ismael Juma | Ewen Cheslack-Postava |
 | [KAFKA-3245](https://issues.apache.org/jira/browse/KAFKA-3245) | need a way to specify the number of replicas for change log topics |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
+| [KAFKA-3192](https://issues.apache.org/jira/browse/KAFKA-3192) | Add implicit unlimited windowed aggregation for KStream |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3165](https://issues.apache.org/jira/browse/KAFKA-3165) | Fix ignored parameters in the gradle "All" tasks |  Major | build | Grant Henke | Grant Henke |
 | [KAFKA-3142](https://issues.apache.org/jira/browse/KAFKA-3142) | Improve error message in kstreams |  Major | . | Jay Kreps | Guozhang Wang |
 | [KAFKA-3136](https://issues.apache.org/jira/browse/KAFKA-3136) | Rename KafkaStreaming to KafkaStreams |  Major | . | Guozhang Wang | Guozhang Wang |
+| [KAFKA-3133](https://issues.apache.org/jira/browse/KAFKA-3133) | Add putIfAbsent function to KeyValueStore |  Major | . | Guozhang Wang | Kim Christensen |
 | [KAFKA-3125](https://issues.apache.org/jira/browse/KAFKA-3125) | Exception Hierarchy for Streams |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3121](https://issues.apache.org/jira/browse/KAFKA-3121) | KStream DSL API Improvement |  Major | . | Guozhang Wang | Guozhang Wang |
 | [KAFKA-3108](https://issues.apache.org/jira/browse/KAFKA-3108) | KStream custom StreamPartitioner for windowed key |  Minor | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
@@ -200,6 +209,7 @@
 | [KAFKA-2718](https://issues.apache.org/jira/browse/KAFKA-2718) | Reuse of temporary directories leading to transient unit test failures |  Major | core | Rajini Sivaram | Rajini Sivaram |
 | [KAFKA-2707](https://issues.apache.org/jira/browse/KAFKA-2707) | Make KStream processor names deterministic |  Major | . | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-2706](https://issues.apache.org/jira/browse/KAFKA-2706) | Make state stores first class citizens in the processor DAG |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
+| [KAFKA-2698](https://issues.apache.org/jira/browse/KAFKA-2698) | add paused API |  Critical | consumer | Onur Karaman | Jason Gustafson |
 | [KAFKA-2694](https://issues.apache.org/jira/browse/KAFKA-2694) | Make a task id be a composite id of a topic group id and a partition id |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |
 | [KAFKA-2667](https://issues.apache.org/jira/browse/KAFKA-2667) | Copycat KafkaBasedLogTest.testSendAndReadToEnd transient failure |  Major | copycat | Jason Gustafson | Ewen Cheslack-Postava |
 | [KAFKA-2654](https://issues.apache.org/jira/browse/KAFKA-2654) | Avoid calling Consumer.poll(0) in each iteration |  Major | . | Guozhang Wang | Yasuhiro Matsuda |

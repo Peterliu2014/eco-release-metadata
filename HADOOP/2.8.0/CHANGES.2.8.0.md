@@ -18,12 +18,13 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 2.8.0 - Unreleased (as of 2016-02-24)
+## Release 2.8.0 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12552](https://issues.apache.org/jira/browse/HADOOP-12552) | Fix undeclared/unused dependency to httpclient |  Minor | build | Masatake Iwasaki | Masatake Iwasaki |
 | [HADOOP-12416](https://issues.apache.org/jira/browse/HADOOP-12416) | Trash messages should be handled by Logger instead of being delivered on System.out |  Major | trash | Ashutosh Chauhan | Mingliang Liu |
 | [HADOOP-11772](https://issues.apache.org/jira/browse/HADOOP-11772) | RPC Invoker relies on static ClientCache which has synchronized(this) blocks |  Major | ipc, performance | Gopal V | Haohui Mai |
 | [HADOOP-11746](https://issues.apache.org/jira/browse/HADOOP-11746) | rewrite test-patch.sh |  Major | build, test | Allen Wittenauer | Allen Wittenauer |
@@ -86,6 +87,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [HADOOP-12828](https://issues.apache.org/jira/browse/HADOOP-12828) | Print user when services are started |  Trivial | . | Brandon Li | Wei-Chiu Chuang |
+| [HADOOP-12824](https://issues.apache.org/jira/browse/HADOOP-12824) | Collect network and disk usage on the node running Windows |  Major | . | Inigo Goiri | Inigo Goiri |
 | [HADOOP-12805](https://issues.apache.org/jira/browse/HADOOP-12805) | Annotate CanUnbuffer with @InterfaceAudience.Public |  Major | . | Ted Yu | Ted Yu |
 | [HADOOP-12794](https://issues.apache.org/jira/browse/HADOOP-12794) | Support additional compression levels for GzipCodec |  Major | io | Ravi Mutyala | Ravi Mutyala |
 | [HADOOP-12788](https://issues.apache.org/jira/browse/HADOOP-12788) | OpensslAesCtrCryptoCodec should log which random number generator is used. |  Minor | . | Wei-Chiu Chuang | Wei-Chiu Chuang |
@@ -197,11 +199,15 @@
 | [HADOOP-7266](https://issues.apache.org/jira/browse/HADOOP-7266) | Deprecate metrics v1 |  Blocker | metrics | Luke Lu | Akira AJISAKA |
 | [HADOOP-6842](https://issues.apache.org/jira/browse/HADOOP-6842) | "hadoop fs -text" does not give a useful text representation of MapWritable objects |  Major | io | Steven Wong | Akira AJISAKA |
 | [HADOOP-1540](https://issues.apache.org/jira/browse/HADOOP-1540) | Support file exclusion list in distcp |  Minor | util | Senthil Subramanian | Rich Haase |
+| [HDFS-9854](https://issues.apache.org/jira/browse/HDFS-9854) | Log cipher suite negotiation more verbosely |  Major | . | Wei-Chiu Chuang | Wei-Chiu Chuang |
+| [HDFS-9843](https://issues.apache.org/jira/browse/HDFS-9843) | Document distcp options required for copying between encrypted locations |  Major | distcp, documentation, encryption | Xiaoyu Yao | Xiaoyu Yao |
+| [HDFS-9831](https://issues.apache.org/jira/browse/HDFS-9831) | Document webhdfs retry configuration keys introduced by HDFS-5219/HDFS-5122 |  Major | documentation, webhdfs | Xiaoyu Yao | Xiaobing Zhou |
 | [HDFS-9797](https://issues.apache.org/jira/browse/HDFS-9797) | Log Standby exceptions thrown by RequestHedgingProxyProvider at DEBUG Level |  Minor | hdfs-client | Inigo Goiri | Inigo Goiri |
 | [HDFS-9768](https://issues.apache.org/jira/browse/HDFS-9768) | Reuse objectMapper instance in HDFS to improve the performance |  Major | performance | Lin Yiqun | Lin Yiqun |
 | [HDFS-9726](https://issues.apache.org/jira/browse/HDFS-9726) | Refactor IBR code to a new class |  Minor | datanode | Tsz Wo Nicholas Sze | Tsz Wo Nicholas Sze |
 | [HDFS-9721](https://issues.apache.org/jira/browse/HDFS-9721) | Allow Delimited PB OIV tool to run upon fsimage that contains INodeReference |  Major | . | Xiao Chen | Xiao Chen |
 | [HDFS-9715](https://issues.apache.org/jira/browse/HDFS-9715) | Check storage ID uniqueness on datanode startup |  Major | datanode | Lei (Eddy) Xu | Lei (Eddy) Xu |
+| [HDFS-9710](https://issues.apache.org/jira/browse/HDFS-9710) | Change DN to send block receipt IBRs in batches |  Major | datanode | Tsz Wo Nicholas Sze | Tsz Wo Nicholas Sze |
 | [HDFS-9706](https://issues.apache.org/jira/browse/HDFS-9706) | Log more details in debug logs in BlockReceiver's constructor |  Minor | . | Xiao Chen | Xiao Chen |
 | [HDFS-9700](https://issues.apache.org/jira/browse/HDFS-9700) | DFSClient and DFSOutputStream should set TCP\_NODELAY on sockets for DataTransferProtocol |  Major | hdfs-client | Gary Helmling | Gary Helmling |
 | [HDFS-9686](https://issues.apache.org/jira/browse/HDFS-9686) | Remove useless boxing/unboxing code |  Minor | performance | Kousuke Saruta | Kousuke Saruta |
@@ -438,6 +444,7 @@
 | [MAPREDUCE-4653](https://issues.apache.org/jira/browse/MAPREDUCE-4653) | TestRandomAlgorithm has an unused "import" statement |  Trivial | contrib/gridmix | Amir Sanjar | Amir Sanjar |
 | [MAPREDUCE-4414](https://issues.apache.org/jira/browse/MAPREDUCE-4414) | Add main methods to JobConf and YarnConfiguration, for debug purposes |  Major | client | Harsh J | Plamen Jeliazkov |
 | [MAPREDUCE-579](https://issues.apache.org/jira/browse/MAPREDUCE-579) | Streaming "slowmatch" documentation |  Trivial | contrib/streaming | Bo Adler | Harsh J |
+| [YARN-4720](https://issues.apache.org/jira/browse/YARN-4720) | Skip unnecessary NN operations in log aggregation |  Major | . | Ming Ma | Jun Gong |
 | [YARN-4690](https://issues.apache.org/jira/browse/YARN-4690) | Skip object allocation in FSAppAttempt#getResourceUsage when possible |  Major | . | Ming Ma | Ming Ma |
 | [YARN-4682](https://issues.apache.org/jira/browse/YARN-4682) | AMRM client to log when AMRM token updated |  Major | client | Steve Loughran | Prabhu Joseph |
 | [YARN-4662](https://issues.apache.org/jira/browse/YARN-4662) | Document some newly added metrics |  Major | . | Jian He | Jian He |
@@ -525,6 +532,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12849](https://issues.apache.org/jira/browse/HADOOP-12849) | TestSymlinkLocalFSFileSystem fails intermittently |  Major | test | Mingliang Liu | Mingliang Liu |
+| [HADOOP-12846](https://issues.apache.org/jira/browse/HADOOP-12846) | Credential Provider Recursive Dependencies |  Major | . | Larry McCay | Larry McCay |
+| [HADOOP-12831](https://issues.apache.org/jira/browse/HADOOP-12831) | LocalFS/FSOutputSummer NPEs in constructor if bytes per checksum  set to 0 |  Minor | fs | Steve Loughran | Mingliang Liu |
 | [HADOOP-12795](https://issues.apache.org/jira/browse/HADOOP-12795) | KMS does not log detailed stack trace for unexpected errors. |  Major | kms | Chris Nauroth | Chris Nauroth |
 | [HADOOP-12787](https://issues.apache.org/jira/browse/HADOOP-12787) | KMS SPNEGO sequence does not work with WEBHDFS |  Major | kms, security | Xiaoyu Yao | Xiaoyu Yao |
 | [HADOOP-12786](https://issues.apache.org/jira/browse/HADOOP-12786) | "hadoop key" command usage is not documented |  Major | documentation | Akira AJISAKA | Xiao Chen |
@@ -536,6 +546,7 @@
 | [HADOOP-12735](https://issues.apache.org/jira/browse/HADOOP-12735) | core-default.xml misspells hadoop.workaround.non.threadsafe.getpwuid |  Minor | . | Ray Chiang | Ray Chiang |
 | [HADOOP-12730](https://issues.apache.org/jira/browse/HADOOP-12730) | Hadoop streaming -mapper and -reducer options are wrongly documented as required |  Major | documentation | DeepakVohra | Kengo Seki |
 | [HADOOP-12718](https://issues.apache.org/jira/browse/HADOOP-12718) | Incorrect error message by fs -put local dir without permission |  Minor | . | John Zhuge | John Zhuge |
+| [HADOOP-12716](https://issues.apache.org/jira/browse/HADOOP-12716) | KerberosAuthenticator#doSpnegoSequence use incorrect class to determine isKeyTab in JDK8 |  Major | security | Xiaoyu Yao | Xiaoyu Yao |
 | [HADOOP-12712](https://issues.apache.org/jira/browse/HADOOP-12712) | Fix some cmake plugin and native build warnings |  Minor | native | Colin Patrick McCabe | Colin Patrick McCabe |
 | [HADOOP-12700](https://issues.apache.org/jira/browse/HADOOP-12700) | Remove unused import in TestCompressorDecompressor.java |  Minor | . | John Zhuge | John Zhuge |
 | [HADOOP-12699](https://issues.apache.org/jira/browse/HADOOP-12699) | TestKMS#testKMSProvider intermittently fails during 'test rollover draining' |  Major | . | Xiao Chen | Xiao Chen |
@@ -724,6 +735,8 @@
 | [HADOOP-9822](https://issues.apache.org/jira/browse/HADOOP-9822) | create constant MAX\_CAPACITY in RetryCache rather than hard-coding 16 in RetryCache constructor |  Minor | . | Tsuyoshi Ozawa | Tsuyoshi Ozawa |
 | [HADOOP-9729](https://issues.apache.org/jira/browse/HADOOP-9729) | The example code of org.apache.hadoop.util.Tool is incorrect |  Major | util | hellojinjie | hellojinjie |
 | [HADOOP-9692](https://issues.apache.org/jira/browse/HADOOP-9692) | Improving log message when SequenceFile reader throws EOFException on zero-length file |  Major | . | Chu Tong | Zhe Zhang |
+| [HADOOP-9121](https://issues.apache.org/jira/browse/HADOOP-9121) | InodeTree.java has redundant check for vName while throwing exception |  Major | fs | Arup Malakar | Arup Malakar |
+| [HADOOP-8818](https://issues.apache.org/jira/browse/HADOOP-8818) | Should use equals() rather than == to compare String or Text in MD5MD5CRC32FileChecksum and TFileDumper |  Minor | fs, io | Brandon Li | Brandon Li |
 | [HADOOP-8751](https://issues.apache.org/jira/browse/HADOOP-8751) | NPE in Token.toString() when Token is constructed using null identifier |  Minor | security | Vlad Rozov | Kanaka Kumar Avvaru |
 | [HADOOP-8437](https://issues.apache.org/jira/browse/HADOOP-8437) | getLocalPathForWrite should throw IOException for invalid paths |  Major | fs | Brahma Reddy Battula | Brahma Reddy Battula |
 | [HADOOP-8436](https://issues.apache.org/jira/browse/HADOOP-8436) | NPE In getLocalPathForWrite ( path, conf ) when the required context item is not configured |  Major | fs | Brahma Reddy Battula | Brahma Reddy Battula |
@@ -732,6 +745,8 @@
 | [HADOOP-7817](https://issues.apache.org/jira/browse/HADOOP-7817) | RawLocalFileSystem.append() should give FSDataOutputStream with accurate .getPos() |  Minor | fs | Kristofer Tomasette | Kanaka Kumar Avvaru |
 | [HADOOP-7165](https://issues.apache.org/jira/browse/HADOOP-7165) | listLocatedStatus(path, filter) is not redefined in FilterFs |  Major | fs | Hairong Kuang | Hairong Kuang |
 | [HADOOP-7161](https://issues.apache.org/jira/browse/HADOOP-7161) | Remove unnecessary oro package from dependency management section |  Minor | build | Todd Lipcon | Sean Busbey |
+| [HDFS-9864](https://issues.apache.org/jira/browse/HDFS-9864) | Correct reference for RENEWDELEGATIONTOKEN and CANCELDELEGATIONTOKEN in webhdfs doc |  Major | documentation | Brahma Reddy Battula | Brahma Reddy Battula |
+| [HDFS-9855](https://issues.apache.org/jira/browse/HDFS-9855) | Modify TestAuditLoggerWithCommands to workaround the absence of HDFS-8332 |  Major | test | Kuhu Shukla | Kuhu Shukla |
 | [HDFS-9844](https://issues.apache.org/jira/browse/HDFS-9844) | Correct path creation in getTrashRoot to handle root dir |  Blocker | encryption | Zhe Zhang | Zhe Zhang |
 | [HDFS-9842](https://issues.apache.org/jira/browse/HDFS-9842) | dfs.datanode.balance.bandwidthPerSec should accept friendly size units |  Minor | balancer & mover | Lin Yiqun | Lin Yiqun |
 | [HDFS-9839](https://issues.apache.org/jira/browse/HDFS-9839) | Reduce verbosity of processReport logging |  Major | namenode | Arpit Agarwal | Arpit Agarwal |
@@ -1356,7 +1371,9 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12813](https://issues.apache.org/jira/browse/HADOOP-12813) | Migrate TestRPC and related codes to rebase on ProtobufRpcEngine |  Major | . | Kai Zheng | Kai Zheng |
 | [HADOOP-12752](https://issues.apache.org/jira/browse/HADOOP-12752) | Improve diagnostics/use of envvar/sysprop credential propagation |  Minor | security | Steve Loughran | Steve Loughran |
+| [HADOOP-12711](https://issues.apache.org/jira/browse/HADOOP-12711) | Remove dependency on commons-httpclient for ServletUtil |  Major | . | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [HADOOP-12582](https://issues.apache.org/jira/browse/HADOOP-12582) | Using BytesWritable's getLength() and getBytes() instead of get() and getSize() |  Major | . | Tsuyoshi Ozawa | Akira AJISAKA |
 | [HADOOP-12475](https://issues.apache.org/jira/browse/HADOOP-12475) | Replace guava Cache with ConcurrentHashMap for caching Connection in ipc Client |  Major | conf, io, ipc | Walter Su | Walter Su |
 | [HADOOP-12457](https://issues.apache.org/jira/browse/HADOOP-12457) | [JDK8] Fix a failure of compiling common by javadoc |  Major | . | Tsuyoshi Ozawa | Akira AJISAKA |
@@ -1491,6 +1508,7 @@
 | [HDFS-6249](https://issues.apache.org/jira/browse/HDFS-6249) | Output AclEntry in PBImageXmlWriter |  Minor | tools | Akira AJISAKA | Surendra Singh Lilhore |
 | [MAPREDUCE-6394](https://issues.apache.org/jira/browse/MAPREDUCE-6394) | Speed up Task processing loop in HsTasksBlock#render() |  Major | jobhistoryserver | Ray Chiang | Ray Chiang |
 | [MAPREDUCE-6376](https://issues.apache.org/jira/browse/MAPREDUCE-6376) | Add avro binary support for jhist files |  Major | jobhistoryserver | Ray Chiang | Ray Chiang |
+| [YARN-4680](https://issues.apache.org/jira/browse/YARN-4680) | TimerTasks leak in ATS V1.5 Writer |  Major | timelineserver | Xuan Gong | Xuan Gong |
 | [YARN-4643](https://issues.apache.org/jira/browse/YARN-4643) | Container recovery is broken with delegating container runtime |  Critical | yarn | Sidharta Seethana | Sidharta Seethana |
 | [YARN-4614](https://issues.apache.org/jira/browse/YARN-4614) | TestApplicationPriority#testApplicationPriorityAllocationWithChangeInPriority fails occasionally |  Major | test | Jason Lowe | Sunil G |
 | [YARN-4557](https://issues.apache.org/jira/browse/YARN-4557) | Fix improper Queues sorting in PartitionedQueueComparator when accessible-node-labels=\* |  Major | resourcemanager | Naganarasimha G R | Naganarasimha G R |

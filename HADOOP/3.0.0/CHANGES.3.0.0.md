@@ -18,12 +18,13 @@
 -->
 # Apache Hadoop Changelog
 
-## Release 3.0.0 - Unreleased (as of 2016-02-24)
+## Release 3.0.0 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12850](https://issues.apache.org/jira/browse/HADOOP-12850) | pull shell code out of hadoop-dist |  Major | build | Allen Wittenauer | Allen Wittenauer |
 | [HADOOP-12651](https://issues.apache.org/jira/browse/HADOOP-12651) | Replace dev-support with wrappers to Yetus |  Major | scripts | Allen Wittenauer | Allen Wittenauer |
 | [HADOOP-12495](https://issues.apache.org/jira/browse/HADOOP-12495) | Fix posix\_spawn error on OS X |  Major | util | Allen Wittenauer | Allen Wittenauer |
 | [HADOOP-12294](https://issues.apache.org/jira/browse/HADOOP-12294) | Throw an Exception when fs.permissions.umask-mode is misconfigured |  Major | conf | Chang Li | Chang Li |
@@ -92,6 +93,7 @@
 | [HADOOP-9044](https://issues.apache.org/jira/browse/HADOOP-9044) | add FindClass main class to provide classpath checking of installations |  Minor | util | Steve Loughran | Steve Loughran |
 | [HADOOP-7947](https://issues.apache.org/jira/browse/HADOOP-7947) | Validate XMLs if a relevant tool is available, when using scripts |  Major | scripts | Harsh J | Kengo Seki |
 | [HADOOP-6590](https://issues.apache.org/jira/browse/HADOOP-6590) | Add a username check for hadoop sub-commands |  Minor | scripts | Scott Chen | John Smith |
+| [HDFS-9804](https://issues.apache.org/jira/browse/HDFS-9804) | Allow long-running Balancer to login with keytab |  Major | balancer & mover, security | Xiao Chen | Xiao Chen |
 | [HDFS-9525](https://issues.apache.org/jira/browse/HDFS-9525) | hadoop utilities need to support provided delegation tokens |  Blocker | security | Allen Wittenauer | HeeSoo Kim |
 | [HDFS-9057](https://issues.apache.org/jira/browse/HDFS-9057) | allow/disallow snapshots via webhdfs |  Major | webhdfs | Allen Wittenauer | Brahma Reddy Battula |
 | [HDFS-7285](https://issues.apache.org/jira/browse/HDFS-7285) | Erasure Coding Support inside HDFS |  Major | . | Weihua Jiang | Zhe Zhang |
@@ -104,6 +106,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12841](https://issues.apache.org/jira/browse/HADOOP-12841) | Update s3-related properties in core-default.xml |  Minor | fs/s3 | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [HADOOP-12541](https://issues.apache.org/jira/browse/HADOOP-12541) | make re2j dependency consistent |  Major | build | Allen Wittenauer | Matthew Paduano |
 | [HADOOP-12436](https://issues.apache.org/jira/browse/HADOOP-12436) | GlobPattern regex library has performance issues with wildcard characters |  Major | fs | Matthew Paduano | Matthew Paduano |
 | [HADOOP-12385](https://issues.apache.org/jira/browse/HADOOP-12385) | include nested stack trace in SaslRpcClient.getServerToken() |  Minor | security | Steve Loughran | Steve Loughran |
@@ -139,7 +142,6 @@
 | [HADOOP-10044](https://issues.apache.org/jira/browse/HADOOP-10044) | Improve the javadoc of rpc code |  Minor | . | Sanjay Radia | Sanjay Radia |
 | [HADOOP-9394](https://issues.apache.org/jira/browse/HADOOP-9394) | Port findHangingTest.sh from HBase to Hadoop |  Minor | . | Andrew Wang | Andrew Wang |
 | [HADOOP-9277](https://issues.apache.org/jira/browse/HADOOP-9277) | Improve javadoc for FileContext |  Minor | . | Andrew Wang | Andrew Wang |
-| [HADOOP-9121](https://issues.apache.org/jira/browse/HADOOP-9121) | InodeTree.java has redundant check for vName while throwing exception |  Trivial | fs | Arup Malakar | Arup Malakar |
 | [HADOOP-9075](https://issues.apache.org/jira/browse/HADOOP-9075) | FileContext#FSLinkResolver should be made static |  Minor | . | Suresh Srinivas | Arpit Agarwal |
 | [HADOOP-8920](https://issues.apache.org/jira/browse/HADOOP-8920) | Add more javadoc to metrics2 related classes |  Minor | metrics | Suresh Srinivas | Suresh Srinivas |
 | [HADOOP-8864](https://issues.apache.org/jira/browse/HADOOP-8864) | Addendum to HADOOP-8840: Add a coloring case for +0 results too. |  Trivial | . | Harsh J | Harsh J |
@@ -162,7 +164,9 @@
 | [HADOOP-7659](https://issues.apache.org/jira/browse/HADOOP-7659) | fs -getmerge isn't guaranteed to work well over non-HDFS filesystems |  Minor | fs | Harsh J | Harsh J |
 | [HADOOP-6964](https://issues.apache.org/jira/browse/HADOOP-6964) | Allow compact property description in xml |  Major | conf | Owen O'Malley | Kengo Seki |
 | [HADOOP-6616](https://issues.apache.org/jira/browse/HADOOP-6616) | Improve documentation for rack awareness |  Major | documentation | Jeff Hammerbacher | Adam Faris |
+| [HDFS-9838](https://issues.apache.org/jira/browse/HDFS-9838) | Refactor the excessReplicateMap to a class |  Major | namenode | Tsz Wo Nicholas Sze | Tsz Wo Nicholas Sze |
 | [HDFS-9795](https://issues.apache.org/jira/browse/HDFS-9795) | OIV Delimited should show which files are ACL-enabled. |  Trivial | tools | Lei (Eddy) Xu | Lei (Eddy) Xu |
+| [HDFS-9734](https://issues.apache.org/jira/browse/HDFS-9734) | Refactoring of checksum failure report related codes |  Major | . | Kai Zheng | Kai Zheng |
 | [HDFS-9721](https://issues.apache.org/jira/browse/HDFS-9721) | Allow Delimited PB OIV tool to run upon fsimage that contains INodeReference |  Major | . | Xiao Chen | Xiao Chen |
 | [HDFS-9582](https://issues.apache.org/jira/browse/HDFS-9582) | TestLeaseRecoveryStriped file missing Apache License header and not well formatted |  Minor | . | Uma Maheswara Rao G | Uma Maheswara Rao G |
 | [HDFS-9491](https://issues.apache.org/jira/browse/HDFS-9491) | Tests should get the number of pending async delets via FsDatasetTestUtils |  Minor | test | Tony Wu | Tony Wu |
@@ -248,6 +252,7 @@
 | [HADOOP-12346](https://issues.apache.org/jira/browse/HADOOP-12346) | Increase some default timeouts / retries for S3a connector |  Major | fs/s3 | Sean Mackrory | Sean Mackrory |
 | [HADOOP-12192](https://issues.apache.org/jira/browse/HADOOP-12192) | update releasedocmaker commands |  Blocker | . | Allen Wittenauer | Allen Wittenauer |
 | [HADOOP-12164](https://issues.apache.org/jira/browse/HADOOP-12164) | Fix TestMove and TestFsShellReturnCode failed to get command name using reflection. |  Minor | . | Lei (Eddy) Xu | Lei (Eddy) Xu |
+| [HADOOP-12070](https://issues.apache.org/jira/browse/HADOOP-12070) | Some of the bin/hadoop subcommands are not available on Windows |  Major | scripts | Kengo Seki | Kengo Seki |
 | [HADOOP-12022](https://issues.apache.org/jira/browse/HADOOP-12022) | fix site -Pdocs -Pdist in hadoop-project-dist; cleanout remaining forrest bits |  Blocker | build | Allen Wittenauer | Allen Wittenauer |
 | [HADOOP-12016](https://issues.apache.org/jira/browse/HADOOP-12016) | Typo in FileSystem:: listStatusIterator |  Trivial | fs | Jakob Homan | Arthur Vigil |
 | [HADOOP-11983](https://issues.apache.org/jira/browse/HADOOP-11983) | HADOOP\_USER\_CLASSPATH\_FIRST works the opposite of what it is supposed to do |  Major | scripts | Sangjin Lee | Sangjin Lee |
@@ -304,7 +309,6 @@
 | [HADOOP-8840](https://issues.apache.org/jira/browse/HADOOP-8840) | Fix the test-patch colorizer to cover all sorts of +1 lines. |  Major | build | Harsh J | Harsh J |
 | [HADOOP-8839](https://issues.apache.org/jira/browse/HADOOP-8839) | test-patch's -1 on @author tag presence doesn't cause a -1 to the overall result |  Trivial | build | Harsh J | Harsh J |
 | [HADOOP-8821](https://issues.apache.org/jira/browse/HADOOP-8821) | Findbugs warning Configuration.dumpDeprecatedKeys() concatenates strings using + in a loop |  Trivial | . | Suresh Srinivas | Suresh Srinivas |
-| [HADOOP-8818](https://issues.apache.org/jira/browse/HADOOP-8818) | Should use equals() rather than == to compare String or Text in MD5MD5CRC32FileChecksum and TFileDumper |  Minor | fs, io | Brandon Li | Brandon Li |
 | [HADOOP-8584](https://issues.apache.org/jira/browse/HADOOP-8584) | test-patch.sh should not immediately exit when no tests are added or modified |  Major | . | Colin Patrick McCabe | Colin Patrick McCabe |
 | [HADOOP-8548](https://issues.apache.org/jira/browse/HADOOP-8548) | test-patch.sh shows an incorrect link in Jekins builds |  Major | build | Kihwal Lee | Kihwal Lee |
 | [HADOOP-8413](https://issues.apache.org/jira/browse/HADOOP-8413) | test-patch.sh gives out the wrong links for newPatchFindbugsWarnings |  Minor | . | Colin Patrick McCabe | Colin Patrick McCabe |
@@ -447,6 +451,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HADOOP-12808](https://issues.apache.org/jira/browse/HADOOP-12808) | Rename the RS coder from HDFS-RAID as legacy |  Major | . | Rui Li | Rui Li |
 | [HADOOP-12685](https://issues.apache.org/jira/browse/HADOOP-12685) | Input buffer position after encode/decode not consistent between different kinds of buffers |  Minor | . | Rui Li | Rui Li |
 | [HADOOP-12582](https://issues.apache.org/jira/browse/HADOOP-12582) | Using BytesWritable's getLength() and getBytes() instead of get() and getSize() |  Major | . | Tsuyoshi Ozawa | Akira AJISAKA |
 | [HADOOP-12544](https://issues.apache.org/jira/browse/HADOOP-12544) | Erasure Coding: create dummy raw coder to isolate performance issues in testing |  Major | . | Rui Li | Rui Li |
@@ -460,6 +465,9 @@
 | [HADOOP-11850](https://issues.apache.org/jira/browse/HADOOP-11850) | Typos in hadoop-common java docs |  Minor | . | Surendra Singh Lilhore | Surendra Singh Lilhore |
 | [HADOOP-11828](https://issues.apache.org/jira/browse/HADOOP-11828) | Implement the Hitchhiker erasure coding algorithm |  Major | . | Zhe Zhang | jack liuquan |
 | [HADOOP-11684](https://issues.apache.org/jira/browse/HADOOP-11684) | S3a to use thread pool that blocks clients |  Major | fs/s3 | Thomas Demoor | Thomas Demoor |
+| [HDFS-9867](https://issues.apache.org/jira/browse/HDFS-9867) | Missing block exception should carry locatedBlocks information |  Minor | erasure-coding, hdfs-client | Mingliang Liu | Mingliang Liu |
+| [HDFS-9866](https://issues.apache.org/jira/browse/HDFS-9866) | BlockManager#chooseExcessReplicasStriped may weaken rack fault tolerance |  Major | namenode | Takuya Fukudome | Jing Zhao |
+| [HDFS-9837](https://issues.apache.org/jira/browse/HDFS-9837) | BlockManager#countNodes should be able to detect duplicated internal blocks |  Major | . | Jing Zhao | Jing Zhao |
 | [HDFS-9830](https://issues.apache.org/jira/browse/HDFS-9830) | Remove references to hftp in ViewFs documentation in trunk |  Minor | documentation, fs | Wei-Chiu Chuang | Wei-Chiu Chuang |
 | [HDFS-9829](https://issues.apache.org/jira/browse/HDFS-9829) | Erasure Coding: Improve few exception handling logic of ErasureCodingWorker |  Minor | erasure-coding | Rakesh R | Rakesh R |
 | [HDFS-9818](https://issues.apache.org/jira/browse/HDFS-9818) | Correctly handle EC reconstruction work caused by not enough racks |  Major | datanode, namenode | Takuya Fukudome | Jing Zhao |

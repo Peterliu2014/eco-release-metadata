@@ -23,6 +23,13 @@ These release notes cover new developer and user-facing incompatibilities, impor
 
 ---
 
+* [HADOOP-12850](https://issues.apache.org/jira/browse/HADOOP-12850) | *Major* | **pull shell code out of hadoop-dist**
+
+This change contains the content of HADOOP-10115 which is an incompatible change.
+
+
+---
+
 * [HADOOP-12651](https://issues.apache.org/jira/browse/HADOOP-12651) | *Major* | **Replace dev-support with wrappers to Yetus**
 
 <!-- markdown -->
@@ -106,34 +113,34 @@ Python is now required to build the documentation.
 
 | Old | New |
 |:---- |:---- |
-| HADOOP\\_HDFS\\_LOG\\_DIR | HADOOP\\_LOG\\_DIR |
-| HADOOP\\_HDFS\\_LOGFILE | HADOOP\\_LOGFILE |
-| HADOOP\\_HDFS\\_NICENESS | HADOOP\\_NICENESS |
-| HADOOP\\_HDFS\\_STOP\\_TIMEOUT | HADOOP\\_STOP\\_TIMEOUT |
-| HADOOP\\_HDFS\\_PID\\_DIR | HADOOP\\_PID\\_DIR |
-| HADOOP\\_HDFS\\_ROOT\\_LOGGER | HADOOP\\_ROOT\\_LOGGER |
-| HADOOP\\_HDFS\\_IDENT\\_STRING | HADOOP\\_IDENT\\_STRING |
-| HADOOP\\_MAPRED\\_LOG\\_DIR | HADOOP\\_LOG\\_DIR |
-| HADOOP\\_MAPRED\\_LOGFILE | HADOOP\\_LOGFILE |
-| HADOOP\\_MAPRED\\_NICENESS | HADOOP\\_NICENESS |
-| HADOOP\\_MAPRED\\_STOP\\_TIMEOUT | HADOOP\\_STOP\\_TIMEOUT |
-| HADOOP\\_MAPRED\\_PID\\_DIR | HADOOP\\_PID\\_DIR |
-| HADOOP\\_MAPRED\\_ROOT\\_LOGGER | HADOOP\\_ROOT\\_LOGGER |
-| HADOOP\\_MAPRED\\_IDENT\\_STRING | HADOOP\\_IDENT\\_STRING |
-| YARN\\_CONF\\_DIR | HADOOP\\_CONF\\_DIR |
-| YARN\\_LOG\\_DIR | HADOOP\\_LOG\\_DIR |
-| YARN\\_LOGFILE | HADOOP\\_LOGFILE |
-| YARN\\_NICENESS | HADOOP\\_NICENESS |
-| YARN\\_STOP\\_TIMEOUT | HADOOP\\_STOP\\_TIMEOUT |
-| YARN\\_PID\\_DIR | HADOOP\\_PID\\_DIR |
-| YARN\\_ROOT\\_LOGGER | HADOOP\\_ROOT\\_LOGGER |
-| YARN\\_IDENT\\_STRING | HADOOP\\_IDENT\\_STRING |
-| YARN\\_OPTS | HADOOP\\_OPTS |
-| YARN\\_SLAVES | HADOOP\\_SLAVES |
-| YARN\\_USER\\_CLASSPATH | HADOOP\\_USER\\_CLASSPATH |
-| YARN\\_USER\\_CLASSPATH\\_FIRST | HADOOP\\_USER\\_CLASSPATH\\_FIRST |
-| KMS\\_CONFIG | HADOOP\\_CONF\\_DIR |
-| KMS\\_LOG | HADOOP\\_LOG\\_DIR |
+| HADOOP\_HDFS\_LOG\_DIR | HADOOP\_LOG\_DIR |
+| HADOOP\_HDFS\_LOGFILE | HADOOP\_LOGFILE |
+| HADOOP\_HDFS\_NICENESS | HADOOP\_NICENESS |
+| HADOOP\_HDFS\_STOP\_TIMEOUT | HADOOP\_STOP\_TIMEOUT |
+| HADOOP\_HDFS\_PID\_DIR | HADOOP\_PID\_DIR |
+| HADOOP\_HDFS\_ROOT\_LOGGER | HADOOP\_ROOT\_LOGGER |
+| HADOOP\_HDFS\_IDENT\_STRING | HADOOP\_IDENT\_STRING |
+| HADOOP\_MAPRED\_LOG\_DIR | HADOOP\_LOG\_DIR |
+| HADOOP\_MAPRED\_LOGFILE | HADOOP\_LOGFILE |
+| HADOOP\_MAPRED\_NICENESS | HADOOP\_NICENESS |
+| HADOOP\_MAPRED\_STOP\_TIMEOUT | HADOOP\_STOP\_TIMEOUT |
+| HADOOP\_MAPRED\_PID\_DIR | HADOOP\_PID\_DIR |
+| HADOOP\_MAPRED\_ROOT\_LOGGER | HADOOP\_ROOT\_LOGGER |
+| HADOOP\_MAPRED\_IDENT\_STRING | HADOOP\_IDENT\_STRING |
+| YARN\_CONF\_DIR | HADOOP\_CONF\_DIR |
+| YARN\_LOG\_DIR | HADOOP\_LOG\_DIR |
+| YARN\_LOGFILE | HADOOP\_LOGFILE |
+| YARN\_NICENESS | HADOOP\_NICENESS |
+| YARN\_STOP\_TIMEOUT | HADOOP\_STOP\_TIMEOUT |
+| YARN\_PID\_DIR | HADOOP\_PID\_DIR |
+| YARN\_ROOT\_LOGGER | HADOOP\_ROOT\_LOGGER |
+| YARN\_IDENT\_STRING | HADOOP\_IDENT\_STRING |
+| YARN\_OPTS | HADOOP\_OPTS |
+| YARN\_SLAVES | HADOOP\_SLAVES |
+| YARN\_USER\_CLASSPATH | HADOOP\_USER\_CLASSPATH |
+| YARN\_USER\_CLASSPATH\_FIRST | HADOOP\_USER\_CLASSPATH\_FIRST |
+| KMS\_CONFIG | HADOOP\_CONF\_DIR |
+| KMS\_LOG | HADOOP\_LOG\_DIR |
 
 
 ---
@@ -163,11 +170,11 @@ This changes the output of the 'hadoop version' command to generically say 'Sour
 
 <!-- markdown -->
 
-* HADOOP\\_HEAPSIZE variable has been deprecated  (It will still be honored if set, but expect it to go away in the future).    In its place, HADOOP\\_HEAPSIZE\\_MAX and HADOOP\\_HEAPSIZE\\_MIN have been introduced to set Xmx and Xms, respectively. 
+* HADOOP\_HEAPSIZE variable has been deprecated  (It will still be honored if set, but expect it to go away in the future).    In its place, HADOOP\_HEAPSIZE\_MAX and HADOOP\_HEAPSIZE\_MIN have been introduced to set Xmx and Xms, respectively. 
 
-* The internal variable JAVA\\_HEAP\\_MAX has been removed.
+* The internal variable JAVA\_HEAP\_MAX has been removed.
 
-* Default heap sizes have been removed. This will allow for the JVM to use auto-tuning based upon the memory size of the host. To re-enable the old default, configure HADOOP\\_HEAPSIZE\_MAX="1g" in hadoop-env.sh. 
+* Default heap sizes have been removed. This will allow for the JVM to use auto-tuning based upon the memory size of the host. To re-enable the old default, configure HADOOP\_HEAPSIZE_MAX="1g" in hadoop-env.sh. 
 
 * All global and daemon-specific heap size variables now support units.  If the variable is only a number, the size is assumed to be in megabytes.
 
@@ -181,14 +188,14 @@ The following shell environment variables have been deprecated:
 
 | Old | New |
 |:---- |:---- |
-| DEFAULT\\_LIBEXEC\\_DIR | HADOOP\\_DEFAULT\\_LIBEXEC\\_DIR |
-| SLAVE\\_NAMES | HADOOP\\_SLAVE\\_NAMES |
-| TOOL\\_PATH | HADOOP\\_TOOLS\\_PATH |
+| DEFAULT\_LIBEXEC\_DIR | HADOOP\_DEFAULT\_LIBEXEC\_DIR |
+| SLAVE\_NAMES | HADOOP\_SLAVE\_NAMES |
+| TOOL\_PATH | HADOOP\_TOOLS\_PATH |
 
 In addition:
 
-* DEFAULT\\_LIBEXEC\\_DIR will NOT be automatically transitioned to HADOOP\\_DEFAULT\\_LIBEXEC\\_DIR and will require changes to any scripts setting that value.  A warning will be printed to the screen if DEFAULT\\_LIBEXEC\\_DIR has been configured.
-* HADOOP\\_TOOLS\\_PATH is now properly handled as a multi-valued, Java classpath-style variable.  Prior, multiple values assigned to TOOL\\_PATH would not work a predictable manner.
+* DEFAULT\_LIBEXEC\_DIR will NOT be automatically transitioned to HADOOP\_DEFAULT\_LIBEXEC\_DIR and will require changes to any scripts setting that value.  A warning will be printed to the screen if DEFAULT\_LIBEXEC\_DIR has been configured.
+* HADOOP\_TOOLS\_PATH is now properly handled as a multi-valued, Java classpath-style variable.  Prior, multiple values assigned to TOOL\_PATH would not work a predictable manner.
 
 
 ---
@@ -221,18 +228,18 @@ The Hadoop shell scripts have been rewritten to fix many long standing bugs and 
 
 INCOMPATIBLE CHANGES:
 
-* The pid and out files for secure daemons have been renamed to include the appropriate ${HADOOP\\_IDENT\\_STR}.  This should allow, with proper configurations in place, for multiple versions of the same secure daemon to run on a host. Additionally, pid files are now created when daemons are run in interactive mode.  This will also prevent the accidental starting of two daemons with the same configuration prior to launching java (i.e., "fast fail" without having to wait for socket opening).
+* The pid and out files for secure daemons have been renamed to include the appropriate ${HADOOP\_IDENT\_STR}.  This should allow, with proper configurations in place, for multiple versions of the same secure daemon to run on a host. Additionally, pid files are now created when daemons are run in interactive mode.  This will also prevent the accidental starting of two daemons with the same configuration prior to launching java (i.e., "fast fail" without having to wait for socket opening).
 * All Hadoop shell script subsystems now execute hadoop-env.sh, which allows for all of the environment variables to be in one location.  This was not the case previously.
 * The default content of *-env.sh has been significantly altered, with the majority of defaults moved into more protected areas inside the code. Additionally, these files do not auto-append anymore; setting a variable on the command line prior to calling a shell command must contain the entire content, not just any extra settings.  This brings Hadoop more in-line with the vast majority of other software packages.
-* All HDFS\\_\*, YARN\\_\*, and MAPRED\\_\* environment variables act as overrides to their equivalent HADOOP\\_\* environment variables when 'hdfs', 'yarn', 'mapred', and related commands are executed. Previously, these were separated out which meant a significant amount of duplication of common settings.  
+* All HDFS\_\*, YARN\_\*, and MAPRED\_\* environment variables act as overrides to their equivalent HADOOP\_\* environment variables when 'hdfs', 'yarn', 'mapred', and related commands are executed. Previously, these were separated out which meant a significant amount of duplication of common settings.  
 * hdfs-config.sh and hdfs-config.cmd were inadvertently duplicated into libexec and sbin.  The sbin versions have been removed.
-* The log4j settings forcibly set by some *-daemon.sh commands have been removed.  These settings are now configurable in the \*-env.sh files via \*\\_OPT. 
+* The log4j settings forcibly set by some *-daemon.sh commands have been removed.  These settings are now configurable in the \*-env.sh files via \*\_OPT. 
 * Support for various undocumented YARN log4j.properties files has been removed.
-* Support for ${HADOOP\\_MASTER} and the related rsync code have been removed.
+* Support for ${HADOOP\_MASTER} and the related rsync code have been removed.
 * The undocumented and unused yarn.id.str Java property has been removed.
 * The unused yarn.policy.file Java property has been removed.
-* We now require bash v3 (released July 27, 2004) or better in order to take advantage of better regex handling and ${BASH\\_SOURCE}.  POSIX sh will not work.
-* Support for --script has been removed. We now use ${HADOOP\\_\*\\_PATH} or ${HADOOP\\_PREFIX} to find the necessary binaries.  (See other note regarding ${HADOOP\\_PREFIX} auto discovery.)
+* We now require bash v3 (released July 27, 2004) or better in order to take advantage of better regex handling and ${BASH\_SOURCE}.  POSIX sh will not work.
+* Support for --script has been removed. We now use ${HADOOP\_\*\_PATH} or ${HADOOP\_PREFIX} to find the necessary binaries.  (See other note regarding ${HADOOP\_PREFIX} auto discovery.)
 * Non-existent classpaths, ld.so library paths, JNI library paths, etc, will be ignored and stripped from their respective environment settings.
 
 NEW FEATURES:
@@ -240,17 +247,17 @@ NEW FEATURES:
 * Daemonization has been moved from *-daemon.sh to the bin commands via the --daemon option. Simply use --daemon start to start a daemon, --daemon stop to stop a daemon, and --daemon status to set $? to the daemon's status.  The return code for status is LSB-compatible.  For example, 'hdfs --daemon start namenode'.
 * It is now possible to override some of the shell code capabilities to provide site specific functionality without replacing the shipped versions.  Replacement functions should go into the new hadoop-user-functions.sh file.
 * A new option called --buildpaths will attempt to add developer build directories to the classpath to allow for in source tree testing.
-* Operations which trigger ssh connections can now use pdsh if installed.  ${HADOOP\\_SSH\\_OPTS} still gets applied. 
+* Operations which trigger ssh connections can now use pdsh if installed.  ${HADOOP\_SSH\_OPTS} still gets applied. 
 * Added distch and jnipath subcommands to the hadoop command.
 * Shell scripts now support a --debug option which will report basic information on the construction of various environment variables, java options, classpath, etc. to help in configuration debugging.
 
 BUG FIXES:
 
-* ${HADOOP\\_CONF\\_DIR} is now properly honored everywhere, without requiring symlinking and other such tricks.
-* ${HADOOP\\_CONF\\_DIR}/hadoop-layout.sh is now documented with a provided hadoop-layout.sh.example file.
-* Shell commands should now work properly when called as a relative path, without ${HADOOP\\_PREFIX} being defined, and as the target of bash -x for debugging. If ${HADOOP\\_PREFIX} is not set, it will be automatically determined based upon the current location of the shell library.  Note that other parts of the extended Hadoop ecosystem may still require this environment variable to be configured.
-* Operations which trigger ssh will now limit the number of connections to run in parallel to ${HADOOP\\_SSH\\_PARALLEL} to prevent memory and network exhaustion.  By default, this is set to 10.
-* ${HADOOP\\_CLIENT\\_OPTS} support has been added to a few more commands.
+* ${HADOOP\_CONF\_DIR} is now properly honored everywhere, without requiring symlinking and other such tricks.
+* ${HADOOP\_CONF\_DIR}/hadoop-layout.sh is now documented with a provided hadoop-layout.sh.example file.
+* Shell commands should now work properly when called as a relative path, without ${HADOOP\_PREFIX} being defined, and as the target of bash -x for debugging. If ${HADOOP\_PREFIX} is not set, it will be automatically determined based upon the current location of the shell library.  Note that other parts of the extended Hadoop ecosystem may still require this environment variable to be configured.
+* Operations which trigger ssh will now limit the number of connections to run in parallel to ${HADOOP\_SSH\_PARALLEL} to prevent memory and network exhaustion.  By default, this is set to 10.
+* ${HADOOP\_CLIENT\_OPTS} support has been added to a few more commands.
 * Some subcommands were not listed in the usage.
 * Various options on hadoop command lines were supported inconsistently.  These have been unified into hadoop-config.sh. --config is still required to be first, however.
 * ulimit logging for secure daemons no longer assumes /bin/bash but does assume bash is on the command line path.
@@ -260,7 +267,7 @@ BUG FIXES:
 * Shell level errors now go to STDERR.  Before, many of them went incorrectly to STDOUT.
 * CDPATH with a period (.) should no longer break the scripts.
 * The scripts no longer try to chown directories.
-* If ${JAVA\\_HOME} is not set on OS X, it now properly detects it instead of throwing an error.
+* If ${JAVA\_HOME} is not set on OS X, it now properly detects it instead of throwing an error.
 
 IMPROVEMENTS:
 
@@ -269,7 +276,7 @@ IMPROVEMENTS:
 * More of the shell code is now commented.
 * Significant amounts of redundant code have been moved into a new file called hadoop-functions.sh.
 * The various *-env.sh have been massively changed to include documentation and examples on what can be set, ramifications of setting, etc.  for all variables that are expected to be set by a user.  
-* There is now some trivial de-duplication and sanitization of the classpath and JVM options.  This allows, amongst other things, for custom settings in \*\\_OPTS for Hadoop daemons to override defaults and other generic settings (i.e., ${HADOOP\\_OPTS}).  This is particularly relevant for Xmx settings, as one can now set them in \_OPTS and ignore the heap specific options for daemons which force the size in megabytes.
+* There is now some trivial de-duplication and sanitization of the classpath and JVM options.  This allows, amongst other things, for custom settings in \*\_OPTS for Hadoop daemons to override defaults and other generic settings (i.e., ${HADOOP\_OPTS}).  This is particularly relevant for Xmx settings, as one can now set them in _OPTS and ignore the heap specific options for daemons which force the size in megabytes.
 * Subcommands have been alphabetized in both usage and in the code.
 * All/most of the functionality provided by the sbin/* commands has been moved to either their bin/ equivalents or made into functions.  The rewritten versions of these commands are now wrappers to maintain backward compatibility.
 * Usage information is given with the following options/subcommands for all scripts using the common framework: --? -? ? --help -help -h help 
@@ -410,8 +417,8 @@ This deprecates the following environment variables:
 
 | Old | New |
 |:---- |:---- |
-| HTTPFS\_LOG | HADOOP\_LOG\_DIR|
-| HTTPFS\_CONFG | HADOOP\_CONF\_DIR |
+| HTTPFS_LOG | HADOOP_LOG_DIR|
+| HTTPFS_CONFG | HADOOP_CONF_DIR |
 
 
 ---

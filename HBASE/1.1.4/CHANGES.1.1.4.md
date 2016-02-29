@@ -18,12 +18,14 @@
 -->
 # Apache HBase Changelog
 
-## Release 1.1.4 - Unreleased (as of 2016-02-24)
+## Release 1.1.4 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HBASE-15323](https://issues.apache.org/jira/browse/HBASE-15323) | Hbase Rest CheckAndDeleteAPi should be able to delete more cells |  Major | hbase | Ajith |  |
+| [HBASE-15290](https://issues.apache.org/jira/browse/HBASE-15290) | Hbase Rest CheckAndAPI should save other cells along with compared cell |  Major | hbase | Ajith |  |
 | [HBASE-15100](https://issues.apache.org/jira/browse/HBASE-15100) | Master WALProcs still never clean up |  Blocker | master, proc-v2 | Elliott Clark | Matteo Bertozzi |
 
 
@@ -51,6 +53,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HBASE-15358](https://issues.apache.org/jira/browse/HBASE-15358) | canEnforceTimeLimitFromScope should use timeScope instead of sizeScope |  Major | Scanners | Phil Yang | Phil Yang |
 | [HBASE-15279](https://issues.apache.org/jira/browse/HBASE-15279) | OrderedBytes.isEncodedValue does not check for int8 and int16 types |  Major | . | Robert Yokota | Robert Yokota |
 | [HBASE-15252](https://issues.apache.org/jira/browse/HBASE-15252) | Data loss when replaying wal if HDFS timeout |  Blocker | wal | Duo Zhang | Duo Zhang |
 | [HBASE-15221](https://issues.apache.org/jira/browse/HBASE-15221) | HTableMultiplexer improvements (stale region locations and resource leaks) |  Critical | Client | Josh Elser | Josh Elser |
@@ -81,6 +84,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [HBASE-15351](https://issues.apache.org/jira/browse/HBASE-15351) | Fix description of hbase.bucketcache.size in hbase-default.xml |  Major | documentation | stack | stack |
+| [HBASE-15311](https://issues.apache.org/jira/browse/HBASE-15311) | Prevent NPE in BlockCacheViewTmpl |  Major | UI | Samir Ahmic | Samir Ahmic |
 | [HBASE-15288](https://issues.apache.org/jira/browse/HBASE-15288) | Flakey TestMasterMetrics.testClusterRequests on branch-1.1 |  Major | test | Heng Chen | Heng Chen |
 | [HBASE-15270](https://issues.apache.org/jira/browse/HBASE-15270) | Use appropriate encoding for "filter" field in TaskMonitorTmpl.jamon |  Major | UI | Samir Ahmic | Samir Ahmic |
 | [HBASE-15224](https://issues.apache.org/jira/browse/HBASE-15224) | Undo  "hbase.increment.fast.but.narrow.consistency" option; it is not necessary since HBASE-15213 |  Major | Performance | stack | stack |
@@ -89,6 +94,7 @@
 | [HBASE-15169](https://issues.apache.org/jira/browse/HBASE-15169) | Backport HBASE-14362 'TestWALProcedureStoreOnHDFS is super duper flaky' to branch-1.1 |  Critical | test | Nick Dimiduk | Heng Chen |
 | [HBASE-15157](https://issues.apache.org/jira/browse/HBASE-15157) | Add \*PerformanceTest for Append, CheckAnd\* |  Major | Performance, test | stack | stack |
 | [HBASE-15153](https://issues.apache.org/jira/browse/HBASE-15153) | Apply checkFamilies addendum on increment to 1.1 and 1.0 |  Major | Performance | stack | stack |
+| [HBASE-14798](https://issues.apache.org/jira/browse/HBASE-14798) | NPE reporting server load causes regionserver abort; causes TestAcidGuarantee to fail |  Major | test | stack | stack |
 
 
 ### OTHER:

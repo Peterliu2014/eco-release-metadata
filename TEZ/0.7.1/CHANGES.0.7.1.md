@@ -18,7 +18,7 @@
 -->
 # Apache Tez Changelog
 
-## Release 0.7.1 - Unreleased (as of 2016-02-24)
+## Release 0.7.1 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,6 +45,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [TEZ-3149](https://issues.apache.org/jira/browse/TEZ-3149) | Tez-tools: Add username in DagInfo |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-3093](https://issues.apache.org/jira/browse/TEZ-3093) | CriticalPathAnalyzer should be accessible via zeppelin |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-3011](https://issues.apache.org/jira/browse/TEZ-3011) | Link Vertex Name in Dag Tasks/Task Attempts to Vertex |  Major | UI | Jonathan Eagles | Jonathan Eagles |
 | [TEZ-2973](https://issues.apache.org/jira/browse/TEZ-2973) | Backport Analyzers to branch-0.7 |  Major | . | Jonathan Eagles | Jonathan Eagles |
@@ -72,12 +73,19 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [TEZ-3147](https://issues.apache.org/jira/browse/TEZ-3147) | Intermediate mem-to-mem: Fix early exit when only one segment can fit into memory |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
+| [TEZ-3141](https://issues.apache.org/jira/browse/TEZ-3141) | mapreduce.task.timeout is not translated to container heartbeat timeout |  Major | . | Jason Lowe | Jason Lowe |
+| [TEZ-3137](https://issues.apache.org/jira/browse/TEZ-3137) | Tez task failed with illegal state exception in recovery |  Major | . | Jeff Zhang | Jeff Zhang |
+| [TEZ-3129](https://issues.apache.org/jira/browse/TEZ-3129) | Tez task and task attempt UI needs application fails with NotFoundException |  Major | UI | Jonathan Eagles | Jonathan Eagles |
+| [TEZ-3128](https://issues.apache.org/jira/browse/TEZ-3128) | Avoid stopping containers on the AM shutdown thread |  Major | . | Siddharth Seth | Tsuyoshi Ozawa |
 | [TEZ-3126](https://issues.apache.org/jira/browse/TEZ-3126) | Log reason for not reducing parallelism |  Minor | . | Jonathan Eagles | Jonathan Eagles |
 | [TEZ-3123](https://issues.apache.org/jira/browse/TEZ-3123) | Containers can get re-used even with conflicting local resources |  Major | . | Hitesh Shah | Hitesh Shah |
 | [TEZ-3117](https://issues.apache.org/jira/browse/TEZ-3117) | Deadlock in Edge and Vertex code |  Major | . | Yesha Vora | Bikas Saha |
+| [TEZ-3114](https://issues.apache.org/jira/browse/TEZ-3114) | Shuffle OOM due to EventMetaData flood |  Major | . | Jason Lowe | Jason Lowe |
 | [TEZ-3107](https://issues.apache.org/jira/browse/TEZ-3107) | tez-tools: Log warn msgs in case ATS has wrong values (e.g startTime \> finishTime) |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-3104](https://issues.apache.org/jira/browse/TEZ-3104) | Tez fails on Bzip2 intermediate output format on hadoop 2.7.1 and earlier |  Critical | . | Jonathan Eagles | Jonathan Eagles |
 | [TEZ-3103](https://issues.apache.org/jira/browse/TEZ-3103) | Shuffle can hang when memory to memory merging enabled |  Critical | . | Jason Lowe | Jason Lowe |
+| [TEZ-3102](https://issues.apache.org/jira/browse/TEZ-3102) | Fetch failure of a speculated task causes job hang |  Critical | . | Jason Lowe | Jason Lowe |
 | [TEZ-3089](https://issues.apache.org/jira/browse/TEZ-3089) | TaskConcurrencyAnalyzer can return negative task count with very large jobs |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-3076](https://issues.apache.org/jira/browse/TEZ-3076) | Reduce merge memory overhead to support large number of in-memory mapoutputs |  Major | . | Jonathan Eagles | Jonathan Eagles |
 | [TEZ-3066](https://issues.apache.org/jira/browse/TEZ-3066) | TaskAttemptFinishedEvent ConcurrentModificationException in recovery or history logging services |  Major | . | Jason Lowe | Jeff Zhang |
@@ -89,6 +97,7 @@
 | [TEZ-3017](https://issues.apache.org/jira/browse/TEZ-3017) | HistoryACLManager does not have a close method for cleanup |  Major | . | Bikas Saha | Bikas Saha |
 | [TEZ-3006](https://issues.apache.org/jira/browse/TEZ-3006) | Remove unused import in TestHistoryParser |  Major | . | Sreenath Somarajapuram | Rajesh Balamohan |
 | [TEZ-2995](https://issues.apache.org/jira/browse/TEZ-2995) | Timeline primary filter should only be on callerId and not type |  Major | . | Hitesh Shah | Hitesh Shah |
+| [TEZ-2988](https://issues.apache.org/jira/browse/TEZ-2988) | DAGAppMaster::shutdownTezAM should return with a no-op if it has been invoked earlier |  Major | . | Hitesh Shah | Tsuyoshi Ozawa |
 | [TEZ-2975](https://issues.apache.org/jira/browse/TEZ-2975) | Bump up apache commons dependency |  Trivial | . | Hitesh Shah | Hitesh Shah |
 | [TEZ-2970](https://issues.apache.org/jira/browse/TEZ-2970) | Re-localization in TezChild does not use correct UGI |  Major | . | Hitesh Shah | Hitesh Shah |
 | [TEZ-2968](https://issues.apache.org/jira/browse/TEZ-2968) | Counter limits exception causes AM to crash |  Critical | . | Hitesh Shah | Hitesh Shah |
@@ -191,6 +200,7 @@
 | [TEZ-2300](https://issues.apache.org/jira/browse/TEZ-2300) | TezClient.stop() takes a lot of time or does not work sometimes |  Major | . | Rohini Palaniswamy | Jonathan Eagles |
 | [TEZ-2291](https://issues.apache.org/jira/browse/TEZ-2291) | TEZ UI: Improper vertex name in tables. |  Major | . | Sreenath Somarajapuram | Sreenath Somarajapuram |
 | [TEZ-2097](https://issues.apache.org/jira/browse/TEZ-2097) | TEZ-UI Add dag logs backend support |  Critical | UI | Jeff Zhang | Jonathan Eagles |
+| [TEZ-1911](https://issues.apache.org/jira/browse/TEZ-1911) | MergeManager's unconditionalReserve() should check for memory limits before allocating memory to IntermediateMemoryToMemoryMerger |  Major | . | Rajesh Balamohan | Rajesh Balamohan |
 | [TEZ-1670](https://issues.apache.org/jira/browse/TEZ-1670) | Add tests for all converter functions in HistoryEventTimelineConversion |  Minor | . | Hitesh Shah | Tatsuya Nishiyama |
 | [TEZ-1529](https://issues.apache.org/jira/browse/TEZ-1529) | ATS and TezClient integration  in secure kerberos enabled cluster |  Blocker | . | Prakash Ramachandran | Prakash Ramachandran |
 

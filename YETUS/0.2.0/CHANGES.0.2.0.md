@@ -18,7 +18,7 @@
 -->
 # Apache Yetus Changelog
 
-## Release 0.2.0 - Unreleased (as of 2016-02-24)
+## Release 0.2.0 - Unreleased (as of 2016-02-29)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -61,6 +61,7 @@
 | [YETUS-272](https://issues.apache.org/jira/browse/YETUS-272) | add a way to flag/veto patches to code which jenkins doesn't test |  Minor | Test Patch | Steve Loughran | Allen Wittenauer |
 | [YETUS-240](https://issues.apache.org/jira/browse/YETUS-240) | Skip checkstyle/findbugs during mvninstall |  Major | Test Patch | Josh Elser | Josh Elser |
 | [YETUS-191](https://issues.apache.org/jira/browse/YETUS-191) | plugins that require external executables should verify those external executables exist. |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |
+| [YETUS-190](https://issues.apache.org/jira/browse/YETUS-190) | markdown table rendering on yetus website is ugly |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-173](https://issues.apache.org/jira/browse/YETUS-173) | report fixed issues |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 
 
@@ -91,6 +92,7 @@
 | [YETUS-209](https://issues.apache.org/jira/browse/YETUS-209) | releasedocmaker's error message is unintelligible if a non-existent project is specified |  Minor | Release Doc Maker | Kengo Seki | Kengo Seki |
 | [YETUS-201](https://issues.apache.org/jira/browse/YETUS-201) | dsec file hanging around |  Trivial | Test Patch | Allen Wittenauer | Marco Zühlke |
 | [YETUS-182](https://issues.apache.org/jira/browse/YETUS-182) | document git hash in patchnames doc |  Major | Test Patch, website and documentation | Allen Wittenauer | Marco Zühlke |
+| [YETUS-144](https://issues.apache.org/jira/browse/YETUS-144) | mvn install usually required on mvn builds |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-104](https://issues.apache.org/jira/browse/YETUS-104) | Update document about plugin functions |  Major | website and documentation | Kengo Seki | Marco Zühlke |
 
 
