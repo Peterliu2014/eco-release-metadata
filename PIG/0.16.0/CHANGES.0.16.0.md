@@ -18,7 +18,7 @@
 -->
 # Apache Pig Changelog
 
-## Release 0.16.0 - Unreleased (as of 2016-02-29)
+## Release 0.16.0 - Unreleased (as of 2016-03-01)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -45,6 +45,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [PIG-4817](https://issues.apache.org/jira/browse/PIG-4817) | Bump HTTP Logparser to version 2.4 |  Major | . | Niels Basjes | Niels Basjes |
 | [PIG-4803](https://issues.apache.org/jira/browse/PIG-4803) | Improve performance of regex-based builtin functions |  Major | . | Eyal Allweil | Eyal Allweil |
 | [PIG-4802](https://issues.apache.org/jira/browse/PIG-4802) | Autoparallelism should estimate less when there is combiner |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |
 | [PIG-4792](https://issues.apache.org/jira/browse/PIG-4792) | Do not add java and sun system properties to jobconf |  Major | . | Rohini Palaniswamy | Rohini Palaniswamy |

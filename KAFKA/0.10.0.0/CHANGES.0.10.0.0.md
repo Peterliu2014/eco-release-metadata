@@ -18,7 +18,7 @@
 -->
 # Apache Kafka Changelog
 
-## Release 0.10.0.0 - Unreleased (as of 2016-02-29)
+## Release 0.10.0.0 - Unreleased (as of 2016-03-01)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -46,6 +46,7 @@
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
 | [KAFKA-3291](https://issues.apache.org/jira/browse/KAFKA-3291) | DumpLogSegment tool should also provide an option to only verify index sanity. |  Major | tools | Parth Brahmbhatt | Parth Brahmbhatt |
+| [KAFKA-3273](https://issues.apache.org/jira/browse/KAFKA-3273) | MessageFormatter and MessageReader interfaces should be resilient to changes |  Major | tools | Ismael Juma | Ismael Juma |
 | [KAFKA-3272](https://issues.apache.org/jira/browse/KAFKA-3272) | Add debugging options to kafka-run-class.sh so we can easily run remote debugging |  Minor | tools | Christian Posta |  |
 | [KAFKA-3259](https://issues.apache.org/jira/browse/KAFKA-3259) | KIP-31/KIP-32 clean-ups |  Major | . | Ismael Juma | Ismael Juma |
 | [KAFKA-3253](https://issues.apache.org/jira/browse/KAFKA-3253) | Skip duplicate message size check if there is no re-compression during log appending. |  Major | . | Jiangjie Qin | Ismael Juma |
@@ -171,6 +172,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [KAFKA-3289](https://issues.apache.org/jira/browse/KAFKA-3289) | Update Kafka protocol guide wiki for KIP-31 / KIP-32 |  Major | . | Jiangjie Qin | Jiangjie Qin |
 | [KAFKA-3277](https://issues.apache.org/jira/browse/KAFKA-3277) | Update trunk version to be 0.10.0.0-SNAPSHOT |  Major | build | Ismael Juma | Ismael Juma |
 | [KAFKA-3276](https://issues.apache.org/jira/browse/KAFKA-3276) | Rename 0.10.0.0 to 0.10.1.0 and 0.9.1.0 to 0.10.0.0 in JIRA |  Major | . | Ismael Juma | Ewen Cheslack-Postava |
 | [KAFKA-3245](https://issues.apache.org/jira/browse/KAFKA-3245) | need a way to specify the number of replicas for change log topics |  Major | kafka streams | Yasuhiro Matsuda | Yasuhiro Matsuda |

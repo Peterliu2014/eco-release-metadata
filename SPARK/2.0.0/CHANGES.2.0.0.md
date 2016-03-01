@@ -18,7 +18,7 @@
 -->
 # Apache Spark Changelog
 
-## Release 2.0.0 - Unreleased (as of 2016-02-29)
+## Release 2.0.0 - Unreleased (as of 2016-03-01)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -82,6 +82,8 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [SPARK-13551](https://issues.apache.org/jira/browse/SPARK-13551) | Fix fix wrong comment and remove meanless lines in mllib.JavaBisectingKMeansExample |  Trivial | MLlib | zhengruifeng | zhengruifeng |
+| [SPARK-13550](https://issues.apache.org/jira/browse/SPARK-13550) | Add java example for ml.clustering.BisectingKMeans |  Trivial | ML | zhengruifeng | zhengruifeng |
 | [SPARK-13545](https://issues.apache.org/jira/browse/SPARK-13545) | Make MLlib LogisticRegressionWithLBFGS's default parameters consistent in Scala and Python |  Minor | MLlib, PySpark | Yanbo Liang | Yanbo Liang |
 | [SPARK-13544](https://issues.apache.org/jira/browse/SPARK-13544) | Rewrite/Propagate constraints for Aliases in Aggregate |  Major | SQL | Xiao Li | Xiao Li |
 | [SPARK-13530](https://issues.apache.org/jira/browse/SPARK-13530) | Add ShortType support to UnsafeRowParquetRecordReader |  Major | SQL | Liang-Chi Hsieh | Liang-Chi Hsieh |
@@ -331,6 +333,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [SPARK-13592](https://issues.apache.org/jira/browse/SPARK-13592) | pyspark failed to launch on Windows client |  Major | PySpark, Spark Submit, Windows | Masayoshi TSUZUKI | Masayoshi TSUZUKI |
 | [SPARK-13540](https://issues.apache.org/jira/browse/SPARK-13540) | Nested classes within Scala objects can't be used as Dataset element type |  Major | SQL | Cheng Lian | Cheng Lian |
 | [SPARK-13537](https://issues.apache.org/jira/browse/SPARK-13537) | Fix readBytes in VectorizedPlainValuesReader |  Major | SQL | Liang-Chi Hsieh | Liang-Chi Hsieh |
 | [SPARK-13533](https://issues.apache.org/jira/browse/SPARK-13533) | Fix readBytes in Parquet's VectorizedPlainValuesReader |  Major | SQL | Nong Li | Nong Li |

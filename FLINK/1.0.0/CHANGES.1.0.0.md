@@ -18,7 +18,7 @@
 -->
 # Apache Flink Changelog
 
-## Release 1.0.0 - Unreleased (as of 2016-02-29)
+## Release 1.0.0 - Unreleased (as of 2016-03-01)
 
 ### INCOMPATIBLE CHANGES:
 
@@ -52,6 +52,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3559](https://issues.apache.org/jira/browse/FLINK-3559) | Don't print pid file check if no active PID |  Trivial | Start-Stop Scripts | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3548](https://issues.apache.org/jira/browse/FLINK-3548) | Remove unnecessary generic parameter from SingleOutputStreamOperator |  Major | Streaming | Aljoscha Krettek | Aljoscha Krettek |
 | [FLINK-3538](https://issues.apache.org/jira/browse/FLINK-3538) | DataStream join API does not enforce consistent usage |  Major | DataStream API, Scala API | Till Rohrmann | Aljoscha Krettek |
 | [FLINK-3536](https://issues.apache.org/jira/browse/FLINK-3536) | Make clearer distinction between event time and processing time |  Minor | DataStream API | Till Rohrmann | Aljoscha Krettek |
@@ -62,6 +63,7 @@
 | [FLINK-3521](https://issues.apache.org/jira/browse/FLINK-3521) | Make Iterable part of method signature for WindowFunction |  Blocker | Streaming | Aljoscha Krettek | Aljoscha Krettek |
 | [FLINK-3520](https://issues.apache.org/jira/browse/FLINK-3520) | Periodic watermark operator should emit current watermark in close() |  Major | Streaming | Stephan Ewen | Stephan Ewen |
 | [FLINK-3509](https://issues.apache.org/jira/browse/FLINK-3509) | Update Hadoop versions in release script and on travis to the latest minor version |  Major | Build System | Robert Metzger | Robert Metzger |
+| [FLINK-3461](https://issues.apache.org/jira/browse/FLINK-3461) | Remove duplicate condition check in ZooKeeperLeaderElectionService |  Trivial | . | Ufuk Celebi |  |
 | [FLINK-3460](https://issues.apache.org/jira/browse/FLINK-3460) | Make flink-streaming-connectors' flink dependencies provided |  Minor | . | Till Rohrmann | Till Rohrmann |
 | [FLINK-3459](https://issues.apache.org/jira/browse/FLINK-3459) | Make build SBT compatible |  Minor | . | Till Rohrmann | Till Rohrmann |
 | [FLINK-3455](https://issues.apache.org/jira/browse/FLINK-3455) | Bump Kafka 0.9 connector dependency to Kafka 0.9.0.1 |  Major | Kafka Connector | Robert Metzger | Robert Metzger |
@@ -158,6 +160,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3556](https://issues.apache.org/jira/browse/FLINK-3556) | Unneeded check in HA blob store configuration |  Critical | . | Ufuk Celebi | Ufuk Celebi |
 | [FLINK-3540](https://issues.apache.org/jira/browse/FLINK-3540) | Hadoop 2.6.3 build contains /com/google/common (guava) classes in flink-dist.jar |  Blocker | Build System | Robert Metzger | Robert Metzger |
 | [FLINK-3534](https://issues.apache.org/jira/browse/FLINK-3534) | Cancelling a running job can lead to restart instead of stopping |  Critical | . | Robert Metzger |  |
 | [FLINK-3526](https://issues.apache.org/jira/browse/FLINK-3526) | ProcessingTime Window Assigner and Trigger are broken |  Blocker | Streaming | Stephan Ewen | Stephan Ewen |
@@ -320,6 +323,7 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [FLINK-3517](https://issues.apache.org/jira/browse/FLINK-3517) | Number of job and task managers not checked in scripts |  Minor | Start-Stop Scripts | Ufuk Celebi | Ufuk Celebi |
 
 
 ### SUB-TASKS:

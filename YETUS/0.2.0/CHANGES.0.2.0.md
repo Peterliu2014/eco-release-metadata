@@ -18,7 +18,7 @@
 -->
 # Apache Yetus Changelog
 
-## Release 0.2.0 - Unreleased (as of 2016-02-29)
+## Release 0.2.0 - 2016-03-04
 
 ### INCOMPATIBLE CHANGES:
 
@@ -54,12 +54,14 @@
 
 | JIRA | Summary | Priority | Component | Reporter | Contributor |
 |:---- |:---- | :--- |:---- |:---- |:---- |
+| [YETUS-308](https://issues.apache.org/jira/browse/YETUS-308) | improve guidance on website maintenance |  Minor | website and documentation | Sean Busbey | Sean Busbey |
 | [YETUS-287](https://issues.apache.org/jira/browse/YETUS-287) | Update year to 2016 on website footer |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-281](https://issues.apache.org/jira/browse/YETUS-281) | hadoop: use built-in dependency order |  Blocker | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-280](https://issues.apache.org/jira/browse/YETUS-280) | build systems should be able to predetermine module order |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-273](https://issues.apache.org/jira/browse/YETUS-273) | Misleading warning messages when FINDBUGS\_HOME is not set |  Trivial | Test Patch | John Zhuge | Marco Zühlke |
 | [YETUS-272](https://issues.apache.org/jira/browse/YETUS-272) | add a way to flag/veto patches to code which jenkins doesn't test |  Minor | Test Patch | Steve Loughran | Allen Wittenauer |
 | [YETUS-240](https://issues.apache.org/jira/browse/YETUS-240) | Skip checkstyle/findbugs during mvninstall |  Major | Test Patch | Josh Elser | Josh Elser |
+| [YETUS-226](https://issues.apache.org/jira/browse/YETUS-226) | Document release process |  Blocker | website and documentation | Sean Busbey | Sean Busbey |
 | [YETUS-191](https://issues.apache.org/jira/browse/YETUS-191) | plugins that require external executables should verify those external executables exist. |  Major | Test Patch | Allen Wittenauer | Marco Zühlke |
 | [YETUS-190](https://issues.apache.org/jira/browse/YETUS-190) | markdown table rendering on yetus website is ugly |  Blocker | website and documentation | Allen Wittenauer | Allen Wittenauer |
 | [YETUS-173](https://issues.apache.org/jira/browse/YETUS-173) | report fixed issues |  Major | Test Patch | Allen Wittenauer | Allen Wittenauer |
